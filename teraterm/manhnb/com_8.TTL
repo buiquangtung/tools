@@ -1,0 +1,4 @@
+; Author Linh NV1
+
+; open Tera Term COM6 with baudrate 115200
+connect '/C=8 /BAUD=115200'

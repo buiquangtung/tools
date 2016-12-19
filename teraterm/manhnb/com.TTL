@@ -1,0 +1,20 @@
+; Author manhnb
+; open Tera Term COM > 19 with baudrate 115200
+
+i=50
+result = 1
+do while result=1
+i=i-1
+port = '/C='
+int2str s i
+strconcat port s
+strconcat port ' /BAUD=115200'
+connect port
+;messagebox result 'result'
+;messagebox i 'i'
+endwhile
+
+
+
+
+

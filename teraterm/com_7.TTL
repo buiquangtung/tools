@@ -1,0 +1,4 @@
+; Author Linh NV1
+
+; open Tera Term COM7 with baudrate 115200
+connect '/C=7 /BAUD=115200'

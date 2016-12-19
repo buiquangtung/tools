@@ -1,0 +1,4 @@
+; Author Linh NV1
+
+; open Tera Term COM9 with baudrate 115200
+connect '/C=9 /BAUD=115200'
