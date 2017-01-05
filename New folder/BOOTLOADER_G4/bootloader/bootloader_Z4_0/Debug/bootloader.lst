@@ -1,0 +1,4151 @@
+
+bootloader.elf:     file format elf32-powerpc
+bootloader.elf
+architecture: powerpc:common, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x01000000
+
+Program Header:
+    LOAD off    0x00010000 vaddr 0x00fa0000 paddr 0x00fa0000 align 2**16
+         filesz 0x00000004 memsz 0x00000004 flags r--
+    LOAD off    0x00010010 vaddr 0x00fa0010 paddr 0x00fa0010 align 2**16
+         filesz 0x00000004 memsz 0x00000004 flags r--
+    LOAD off    0x00020000 vaddr 0x01000000 paddr 0x01000000 align 2**16
+         filesz 0x000010e4 memsz 0x000010e4 flags r-x
+    LOAD off    0x00022000 vaddr 0x01002000 paddr 0x01002000 align 2**16
+         filesz 0x00000bc8 memsz 0x00000bc8 flags r-x
+    LOAD off    0x00022bd0 vaddr 0x01002bd0 paddr 0x01002bd0 align 2**16
+         filesz 0x00001bb0 memsz 0x00001bb0 flags r-x 10000000
+    LOAD off    0x00024780 vaddr 0x01004780 paddr 0x01004780 align 2**16
+         filesz 0x00000284 memsz 0x00000284 flags r-x
+    LOAD off    0x00030000 vaddr 0x40020000 paddr 0x01004a04 align 2**16
+         filesz 0x00000000 memsz 0x000000ac flags rw-
+    LOAD off    0x000300b0 vaddr 0x400200b0 paddr 0x01004a10 align 2**16
+         filesz 0x00000000 memsz 0x00001004 flags rw-
+EH_FRAME off    0x00024974 vaddr 0x01004974 paddr 0x01004974 align 2**2
+         filesz 0x00000014 memsz 0x00000014 flags r--
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .rchw         00000004  00fa0000  00fa0000  00010000  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .cpu0_reset_vector 00000004  00fa0010  00fa0010  00010010  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .startup      0000026a  01000000  01000000  00020000  2**10  CONTENTS, ALLOC, LOAD, READONLY, CODE, VLE
+  3 .core_exceptions_table 000000e4  01001000  01001000  00021000  2**12  CONTENTS, ALLOC, LOAD, READONLY, CODE, VLE
+  4 .intc_vector_table 00000bc8  01002000  01002000  00022000  2**12  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .text         00001bb0  01002bd0  01002bd0  00022bd0  2**4  CONTENTS, ALLOC, LOAD, READONLY, CODE, VLE
+  6 .rodata       000001f2  01004780  01004780  00024780  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .eh_frame_hdr 00000014  01004974  01004974  00024974  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .eh_frame     0000007c  01004988  01004988  00024988  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .bss          000000ac  40020000  01004a04  00030000  2**2  ALLOC
+ 10 .stack        00001004  400200b0  01004a10  000300b0  2**4  ALLOC
+ 11 .PPC.EMB.apuinfo 00000018  00000000  00000000  00024a04  2**0  CONTENTS, READONLY
+ 12 .comment      000000a8  00000000  00000000  00024a1c  2**0  CONTENTS, READONLY
+ 13 .debug_line   00001b42  00000000  00000000  00024ac4  2**0  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_info   000080ae  00000000  00000000  00026606  2**0  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_abbrev 00000b2f  00000000  00000000  0002e6b4  2**0  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_aranges 000003c0  00000000  00000000  0002f1e8  2**3  CONTENTS, READONLY, DEBUGGING
+ 17 .debug_ranges 00000290  00000000  00000000  0002f5a8  2**0  CONTENTS, READONLY, DEBUGGING
+ 18 .debug_macro  000194a3  00000000  00000000  0002f838  2**0  CONTENTS, READONLY, DEBUGGING
+ 19 .debug_str    00069f78  00000000  00000000  00048cdb  2**0  CONTENTS, READONLY, DEBUGGING
+ 20 .debug_frame  00000980  00000000  00000000  000b2c54  2**2  CONTENTS, READONLY, DEBUGGING
+ 21 .debug_loc    0000062d  00000000  00000000  000b35d4  2**0  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00fa0000 l    d  .rchw	00000000 .rchw
+00fa0010 l    d  .cpu0_reset_vector	00000000 .cpu0_reset_vector
+01000000 l    d  .startup	00000000 .startup
+01001000 l    d  .core_exceptions_table	00000000 .core_exceptions_table
+01002000 l    d  .intc_vector_table	00000000 .intc_vector_table
+01002bd0 l    d  .text	00000000 .text
+01004780 l    d  .rodata	00000000 .rodata
+01004974 l    d  .eh_frame_hdr	00000000 .eh_frame_hdr
+01004988 l    d  .eh_frame	00000000 .eh_frame
+40020000 l    d  .bss	00000000 .bss
+400200b0 l    d  .stack	00000000 .stack
+00000000 l    d  .PPC.EMB.apuinfo	00000000 .PPC.EMB.apuinfo
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    df *ABS*	00000000 flashrchw.c
+00000000 l    df *ABS*	00000000 ./Project_Settings/Startup_Code/startup.o
+01000106 l       .startup	00000000 sram_loop
+01000112 l       .startup	00000000 DATACOPY
+0100014a l       .startup	00000000 SDATACOPY
+0100013e l       .startup	00000000 DATACPYLOOP
+01000182 l       .startup	00000000 ROMCPYEND
+01000176 l       .startup	00000000 SDATACPYLOOP
+0100018e l       .startup	00000000 __icache_cfg
+010001a6 l       .startup	00000000 __icache_inv
+010001be l       .startup	00000000 __icache_no_abort
+010001d4 l       .startup	00000000 __dcache_cfg
+010001ec l       .startup	00000000 __dcache_inv
+01000204 l       .startup	00000000 __dcache_no_abort
+0100021e l       .startup	00000000 bss_Init
+0100024a l       .startup	00000000 bss_Init_end
+01000242 l       .startup	00000000 bss_Init_loop
+00000000 l    df *ABS*	00000000 Vector.c
+00000000 l    df *ABS*	00000000 intc_SW_mode_isr_vectors_MPC5748G.c
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 ./src/intc_sw_handlers.o
+fc040020 l       *ABS*	00000000 INTC_IACKR
+fc040030 l       *ABS*	00000000 INTC_EOIR
+01002c00 l       .text	00000000 prologue
+01002c24 l       .text	00000000 epilogue
+00000000 l    df *ABS*	00000000 srec.c
+01002cfa l     F .text	00000186 GetHex
+00000000 l    df *ABS*	00000000 mode.c
+00000000 l    df *ABS*	00000000 linflexd_uart.c
+00000000 l    df *ABS*	00000000 MPC57xx__Interrupt_Init.c
+00000000 l    df *ABS*	00000000 memcpy.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 __filll_mem.c
+00000000 l    df *ABS*	00000000 ctype.c
+00000000 l    df *ABS*	00000000 
+00000000 l       *ABS*	00000000 __HEAP_SIZE
+00040000 l       *ABS*	00000000 SRAM_SIZE
+40000000 l       *ABS*	00000000 SRAM_BASE_ADDR
+400200ac l       .bss	00000000 __BSS_END
+00001000 l       *ABS*	00000000 __STACK_SIZE
+40028000 l     O .eh_frame	00000000 _SDA_BASE_
+00000000 l       *ABS*	00000000 __MY_RAM_SIZE
+40028000 l     O .eh_frame	00000000 _SDA2_BASE_
+010034ce g     F .text	00000160 ProgramFlash
+400200b0 g       .stack	00000000 __HEAP
+00040000 g       *ABS*	00000000 __SRAM_SIZE
+00000000 g       *ABS*	00000000 __DATA_SIZE
+010010d0 g       .core_exceptions_table	00000000 IVOR14_Vector
+0100460c g     F .text	00000034 xcptn_xmpl
+01001020 g       .core_exceptions_table	00000000 IVOR2_Vector
+01002c90 g     F .text	0000000e .hidden _restgpr_31_x
+40020000 g     O .bss	00000001 TxInProgress
+01001000 g       .core_exceptions_table	00000000 VTABLE
+01002c70 g     F .text	0000002e .hidden _restgpr_23_x
+0100430e g     F .text	0000019c GetChar
+00fa0010 g     O .cpu0_reset_vector	00000004 RCHW2_0
+40000000 g       .PPC.EMB.apuinfo	00000000 MY_RAM_END
+40000000 g       .PPC.EMB.apuinfo	00000000 MY_RAM_START
+40020000 g       .debug_line	00000000 __DATA_SRAM_ADDR
+01001040 g       .core_exceptions_table	00000000 IVOR4_Vector
+01002c50 g     F .text	0000004e .hidden _restgpr_15_x
+01003b26 g     F .text	00000204 LIN1TX_irq
+010010a0 g       .core_exceptions_table	00000000 IVOR11_Vector
+400210b0 g       .stack	00000000 _stack_addr
+40000000 g       .PPC.EMB.apuinfo	00000000 __MY_RAM_ADR
+40020001 g     O .bss	00000001 RxIn
+01003306 g     F .text	0000010a PLL_160MHz
+000000ac g       *ABS*	00000000 __BSS_SIZE
+01002c60 g     F .text	0000003e .hidden _restgpr_19_x
+01004640 g     F .text	00000042 memcpy
+010010c0 g       .core_exceptions_table	00000000 IVOR13_Vector
+01001040 g       .core_exceptions_table	00000000 IVOR5_Vector
+01002c8c g     F .text	00000012 .hidden _restgpr_30_x
+01002c58 g     F .text	00000046 .hidden _restgpr_17_x
+01002c88 g     F .text	00000016 .hidden _restgpr_29_x
+40000000 g       *ABS*	00000000 __SRAM_BASE_ADDR
+40020000 g       .bss	00000000 __BSS_START
+010010b0 g       .core_exceptions_table	00000000 IVOR12_Vector
+01002c9e  w    F .text	0000005c isxdigit
+01002c00 g       .text	00000000 IVOR4_Handler
+01003d2a g     F .text	0000022c initLINFlexD_1
+010037a8 g     F .text	0000004c peri_clock_gating
+01004a04 g       *ABS*	00000000 __SDATA_ROM_ADDR
+01001010 g       .core_exceptions_table	00000000 IVOR1_Vector
+01003f56 g     F .text	00000080 rxLINFlexD_1
+01000000 g       .startup	00000000 __start
+01002c6c g     F .text	00000032 .hidden _restgpr_22_x
+01002c7c g     F .text	00000022 .hidden _restgpr_26_x
+01002c84 g     F .text	0000001a .hidden _restgpr_28_x
+01002c78 g     F .text	00000026 .hidden _restgpr_25_x
+01002c74 g     F .text	0000002a .hidden _restgpr_24_x
+01000000 g       .startup	00000000 _start
+01001030 g       .core_exceptions_table	00000000 IVOR3_Vector
+40020002 g     O .bss	00000001 XOffSent
+40020003 g     O .bss	00000001 SendXOn
+400210b0 g       .stack	00000000 __SP_INIT
+4002000b g     O .bss	00000001 UARTFirstTransmitFlag
+01002c5c g     F .text	00000042 .hidden _restgpr_18_x
+01002000 g     O .intc_vector_table	00000bc8 IntcIsrVectorTable
+40020004 g     O .bss	00000001 XOffRcvd
+01004532 g     F .text	00000092 InitINTC
+40020005 g     O .bss	00000001 TxBAvail
+40020006 g     O .bss	00000001 SendXOff
+010044aa g     F .text	00000062 OutStr
+01004a04 g       *ABS*	00000000 __DATA_ROM_ADDR
+01004682 g     F .text	0000001a memset
+0100366c g     F .text	0000013c main
+010034ba g     F .text	00000014 hw_init
+01002e80 g     F .text	00000486 RecievedFile
+400200b0 g       .stack	00000000 _stack_end
+01004518 g     F .text	0000001a SetIVPR
+01001080 g       .core_exceptions_table	00000000 IVOR9_Vector
+01002bd0 g     F .text	0000002a JumpToAddress
+01003410 g     F .text	000000aa system160mhz
+01004872 g     O .rodata	00000100 __ctype_mapC
+0100469c g     F .text	000000d8 __fill_mem
+010037f4 g     F .text	00000332 LIN1RX_irq
+0100414a g     F .text	000001c4 PutChar
+00fa0000 g     O .rchw	00000004 RCHW1
+010045c4 g     F .text	00000048 enableIrq
+010010e0 g       .core_exceptions_table	00000000 IVOR15_Vector
+4002000c g     O .bss	00000060 RxBuff
+40020007 g     O .bss	00000001 RxBAvail
+0100450c g     F .text	0000000c dummy
+01001000 g       .core_exceptions_table	00000000 IVOR0_Vector
+00000000 g       *ABS*	00000000 __SDATA_SIZE
+0100362e g     F .text	0000003e AppExecute
+01001090 g       .core_exceptions_table	00000000 IVOR10_Vector
+40020008 g     O .bss	00000001 TxIn
+01002c4c g     F .text	00000052 .hidden _restgpr_14_x
+4002006c g     O .bss	00000040 TxBuff
+40020009 g     O .bss	00000001 RxOut
+01002c48 g       .text	00000000 IVOR6_Handler
+01001050 g       .core_exceptions_table	00000000 IVOR6_Vector
+40020000 g       .eh_frame	00000000 __SDATA_SRAM_ADDR
+01002c68 g     F .text	00000036 .hidden _restgpr_21_x
+01002c54 g     F .text	0000004a .hidden _restgpr_16_x
+01003fd6 g     F .text	000000b8 txLINFlexD_1
+400200b0 g       .stack	00000000 __HEAP_END
+0100408e g     F .text	000000bc send2Term
+01002c80 g     F .text	0000001e .hidden _restgpr_27_x
+01001070 g       .core_exceptions_table	00000000 IVOR8_Vector
+4002000a g     O .bss	00000001 TxOut
+01001000 g       .core_exceptions_table	00000000 __IVPR_VALUE
+01002c64 g     F .text	0000003a .hidden _restgpr_20_x
+01001060 g       .core_exceptions_table	00000000 IVOR7_Vector
+
+
+
+Disassembly of section .startup:
+
+01000000 <__start>:
+__start():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:10
+_start:
+
+;#****************************** Turn off SWTs ********************************
+#if defined(DISABLE_SWT0)
+;#SWT0
+		e_lis	r4, 0xFC05
+ 1000000:	70 9f e4 05 	e_lis   r4,64517
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:11
+		e_or2i	r4, 0x0000
+ 1000004:	70 80 c0 00 	e_or2i  r4,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:13
+
+		e_li	r3, 0xC520
+ 1000008:	70 78 05 20 	e_li    r3,50464
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:14
+		e_stw	r3, 0x10(r4)
+ 100000c:	54 64 00 10 	e_stw   r3,16(r4)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:16
+
+		e_li	r3, 0xD928
+ 1000010:	70 7b 01 28 	e_li    r3,55592
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:17
+		e_stw	r3, 0x10(r4)
+ 1000014:	54 64 00 10 	e_stw   r3,16(r4)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:19
+
+		e_lis	r3, 0x7F00
+ 1000018:	70 6f e7 00 	e_lis   r3,32512
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:20
+		e_or2i	r3, 0x010A
+ 100001c:	70 60 c1 0a 	e_or2i  r3,266
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:21
+		e_stw	r3, 0(r4)
+ 1000020:	54 64 00 00 	e_stw   r3,0(r4)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:25
+#endif
+;#********************************* Enable BTB ********************************
+;# Flush & Enable BTB - Set BBFI bit in BUCSR
+		e_li	r3, 0x201
+ 1000024:	70 60 02 01 	e_li    r3,513
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:26
+		mtspr	1013, r3
+ 1000028:	7c 75 fb a6 	mtspr   1013,r3
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:27
+		se_isync
+ 100002c:	00 01       	se_isync
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:35
+;# The E200Z4 core needs its registers initialising before they are used
+;# otherwise in Lock Step mode the two cores will contain different random data.
+;# If this is stored to memory (e.g. stacked) it will cause a Lock Step error.
+
+;# GPRs 0-31
+		e_li	r0, 0
+ 100002e:	70 00 00 00 	e_li    r0,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:36
+		e_li	r1, 0
+ 1000032:	70 20 00 00 	e_li    r1,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:37
+		e_li	r2, 0
+ 1000036:	70 40 00 00 	e_li    r2,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:38
+		e_li	r3, 0
+ 100003a:	70 60 00 00 	e_li    r3,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:39
+		e_li	r4, 0
+ 100003e:	70 80 00 00 	e_li    r4,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:40
+		e_li	r5, 0
+ 1000042:	70 a0 00 00 	e_li    r5,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:41
+		e_li	r6, 0
+ 1000046:	70 c0 00 00 	e_li    r6,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:42
+		e_li	r7, 0
+ 100004a:	70 e0 00 00 	e_li    r7,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:43
+		e_li	r8, 0
+ 100004e:	71 00 00 00 	e_li    r8,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:44
+		e_li	r9, 0
+ 1000052:	71 20 00 00 	e_li    r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:45
+		e_li	r10, 0
+ 1000056:	71 40 00 00 	e_li    r10,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:46
+		e_li	r11, 0
+ 100005a:	71 60 00 00 	e_li    r11,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:47
+		e_li	r12, 0
+ 100005e:	71 80 00 00 	e_li    r12,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:48
+		e_li	r13, 0
+ 1000062:	71 a0 00 00 	e_li    r13,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:49
+		e_li	r14, 0
+ 1000066:	71 c0 00 00 	e_li    r14,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:50
+		e_li	r15, 0
+ 100006a:	71 e0 00 00 	e_li    r15,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:51
+		e_li	r16, 0
+ 100006e:	72 00 00 00 	e_li    r16,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:52
+		e_li	r17, 0
+ 1000072:	72 20 00 00 	e_li    r17,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:53
+		e_li	r18, 0
+ 1000076:	72 40 00 00 	e_li    r18,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:54
+		e_li	r19, 0
+ 100007a:	72 60 00 00 	e_li    r19,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:55
+		e_li	r20, 0
+ 100007e:	72 80 00 00 	e_li    r20,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:56
+		e_li	r21, 0
+ 1000082:	72 a0 00 00 	e_li    r21,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:57
+		e_li	r22, 0
+ 1000086:	72 c0 00 00 	e_li    r22,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:58
+		e_li	r23, 0
+ 100008a:	72 e0 00 00 	e_li    r23,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:59
+		e_li	r24, 0
+ 100008e:	73 00 00 00 	e_li    r24,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:60
+		e_li	r25, 0
+ 1000092:	73 20 00 00 	e_li    r25,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:61
+		e_li	r26, 0
+ 1000096:	73 40 00 00 	e_li    r26,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:62
+		e_li	r27, 0
+ 100009a:	73 60 00 00 	e_li    r27,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:63
+		e_li	r28, 0
+ 100009e:	73 80 00 00 	e_li    r28,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:64
+		e_li	r29, 0
+ 10000a2:	73 a0 00 00 	e_li    r29,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:65
+		e_li	r30, 0
+ 10000a6:	73 c0 00 00 	e_li    r30,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:66
+		e_li	r31, 0
+ 10000aa:	73 e0 00 00 	e_li    r31,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:70
+
+;# Init any other CPU register which might be stacked (before being used).
+
+		mtspr	1, r1		;#XER
+ 10000ae:	7c 21 03 a6 	mtxer   r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:71
+		mtcrf	0xFF, r1
+ 10000b2:	7c 2f f1 20 	mtcr    r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:72
+		mtspr	CTR, r1
+ 10000b6:	7c 29 03 a6 	mtctr   r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:73
+		mtspr	272, r1		;#SPRG0
+ 10000ba:	7c 30 43 a6 	mtsprg  0,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:74
+		mtspr	273, r1		;#SPRG1
+ 10000be:	7c 31 43 a6 	mtsprg  1,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:75
+		mtspr	274, r1		;#SPRG2
+ 10000c2:	7c 32 43 a6 	mtsprg  2,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:76
+		mtspr	275, r1		;#SPRG3
+ 10000c6:	7c 33 43 a6 	mtsprg  3,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:77
+		mtspr	58, r1		;#CSRR0
+ 10000ca:	7c 3a 0b a6 	mtcsrr0 r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:78
+		mtspr	59, r1		;#CSRR1
+ 10000ce:	7c 3b 0b a6 	mtcsrr1 r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:79
+		mtspr	570, r1		;#MCSRR0
+ 10000d2:	7c 3a 8b a6 	mtmcsrr0 r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:80
+		mtspr	571, r1		;#MCSRR1
+ 10000d6:	7c 3b 8b a6 	mtmcsrr1 r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:81
+		mtspr	61, r1		;#DEAR
+ 10000da:	7c 3d 0b a6 	mtdear  r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:82
+		mtspr	63, r1		;#IVPR
+ 10000de:	7c 3f 0b a6 	mtivpr  r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:83
+		mtspr	256, r1		;#USPRG0
+ 10000e2:	7c 20 43 a6 	mtusprg0 r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:84
+		mtspr	62, r1		;#ESR
+ 10000e6:	7c 3e 0b a6 	mtesr   r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:85
+		mtspr	8,r31		;#LR
+ 10000ea:	7f e8 03 a6 	mtlr    r31
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:90
+
+#ifdef START_FROM_FLASH
+;#***************************** Initialise SRAM ECC ***************************/
+;# Store number of 128Byte (32GPRs) segments in Counter
+ e_lis       r5, __SRAM_SIZE@h  # Initialize r5 to size of SRAM (Bytes)
+ 10000ee:	70 a0 e0 04 	e_lis   r5,4
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:91
+ e_or2i      r5, __SRAM_SIZE@l
+ 10000f2:	70 a0 c0 00 	e_or2i  r5,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:92
+ e_srwi      r5, r5, 0x7         # Divide SRAM size by 128
+ 10000f6:	7c a5 3c 70 	e_srwi  r5,r5,7
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:93
+ mtctr       r5                  # Move to counter for use with "bdnz"
+ 10000fa:	7c a9 03 a6 	mtctr   r5
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:96
+
+;# Base Address of the internal SRAM
+ e_lis       r5, __SRAM_BASE_ADDR@h
+ 10000fe:	70 a8 e0 00 	e_lis   r5,16384
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:97
+ e_or2i      r5, __SRAM_BASE_ADDR@l
+ 1000102:	70 a0 c0 00 	e_or2i  r5,0
+
+01000106 <sram_loop>:
+sram_loop():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:101
+
+;# Fill SRAM with writes of 32GPRs
+sram_loop:
+    e_stmw      r0,0(r5)            # Write all 32 registers to SRAM
+ 1000106:	18 05 09 00 	e_stmw  r0,0(r5)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:102
+    e_addi      r5,r5,128           # Increment the RAM pointer to next 128bytes
+ 100010a:	18 a5 80 80 	e_addi  r5,r5,128
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:103
+    e_bdnz      sram_loop           # Loop for all of SRAM
+ 100010e:	7a 20 ff f8 	e_bdnz  1000106 <sram_loop>
+
+01000112 <DATACOPY>:
+DATACOPY():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:109
+#endif
+    
+;#*************** Load Initialised Data Values from Flash into RAM ************/
+;# Initialised Data - ".data"
+DATACOPY:
+    e_lis       r9, __DATA_SIZE@ha      # Load upper SRAM load size (# of bytes) into R9
+ 1000112:	71 20 e0 00 	e_lis   r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:110
+    e_or2i      r9, __DATA_SIZE@l       # Load lower SRAM load size into R9                                     
+ 1000116:	71 20 c0 00 	e_or2i  r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:111
+    e_cmp16i    r9,0                    # Compare to see if equal to 0                                  
+ 100011a:	70 09 98 00 	e_cmp16i r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:112
+    e_beq       SDATACOPY               # Exit cfg_ROMCPY if size is zero (no data to initialise)
+ 100011e:	7a 12 00 2c 	e_beq   100014a <SDATACOPY>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:114
+                                        
+    mtctr       r9                      # Store no. of bytes to be moved in counter
+ 1000122:	7d 29 03 a6 	mtctr   r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:116
+                                        
+    e_lis       r10, __DATA_ROM_ADDR@h  # Load address of first SRAM load into R10
+ 1000126:	71 40 e1 00 	e_lis   r10,256
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:117
+    e_or2i      r10, __DATA_ROM_ADDR@l  # Load lower address of SRAM load into R10
+ 100012a:	71 49 c2 04 	e_or2i  r10,18948
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:118
+    e_subi      r10,r10, 1              # Decrement address to prepare for ROMCPYLOOP
+ 100012e:	19 4a 84 ff 	e_addi  r10,r10,-1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:120
+
+    e_lis       r5, __DATA_SRAM_ADDR@h  # Load upper SRAM address into R5 (from linker file)
+ 1000132:	70 a8 e0 02 	e_lis   r5,16386
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:121
+    e_or2i      r5, __DATA_SRAM_ADDR@l  # Load lower SRAM address into R5 (from linker file)
+ 1000136:	70 a0 c0 00 	e_or2i  r5,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:122
+    e_subi      r5, r5, 1               # Decrement address to prepare for ROMCPYLOOP
+ 100013a:	18 a5 84 ff 	e_addi  r5,r5,-1
+
+0100013e <DATACPYLOOP>:
+DATACPYLOOP():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:125
+
+DATACPYLOOP:
+    e_lbzu      r4, 1(r10)              # Load data byte at R10 into R4,incrementing (update) ROM address
+ 100013e:	18 8a 00 01 	e_lbzu  r4,1(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:126
+    e_stbu      r4, 1(r5)               # Store R4 data byte into SRAM at R5 and update SRAM address 
+ 1000142:	18 85 04 01 	e_stbu  r4,1(r5)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:127
+    e_bdnz      DATACPYLOOP             # Branch if more bytes to load from ROM
+ 1000146:	7a 20 ff f8 	e_bdnz  100013e <DATACPYLOOP>
+
+0100014a <SDATACOPY>:
+SDATACOPY():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:131
+
+;# Small Initialised Data - ".sdata"
+SDATACOPY:    
+    e_lis       r9, __SDATA_SIZE@ha     # Load upper SRAM load size (# of bytes) into R9
+ 100014a:	71 20 e0 00 	e_lis   r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:132
+    e_or2i      r9, __SDATA_SIZE@l      # Load lower SRAM load size into R9                                     
+ 100014e:	71 20 c0 00 	e_or2i  r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:133
+    e_cmp16i    r9,0                    # Compare to see if equal to 0                                  
+ 1000152:	70 09 98 00 	e_cmp16i r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:134
+    e_beq       ROMCPYEND               # Exit cfg_ROMCPY if size is zero (no data to initialise)
+ 1000156:	7a 12 00 2c 	e_beq   1000182 <ROMCPYEND>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:136
+                                        
+    mtctr       r9                      # Store no. of bytes to be moved in counter
+ 100015a:	7d 29 03 a6 	mtctr   r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:138
+                                        
+    e_lis       r10, __SDATA_ROM_ADDR@h # Load address of first SRAM load into R10
+ 100015e:	71 40 e1 00 	e_lis   r10,256
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:139
+    e_or2i      r10, __SDATA_ROM_ADDR@l # Load lower address of SRAM load into R10
+ 1000162:	71 49 c2 04 	e_or2i  r10,18948
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:140
+    e_subi      r10,r10, 1              # Decrement address to prepare for ROMCPYLOOP
+ 1000166:	19 4a 84 ff 	e_addi  r10,r10,-1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:142
+
+    e_lis       r5, __SDATA_SRAM_ADDR@h # Load upper SRAM address into R5 (from linker file)
+ 100016a:	70 a8 e0 02 	e_lis   r5,16386
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:143
+    e_or2i      r5, __SDATA_SRAM_ADDR@l # Load lower SRAM address into R5 (from linker file)
+ 100016e:	70 a0 c0 00 	e_or2i  r5,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:144
+    e_subi      r5, r5, 1               # Decrement address to prepare for ROMCPYLOOP
+ 1000172:	18 a5 84 ff 	e_addi  r5,r5,-1
+
+01000176 <SDATACPYLOOP>:
+SDATACPYLOOP():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:147
+
+SDATACPYLOOP:
+    e_lbzu      r4, 1(r10)              # Load data byte at R10 into R4,incrementing (update) ROM address
+ 1000176:	18 8a 00 01 	e_lbzu  r4,1(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:148
+    e_stbu      r4, 1(r5)               # Store R4 data byte into SRAM at R5 and update SRAM address 
+ 100017a:	18 85 04 01 	e_stbu  r4,1(r5)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:149
+    e_bdnz      SDATACPYLOOP            # Branch if more bytes to load from ROM
+ 100017e:	7a 20 ff f8 	e_bdnz  1000176 <SDATACPYLOOP>
+
+01000182 <ROMCPYEND>:
+ROMCPYEND():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:155
+    
+    
+ROMCPYEND:
+
+;#*************************** Enable ME Bit in MSR *****************************
+		mfmsr	r6
+ 1000182:	7c c0 00 a6 	mfmsr   r6
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:156
+		e_or2i	r6,0x1000
+ 1000186:	70 c2 c0 00 	e_or2i  r6,4096
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:157
+		mtmsr	r6
+ 100018a:	7c c0 01 24 	mtmsr   r6
+
+0100018e <__icache_cfg>:
+__icache_cfg():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:162
+
+#if defined(I_CACHE)
+;#****************** Invalidate and Enable the Instruction cache **************
+__icache_cfg:
+		e_li	r5, 0x2
+ 100018e:	70 a0 00 02 	e_li    r5,2
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:163
+		mtspr	1011,r5
+ 1000192:	7c b3 fb a6 	mtspr   1011,r5
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:165
+
+		e_li	r7, 0x4
+ 1000196:	70 e0 00 04 	e_li    r7,4
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:166
+		e_li	r8, 0x2
+ 100019a:	71 00 00 02 	e_li    r8,2
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:168
+		;#e_lwi r11, 0xFFFFFFFB
+		e_lis	r11,0xFFFF
+ 100019e:	71 7f e7 ff 	e_lis   r11,65535
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:169
+		e_or2i	r11,0xFFFB
+ 10001a2:	71 7f c7 fb 	e_or2i  r11,65531
+
+010001a6 <__icache_inv>:
+__icache_inv():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:172
+
+__icache_inv:
+		mfspr	r9, 1011
+ 10001a6:	7d 33 fa a6 	mfspr   r9,1011
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:173
+		and.	r10, r7, r9
+ 10001aa:	7c ea 48 39 	and.    r10,r7,r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:174
+		e_beq	__icache_no_abort
+ 10001ae:	7a 12 00 10 	e_beq   10001be <__icache_no_abort>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:175
+		and.	r10, r11, r9
+ 10001b2:	7d 6a 48 39 	and.    r10,r11,r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:176
+		mtspr	1011, r10
+ 10001b6:	7d 53 fb a6 	mtspr   1011,r10
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:177
+		e_b		__icache_cfg
+ 10001ba:	79 ff ff d4 	e_b     100018e <__icache_cfg>
+
+010001be <__icache_no_abort>:
+__icache_no_abort():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:180
+
+__icache_no_abort:
+		and.	r10, r8, r9
+ 10001be:	7d 0a 48 39 	and.    r10,r8,r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:181
+		e_bne	__icache_inv
+ 10001c2:	7a 02 ff e4 	e_bne   10001a6 <__icache_inv>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:183
+
+		mfspr	r5, 1011
+ 10001c6:	7c b3 fa a6 	mfspr   r5,1011
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:184
+		e_ori	r5, r5, 0x0001
+ 10001ca:	18 a5 d0 01 	e_ori   r5,r5,1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:185
+		se_isync
+ 10001ce:	00 01       	se_isync
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:187
+		;#msync
+		mtspr	1011, r5
+ 10001d0:	7c b3 fb a6 	mtspr   1011,r5
+
+010001d4 <__dcache_cfg>:
+__dcache_cfg():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:192
+#endif
+#if defined(D_CACHE)
+;#****************** Invalidate and Enable the Data cache **************
+__dcache_cfg:
+        e_li r5, 0x2
+ 10001d4:	70 a0 00 02 	e_li    r5,2
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:193
+        mtspr 1010,r5
+ 10001d8:	7c b2 fb a6 	mtspr   1010,r5
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:195
+
+        e_li r7, 0x4
+ 10001dc:	70 e0 00 04 	e_li    r7,4
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:196
+        e_li r8, 0x2
+ 10001e0:	71 00 00 02 	e_li    r8,2
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:197
+        e_lis	r11,0xFFFF
+ 10001e4:	71 7f e7 ff 	e_lis   r11,65535
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:198
+		e_or2i	r11,0xFFFB
+ 10001e8:	71 7f c7 fb 	e_or2i  r11,65531
+
+010001ec <__dcache_inv>:
+__dcache_inv():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:201
+
+__dcache_inv:
+        mfspr r9, 1010
+ 10001ec:	7d 32 fa a6 	mfspr   r9,1010
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:202
+        and.  r10, r7, r9
+ 10001f0:	7c ea 48 39 	and.    r10,r7,r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:203
+        e_beq   __dcache_no_abort
+ 10001f4:	7a 12 00 10 	e_beq   1000204 <__dcache_no_abort>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:204
+        and.  r10, r11, r9
+ 10001f8:	7d 6a 48 39 	and.    r10,r11,r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:205
+        mtspr 1010, r10
+ 10001fc:	7d 52 fb a6 	mtspr   1010,r10
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:206
+        e_b __dcache_cfg
+ 1000200:	79 ff ff d4 	e_b     10001d4 <__dcache_cfg>
+
+01000204 <__dcache_no_abort>:
+__dcache_no_abort():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:209
+
+__dcache_no_abort:
+        and.  r10, r8, r9
+ 1000204:	7d 0a 48 39 	and.    r10,r8,r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:210
+        e_bne __dcache_inv
+ 1000208:	7a 02 ff e4 	e_bne   10001ec <__dcache_inv>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:212
+
+        mfspr r5, 1010
+ 100020c:	7c b2 fa a6 	mfspr   r5,1010
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:213
+        e_ori   r5, r5, 0x0001
+ 1000210:	18 a5 d0 01 	e_ori   r5,r5,1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:214
+        se_isync
+ 1000214:	00 01       	se_isync
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:215
+        msync
+ 1000216:	7c 00 04 ac 	sync    
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:216
+        mtspr 1010, r5
+ 100021a:	7c b2 fb a6 	mtspr   1010,r5
+
+0100021e <bss_Init>:
+bss_Init():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:221
+#endif
+
+;#****************************** Initialize BSS section ******************************/
+bss_Init:
+    e_lis        r9, __BSS_SIZE@h       # Load upper BSS load size (# of bytes) into R9
+ 100021e:	71 20 e0 00 	e_lis   r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:222
+    e_or2i       r9, __BSS_SIZE@l       # Load lower BSS load size into R9 and compare to zero
+ 1000222:	71 20 c0 ac 	e_or2i  r9,172
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:223
+    e_cmp16i     r9,0
+ 1000226:	70 09 98 00 	e_cmp16i r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:224
+    e_beq        bss_Init_end           # Exit if size is zero (no data to initialise)
+ 100022a:	7a 12 00 20 	e_beq   100024a <bss_Init_end>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:226
+
+    mtctr        r9                     # Store no. of bytes to be moved in counter
+ 100022e:	7d 29 03 a6 	mtctr   r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:228
+
+    e_lis        r5, __BSS_START@h      # Load upper BSS address into R5 (from linker file)
+ 1000232:	70 a8 e0 02 	e_lis   r5,16386
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:229
+    e_or2i       r5, __BSS_START@l      # Load lower BSS address into R5 (from linker file)
+ 1000236:	70 a0 c0 00 	e_or2i  r5,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:230
+    e_subi       r5, r5, 1              # Decrement address to prepare for bss_Init_loop
+ 100023a:	18 a5 84 ff 	e_addi  r5,r5,-1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:232
+
+    e_lis        r4, 0x0
+ 100023e:	70 80 e0 00 	e_lis   r4,0
+
+01000242 <bss_Init_loop>:
+bss_Init_loop():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:235
+
+bss_Init_loop:
+    e_stbu       r4, 1(r5)              # Store zero byte into BSS at R5 and update BSS address
+ 1000242:	18 85 04 01 	e_stbu  r4,1(r5)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:236
+    e_bdnz       bss_Init_loop          # Branch if more bytes to load
+ 1000246:	7a 20 ff fc 	e_bdnz  1000242 <bss_Init_loop>
+
+0100024a <bss_Init_end>:
+bss_Init_end():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:241
+
+bss_Init_end:
+
+;#****************************** Configure Stack ******************************/
+		e_lis	r1, __SP_INIT@h	;# Initialize stack pointer r1 to
+ 100024a:	70 28 e0 02 	e_lis   r1,16386
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:242
+		e_or2i	r1, __SP_INIT@l	;# value in linker command file.
+ 100024e:	70 22 c0 b0 	e_or2i  r1,4272
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:244
+
+		e_lis	r13, _SDA_BASE_@h	;# Initialize r13 to sdata base
+ 1000252:	71 a8 e0 02 	e_lis   r13,16386
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:245
+		e_or2i	r13, _SDA_BASE_@l	;# (provided by linker).
+ 1000256:	71 b0 c0 00 	e_or2i  r13,32768
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:247
+
+		e_lis	r2, _SDA2_BASE_@h	;# Initialize r2 to sdata2 base
+ 100025a:	70 48 e0 02 	e_lis   r2,16386
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:248
+		e_or2i	r2, _SDA2_BASE_@l	;# (provided by linker).
+ 100025e:	70 50 c0 00 	e_or2i  r2,32768
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:250
+
+		e_stwu	r0,-64(r1)			;# Terminate stack.
+ 1000262:	18 01 06 c0 	e_stwu  r0,-64(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../Project_Settings/Startup_Code/startup.S:257
+#if defined(HW_INIT)
+;# perform hardware init prior to main
+		e_bl   hw_init
+#endif
+;# Jump to Main
+		e_bl	main
+ 1000266:	78 00 34 07 	e_bl    100366c <main>
+
+Disassembly of section .core_exceptions_table:
+
+01001000 <IVOR0_Vector>:
+VTABLE():
+ 1001000:	78 00 00 00 	e_b     1001000 <IVOR0_Vector>
+ 1001004:	44 00       	se_nop
+ 1001006:	44 00       	se_nop
+ 1001008:	44 00       	se_nop
+ 100100a:	44 00       	se_nop
+ 100100c:	44 00       	se_nop
+ 100100e:	44 00       	se_nop
+
+01001010 <IVOR1_Vector>:
+IVOR1_Vector():
+ 1001010:	78 00 00 00 	e_b     1001010 <IVOR1_Vector>
+ 1001014:	44 00       	se_nop
+ 1001016:	44 00       	se_nop
+ 1001018:	44 00       	se_nop
+ 100101a:	44 00       	se_nop
+ 100101c:	44 00       	se_nop
+ 100101e:	44 00       	se_nop
+
+01001020 <IVOR2_Vector>:
+IVOR2_Vector():
+ 1001020:	78 00 00 00 	e_b     1001020 <IVOR2_Vector>
+ 1001024:	44 00       	se_nop
+ 1001026:	44 00       	se_nop
+ 1001028:	44 00       	se_nop
+ 100102a:	44 00       	se_nop
+ 100102c:	44 00       	se_nop
+ 100102e:	44 00       	se_nop
+
+01001030 <IVOR3_Vector>:
+IVOR3_Vector():
+ 1001030:	78 00 00 00 	e_b     1001030 <IVOR3_Vector>
+ 1001034:	44 00       	se_nop
+ 1001036:	44 00       	se_nop
+ 1001038:	44 00       	se_nop
+ 100103a:	44 00       	se_nop
+ 100103c:	44 00       	se_nop
+ 100103e:	44 00       	se_nop
+
+01001040 <IVOR4_Vector>:
+IVOR4_Vector():
+ 1001040:	78 00 00 00 	e_b     1001040 <IVOR4_Vector>
+ 1001044:	44 00       	se_nop
+ 1001046:	44 00       	se_nop
+ 1001048:	44 00       	se_nop
+ 100104a:	44 00       	se_nop
+ 100104c:	44 00       	se_nop
+ 100104e:	44 00       	se_nop
+
+01001050 <IVOR6_Vector>:
+IVOR6_Vector():
+ 1001050:	78 00 1b f8 	e_b     1002c48 <IVOR6_Handler>
+ 1001054:	44 00       	se_nop
+ 1001056:	44 00       	se_nop
+ 1001058:	44 00       	se_nop
+ 100105a:	44 00       	se_nop
+ 100105c:	44 00       	se_nop
+ 100105e:	44 00       	se_nop
+
+01001060 <IVOR7_Vector>:
+IVOR7_Vector():
+ 1001060:	78 00 00 00 	e_b     1001060 <IVOR7_Vector>
+ 1001064:	44 00       	se_nop
+ 1001066:	44 00       	se_nop
+ 1001068:	44 00       	se_nop
+ 100106a:	44 00       	se_nop
+ 100106c:	44 00       	se_nop
+ 100106e:	44 00       	se_nop
+
+01001070 <IVOR8_Vector>:
+IVOR8_Vector():
+ 1001070:	78 00 00 00 	e_b     1001070 <IVOR8_Vector>
+ 1001074:	44 00       	se_nop
+ 1001076:	44 00       	se_nop
+ 1001078:	44 00       	se_nop
+ 100107a:	44 00       	se_nop
+ 100107c:	44 00       	se_nop
+ 100107e:	44 00       	se_nop
+
+01001080 <IVOR9_Vector>:
+IVOR9_Vector():
+ 1001080:	78 00 00 00 	e_b     1001080 <IVOR9_Vector>
+ 1001084:	44 00       	se_nop
+ 1001086:	44 00       	se_nop
+ 1001088:	44 00       	se_nop
+ 100108a:	44 00       	se_nop
+ 100108c:	44 00       	se_nop
+ 100108e:	44 00       	se_nop
+
+01001090 <IVOR10_Vector>:
+IVOR10_Vector():
+ 1001090:	78 00 00 00 	e_b     1001090 <IVOR10_Vector>
+ 1001094:	44 00       	se_nop
+ 1001096:	44 00       	se_nop
+ 1001098:	44 00       	se_nop
+ 100109a:	44 00       	se_nop
+ 100109c:	44 00       	se_nop
+ 100109e:	44 00       	se_nop
+
+010010a0 <IVOR11_Vector>:
+IVOR11_Vector():
+ 10010a0:	78 00 00 00 	e_b     10010a0 <IVOR11_Vector>
+ 10010a4:	44 00       	se_nop
+ 10010a6:	44 00       	se_nop
+ 10010a8:	44 00       	se_nop
+ 10010aa:	44 00       	se_nop
+ 10010ac:	44 00       	se_nop
+ 10010ae:	44 00       	se_nop
+
+010010b0 <IVOR12_Vector>:
+IVOR12_Vector():
+ 10010b0:	78 00 00 00 	e_b     10010b0 <IVOR12_Vector>
+ 10010b4:	44 00       	se_nop
+ 10010b6:	44 00       	se_nop
+ 10010b8:	44 00       	se_nop
+ 10010ba:	44 00       	se_nop
+ 10010bc:	44 00       	se_nop
+ 10010be:	44 00       	se_nop
+
+010010c0 <IVOR13_Vector>:
+IVOR13_Vector():
+ 10010c0:	78 00 00 00 	e_b     10010c0 <IVOR13_Vector>
+ 10010c4:	44 00       	se_nop
+ 10010c6:	44 00       	se_nop
+ 10010c8:	44 00       	se_nop
+ 10010ca:	44 00       	se_nop
+ 10010cc:	44 00       	se_nop
+ 10010ce:	44 00       	se_nop
+
+010010d0 <IVOR14_Vector>:
+IVOR14_Vector():
+ 10010d0:	78 00 00 00 	e_b     10010d0 <IVOR14_Vector>
+ 10010d4:	44 00       	se_nop
+ 10010d6:	44 00       	se_nop
+ 10010d8:	44 00       	se_nop
+ 10010da:	44 00       	se_nop
+ 10010dc:	44 00       	se_nop
+ 10010de:	44 00       	se_nop
+
+010010e0 <IVOR15_Vector>:
+IVOR15_Vector():
+ 10010e0:	78 00 00 00 	e_b     10010e0 <IVOR15_Vector>
+
+Disassembly of section .text:
+
+01002bd0 <JumpToAddress>:
+JumpToAddress():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:36
+#endif /* defined(DEBUG_SECONDARY_CORES) */
+}
+
+__attribute__ ((section(".text")))
+/*********************************Thanh*********DONE********************/
+void JumpToAddress(void (*StartAddress)()) {
+ 1002bd0:	18 21 06 e8 	e_stwu  r1,-24(r1)
+ 1002bd4:	00 80       	se_mflr r0
+ 1002bd6:	d7 01       	se_stw  r0,28(r1)
+ 1002bd8:	d5 f1       	se_stw  r31,20(r1)
+ 1002bda:	01 1f       	se_mr   r31,r1
+ 1002bdc:	d2 3f       	se_stw  r3,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:37
+	(*StartAddress)();
+ 1002bde:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 1002be2:	7d 29 03 a6 	mtctr   r9
+ 1002be6:	00 07       	se_bctrl
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:38
+}
+ 1002be8:	19 7f 80 18 	e_addi  r11,r31,24
+ 1002bec:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 1002bf0:	00 90       	se_mtlr r0
+ 1002bf2:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1002bf6:	03 31       	se_mfar r1,r11
+ 1002bf8:	00 04       	se_blr
+ 1002bfa:	00 00       	se_illegal
+ 1002bfc:	00 00       	se_illegal
+	...
+
+01002c00 <IVOR4_Handler>:
+prologue():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:27
+
+    .align 4
+
+IVOR4_Handler:
+prologue:
+    e_stwu      r1,-0x50 (r1)           ;# Create stack frame and store back chain
+ 1002c00:	18 21 06 b0 	e_stwu  r1,-80(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:28
+    e_stmvsrrw      0x0c (r1)           ;# Save SRR[0-1] (must be done before enabling MSR[EE])
+ 1002c04:	18 81 11 0c 	e_stmvsrrw 12(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:29
+    se_stw      r3, 0x08 (r1)           ;# Save working register (r3)
+ 1002c08:	d2 31       	se_stw  r3,8(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:30
+    e_lis       r3, INTC_IACKR@ha       ;# Save address  of INTC_IACKR in r3
+ 1002c0a:	70 7f e4 04 	e_lis   r3,64516
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:31
+    e_lwz       r3, INTC_IACKR@l(r3)    ;# Save contents of INTC_IACKR in r3 (this is vector table address)
+ 1002c0e:	50 63 00 20 	e_lwz   r3,32(r3)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:32
+    wrteei      1                       ;# Set MSR[EE] (must wait a couple clocks after reading IACKR)
+ 1002c12:	7c 00 81 46 	wrteei  1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:33
+    se_lwz      r3, 0x0(r3)             ;# Read ISR address from Interrupt Vector Table using pointer
+ 1002c16:	c0 33       	se_lwz  r3,0(r3)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:34
+    e_stmvsprw      0x14 (r1)           ;# Save CR, LR, CTR, XER
+ 1002c18:	18 21 11 14 	e_stmvsprw 20(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:35
+    se_mtLR     r3                      ;# Copy ISR address (from IACKR) to LR for next branch
+ 1002c1c:	00 93       	se_mtlr r3
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:36
+    e_stmvgprw      0x24 (r1)           ;# Save GPRs, r[0,3-12]
+ 1002c1e:	18 01 11 24 	e_stmvgprw 36(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:37
+    se_blrl                             ;# Branch to ISR, with return to next instruction (epilogue)
+ 1002c22:	00 05       	se_blrl
+
+01002c24 <epilogue>:
+epilogue():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:40
+
+epilogue:
+    e_lmvsprw       0x14 (r1)           ;# Restore CR, LR, CTR, XER
+ 1002c24:	18 21 10 14 	e_ldmvsprw 20(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:41
+    e_lmvgprw       0x24 (r1)           ;# Restore GPRs, r[0,3-12]
+ 1002c28:	18 01 10 24 	e_ldmvgprw 36(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:42
+    e_lis       r3, INTC_EOIR@ha        ;# Load upper half of INTC_EOIR address to r3
+ 1002c2c:	70 7f e4 04 	e_lis   r3,64516
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:43
+    mbar                                ;# Ensure prior clearing of interrupt flag conmpleted.
+ 1002c30:	7c 00 06 ac 	mbar    
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:44
+    wrteei      0                       ;# Disable interrupts
+ 1002c34:	7c 00 01 46 	wrteei  0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:45
+    e_stw       r3, INTC_EOIR@l(r3)     ;# Load lower half of INTC_EOIR address to r3 and
+ 1002c38:	54 63 00 30 	e_stw   r3,48(r3)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:47
+                                        ;# write contents of r3 to INTC_EOIR
+    se_lwz      r3, 0x08 (r1)           ;# Restore working register (r3) (original value)
+ 1002c3c:	c2 31       	se_lwz  r3,8(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:48
+    e_lmvsrrw       0x0c (r1)           ;# Restore SRR[0-1]
+ 1002c3e:	18 81 10 0c 	e_ldmvsrrw 12(r1)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:49
+    e_add16i    r1, r1, 0x50            ;# Reclaim stack space
+ 1002c42:	1c 21 00 50 	e_add16i r1,r1,80
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:50
+    se_rfi                              ;# End of Interrupt Handler - re-enables interrupts
+ 1002c46:	00 08       	se_rfi
+
+01002c48 <IVOR6_Handler>:
+IVOR6_Handler():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_sw_handlers.S:53
+
+    IVOR6_Handler:
+        e_b 	1000000              ;   #jump to Bootloader
+ 1002c48:	78 0f 42 40 	e_b     10f6e88 <__DATA_ROM_ADDR+0xf2484>
+
+01002c4c <_restgpr_14_x>:
+_restgpr_14_x():
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:58
+ 1002c4c:	51 cb ff b8 	e_lwz   r14,-72(r11)
+
+01002c50 <_restgpr_15_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:60
+ 1002c50:	51 eb ff bc 	e_lwz   r15,-68(r11)
+
+01002c54 <_restgpr_16_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:62
+ 1002c54:	52 0b ff c0 	e_lwz   r16,-64(r11)
+
+01002c58 <_restgpr_17_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:64
+ 1002c58:	52 2b ff c4 	e_lwz   r17,-60(r11)
+
+01002c5c <_restgpr_18_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:66
+ 1002c5c:	52 4b ff c8 	e_lwz   r18,-56(r11)
+
+01002c60 <_restgpr_19_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:68
+ 1002c60:	52 6b ff cc 	e_lwz   r19,-52(r11)
+
+01002c64 <_restgpr_20_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:70
+ 1002c64:	52 8b ff d0 	e_lwz   r20,-48(r11)
+
+01002c68 <_restgpr_21_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:72
+ 1002c68:	52 ab ff d4 	e_lwz   r21,-44(r11)
+
+01002c6c <_restgpr_22_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:74
+ 1002c6c:	52 cb ff d8 	e_lwz   r22,-40(r11)
+
+01002c70 <_restgpr_23_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:76
+ 1002c70:	52 eb ff dc 	e_lwz   r23,-36(r11)
+
+01002c74 <_restgpr_24_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:78
+ 1002c74:	53 0b ff e0 	e_lwz   r24,-32(r11)
+
+01002c78 <_restgpr_25_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:80
+ 1002c78:	53 2b ff e4 	e_lwz   r25,-28(r11)
+
+01002c7c <_restgpr_26_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:82
+ 1002c7c:	53 4b ff e8 	e_lwz   r26,-24(r11)
+
+01002c80 <_restgpr_27_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:84
+ 1002c80:	53 6b ff ec 	e_lwz   r27,-20(r11)
+
+01002c84 <_restgpr_28_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:86
+ 1002c84:	53 8b ff f0 	e_lwz   r28,-16(r11)
+
+01002c88 <_restgpr_29_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:88
+ 1002c88:	53 ab ff f4 	e_lwz   r29,-12(r11)
+
+01002c8c <_restgpr_30_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:90
+ 1002c8c:	53 cb ff f8 	e_lwz   r30,-8(r11)
+
+01002c90 <_restgpr_31_x>:
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:92
+ 1002c90:	50 0b 00 04 	e_lwz   r0,4(r11)
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:93
+ 1002c94:	53 eb ff fc 	e_lwz   r31,-4(r11)
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:95
+ 1002c98:	00 90       	se_mtlr r0
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:97
+ 1002c9a:	03 31       	se_mfar r1,r11
+/home/jbuilds/workspace/S32DS_ToolsGCC_E200/build_gnu/opt/freescale/ELvle/obj_gcc/powerpc-eabivle/fp/e200z4/libgcc/../../../../../src_gcc/libgcc/config/rs6000/e200crtresxgpr.S:99
+ 1002c9c:	00 04       	se_blr
+
+01002c9e <isxdigit>:
+isxdigit():
+C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2/EWL_C/include/cctype:177
+	_EWL_INLINE int _EWL_CDECL _EWL_CANT_THROW islower(int c) { return (((unsigned)(c) >= __ewl_cmap_size)) ? 0 : (int) (_EWL_CMAP_ACCESS[c] & __ewl_lower); }
+	_EWL_INLINE int _EWL_CDECL _EWL_CANT_THROW isprint(int c) { return (((unsigned)(c) >= __ewl_cmap_size)) ? 0 : (int) (_EWL_CMAP_ACCESS[c] & __ewl_print); }
+	_EWL_INLINE int _EWL_CDECL _EWL_CANT_THROW ispunct(int c) { return (((unsigned)(c) >= __ewl_cmap_size)) ? 0 : (int) (_EWL_CMAP_ACCESS[c] & __ewl_punct); }
+	_EWL_INLINE int _EWL_CDECL _EWL_CANT_THROW isspace(int c) { return (((unsigned)(c) >= __ewl_cmap_size)) ? 0 : (int) (_EWL_CMAP_ACCESS[c] & __ewl_space); }
+	_EWL_INLINE int _EWL_CDECL _EWL_CANT_THROW isupper(int c) { return (((unsigned)(c) >= __ewl_cmap_size)) ? 0 : (int) (_EWL_CMAP_ACCESS[c] & __ewl_upper); }
+	_EWL_INLINE int _EWL_CDECL _EWL_CANT_THROW isxdigit(int c){ return (((unsigned)(c) >= __ewl_cmap_size)) ? 0 : (int) (_EWL_CMAP_ACCESS[c] & __ewl_xdigit); }
+ 1002c9e:	18 21 06 e8 	e_stwu  r1,-24(r1)
+ 1002ca2:	d5 f1       	se_stw  r31,20(r1)
+ 1002ca4:	01 1f       	se_mr   r31,r1
+ 1002ca6:	d2 3f       	se_stw  r3,8(r31)
+ 1002ca8:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 1002cac:	70 09 a8 7f 	e_cmpl16i r9,127
+ 1002cb0:	7f 80 00 20 	e_mcrf  cr7
+ 1002cb4:	7d 20 00 26 	mfcr    r9
+ 1002cb8:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002cbc:	7d 28 01 20 	mtcrf   128,r9
+ 1002cc0:	7a 11 00 28 	e_bgt   1002ce8 <isxdigit+0x4a>
+C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2/EWL_C/include/cctype:177 (discriminator 1)
+ 1002cc4:	71 20 e1 00 	e_lis   r9,256
+ 1002cc8:	1d 49 48 72 	e_add16i r10,r9,18546
+ 1002ccc:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 1002cd0:	7d 29 08 70 	e_slwi  r9,r9,1
+ 1002cd4:	7d 2a 4a 14 	add     r9,r10,r9
+ 1002cd8:	59 29 00 00 	e_lhz   r9,0(r9)
+ 1002cdc:	75 29 04 3f 	e_rlwinm r9,r9,0,16,31
+ 1002ce0:	19 29 c1 04 	e_andi  r9,r9,1024
+ 1002ce4:	78 00 00 08 	e_b     1002cec <isxdigit+0x4e>
+C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2/EWL_C/include/cctype:177 (discriminator 2)
+ 1002ce8:	71 20 00 00 	e_li    r9,0
+C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2/EWL_C/include/cctype:177 (discriminator 4)
+ 1002cec:	03 13       	se_mfar r3,r9
+ 1002cee:	19 7f 80 18 	e_addi  r11,r31,24
+ 1002cf2:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1002cf6:	03 31       	se_mfar r1,r11
+ 1002cf8:	00 04       	se_blr
+
+01002cfa <GetHex>:
+GetHex():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:43
+ *******************************************************************************/
+
+/*******************************************************************************
+ Function Name : GetHex
+ ******************************Tung**********************DONE***************************/
+static uint8_t GetHex(uint8_t *MemByte) {
+ 1002cfa:	18 21 06 d8 	e_stwu  r1,-40(r1)
+ 1002cfe:	00 80       	se_mflr r0
+ 1002d00:	db 01       	se_stw  r0,44(r1)
+ 1002d02:	d9 f1       	se_stw  r31,36(r1)
+ 1002d04:	01 1f       	se_mr   r31,r1
+ 1002d06:	d6 3f       	se_stw  r3,24(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:46
+	int8_t c; /* used to hold the received ASCII hex byte */
+
+	*MemByte = 0;
+ 1002d08:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002d0c:	71 40 00 00 	e_li    r10,0
+ 1002d10:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:48
+
+	c = GetChar(); /* get an ASCII hex byte from stdin (upper nybble of byte) */
+ 1002d14:	78 00 15 fb 	e_bl    100430e <GetChar>
+ 1002d18:	02 31       	se_mtar r9,r3
+ 1002d1a:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:50
+
+	if (!isxdigit(c)) /* is it a valid hex digit */{
+ 1002d1e:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002d22:	7d 29 07 74 	extsb   r9,r9
+ 1002d26:	03 13       	se_mfar r3,r9
+ 1002d28:	79 ff ff 77 	e_bl    1002c9e <isxdigit>
+ 1002d2c:	02 31       	se_mtar r9,r3
+ 1002d2e:	70 09 98 00 	e_cmp16i r9,0
+ 1002d32:	7f 80 00 20 	e_mcrf  cr7
+ 1002d36:	7d 20 00 26 	mfcr    r9
+ 1002d3a:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002d3e:	7d 28 01 20 	mtcrf   128,r9
+ 1002d42:	7a 02 00 1a 	e_bne   1002d5c <GetHex+0x62>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:51
+		send2Term("invalid hex digit",17);
+ 1002d46:	71 20 e1 00 	e_lis   r9,256
+ 1002d4a:	1c 69 47 80 	e_add16i r3,r9,18304
+ 1002d4e:	49 14       	se_li   r4,17
+ 1002d50:	78 00 13 3f 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:52
+		return (ErrorHex); /* no. return an error */
+ 1002d54:	71 20 00 05 	e_li    r9,5
+ 1002d58:	78 00 01 14 	e_b     1002e6c <GetHex+0x172>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:56
+	}
+
+	/* convert the ASCII character to a binary hex nybble */
+	*MemByte = (uint8_t) (isdigit(c) ? c - '0' : c - 'A' + 10) << 4;
+ 1002d5c:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002d60:	7d 29 07 74 	extsb   r9,r9
+ 1002d64:	19 29 84 d0 	e_addi  r9,r9,-48
+ 1002d68:	70 09 a8 09 	e_cmpl16i r9,9
+ 1002d6c:	7f 80 00 20 	e_mcrf  cr7
+ 1002d70:	7d 20 00 26 	mfcr    r9
+ 1002d74:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002d78:	7d 28 01 20 	mtcrf   128,r9
+ 1002d7c:	7a 11 00 20 	e_bgt   1002d9c <GetHex+0xa2>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:56 (discriminator 1)
+ 1002d80:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002d84:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002d88:	19 29 84 d0 	e_addi  r9,r9,-48
+ 1002d8c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002d90:	7d 29 20 70 	e_slwi  r9,r9,4
+ 1002d94:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002d98:	78 00 00 1c 	e_b     1002db4 <GetHex+0xba>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:56 (discriminator 2)
+ 1002d9c:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002da0:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002da4:	19 29 84 c9 	e_addi  r9,r9,-55
+ 1002da8:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002dac:	7d 29 20 70 	e_slwi  r9,r9,4
+ 1002db0:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:56 (discriminator 4)
+ 1002db4:	51 5f 00 18 	e_lwz   r10,24(r31)
+ 1002db8:	35 2a 00 00 	e_stb   r9,0(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:58 (discriminator 4)
+
+	c = GetChar(); /* get an ASCII hex byte from stdin (lower nybble of byte) */
+ 1002dbc:	78 00 15 53 	e_bl    100430e <GetChar>
+ 1002dc0:	02 31       	se_mtar r9,r3
+ 1002dc2:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:60 (discriminator 4)
+
+	if (!isxdigit(c)) /* is it a valid hex digit */
+ 1002dc6:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002dca:	7d 29 07 74 	extsb   r9,r9
+ 1002dce:	03 13       	se_mfar r3,r9
+ 1002dd0:	79 ff fe cf 	e_bl    1002c9e <isxdigit>
+ 1002dd4:	02 31       	se_mtar r9,r3
+ 1002dd6:	70 09 98 00 	e_cmp16i r9,0
+ 1002dda:	7f 80 00 20 	e_mcrf  cr7
+ 1002dde:	7d 20 00 26 	mfcr    r9
+ 1002de2:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002de6:	7d 28 01 20 	mtcrf   128,r9
+ 1002dea:	7a 02 00 1a 	e_bne   1002e04 <GetHex+0x10a>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:62
+	{
+		send2Term("invalid hex digit",17);
+ 1002dee:	71 20 e1 00 	e_lis   r9,256
+ 1002df2:	1c 69 47 80 	e_add16i r3,r9,18304
+ 1002df6:	49 14       	se_li   r4,17
+ 1002df8:	78 00 12 97 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:63
+		return (ErrorHex); /* no. return an error */
+ 1002dfc:	71 20 00 05 	e_li    r9,5
+ 1002e00:	78 00 00 6c 	e_b     1002e6c <GetHex+0x172>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:67
+	} /* no. return an error */
+
+	/* convert the ASCII character to a binary hex nybble */
+	*MemByte += (isdigit(c) ? c - '0' : c - 'A' + 10);
+ 1002e04:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002e08:	31 29 00 00 	e_lbz   r9,0(r9)
+ 1002e0c:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 1002e10:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002e14:	7d 29 07 74 	extsb   r9,r9
+ 1002e18:	19 29 84 d0 	e_addi  r9,r9,-48
+ 1002e1c:	70 09 a8 09 	e_cmpl16i r9,9
+ 1002e20:	7f 80 00 20 	e_mcrf  cr7
+ 1002e24:	7d 20 00 26 	mfcr    r9
+ 1002e28:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002e2c:	7d 28 01 20 	mtcrf   128,r9
+ 1002e30:	7a 11 00 18 	e_bgt   1002e48 <GetHex+0x14e>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:67 (discriminator 1)
+ 1002e34:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002e38:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002e3c:	19 29 84 d0 	e_addi  r9,r9,-48
+ 1002e40:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002e44:	78 00 00 14 	e_b     1002e58 <GetHex+0x15e>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:67 (discriminator 2)
+ 1002e48:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1002e4c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002e50:	19 29 84 c9 	e_addi  r9,r9,-55
+ 1002e54:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:67 (discriminator 4)
+ 1002e58:	7d 2a 4a 14 	add     r9,r10,r9
+ 1002e5c:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 1002e60:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002e64:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:69 (discriminator 4)
+
+	return (noErr); /* return 'no error' */
+ 1002e68:	71 20 00 00 	e_li    r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:70
+} //GetHex
+ 1002e6c:	03 13       	se_mfar r3,r9
+ 1002e6e:	19 7f 80 28 	e_addi  r11,r31,40
+ 1002e72:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 1002e76:	00 90       	se_mtlr r0
+ 1002e78:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1002e7c:	03 31       	se_mfar r1,r11
+ 1002e7e:	00 04       	se_blr
+
+01002e80 <RecievedFile>:
+RecievedFile():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:75
+
+/*******************************************************************************
+ Function Name : RecievedFile
+ *********************************Thanh********************DONE**************************/
+UINT8 RecievedFile(Srec1 *SRecord) {
+ 1002e80:	18 21 06 d8 	e_stwu  r1,-40(r1)
+ 1002e84:	00 80       	se_mflr r0
+ 1002e86:	db 01       	se_stw  r0,44(r1)
+ 1002e88:	d9 f1       	se_stw  r31,36(r1)
+ 1002e8a:	01 1f       	se_mr   r31,r1
+ 1002e8c:	d6 3f       	se_stw  r3,24(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:82
+	/* used to hold the return error code */
+	uint8_t CheckSum;
+	/* used to hold calculated checksum value */
+	uint8_t SRecByte;
+	/* used to hold memory/address bytes received through GetHex() */
+	uint32_t Addressess = 0;
+ 1002e8e:	71 20 00 00 	e_li    r9,0
+ 1002e92:	55 3f 00 0c 	e_stw   r9,12(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:94 (discriminator 1)
+	/* number of bytes in the Srecord address */
+	uint8_t RecType;
+	/* holds the character received after the Start-of-Record character (S) */
+
+	for (;;) {
+		while (GetChar() != 'S') {
+ 1002e96:	44 00       	se_nop
+ 1002e98:	78 00 14 77 	e_bl    100430e <GetChar>
+ 1002e9c:	02 31       	se_mtar r9,r3
+ 1002e9e:	70 09 98 53 	e_cmp16i r9,83
+ 1002ea2:	7f 80 00 20 	e_mcrf  cr7
+ 1002ea6:	7d 20 00 26 	mfcr    r9
+ 1002eaa:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002eae:	7d 28 01 20 	mtcrf   128,r9
+ 1002eb2:	7a 02 ff e6 	e_bne   1002e98 <RecievedFile+0x18>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:97
+		}; /* get a character. Start of record character? */
+
+		RecType = GetChar(); /* yes. get the next character */
+ 1002eb6:	78 00 14 59 	e_bl    100430e <GetChar>
+ 1002eba:	02 31       	se_mtar r9,r3
+ 1002ebc:	35 3f 00 12 	e_stb   r9,18(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:99
+
+		if (RecType == '0') /* S0 record? */
+ 1002ec0:	31 3f 00 12 	e_lbz   r9,18(r31)
+ 1002ec4:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002ec8:	70 09 98 30 	e_cmp16i r9,48
+ 1002ecc:	7f 80 00 20 	e_mcrf  cr7
+ 1002ed0:	7d 20 00 26 	mfcr    r9
+ 1002ed4:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002ed8:	7d 28 01 20 	mtcrf   128,r9
+ 1002edc:	7a 02 00 1c 	e_bne   1002ef8 <RecievedFile+0x78>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:101
+		{
+			SRecord->RecType = HeaderRec; /* yes. mark as a header record */
+ 1002ee0:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002ee4:	71 40 00 03 	e_li    r10,3
+ 1002ee8:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:102
+			AddrBytes = 2; /* with 2 address bytes */
+ 1002eec:	71 20 00 02 	e_li    r9,2
+ 1002ef0:	35 3f 00 11 	e_stb   r9,17(r31)
+ 1002ef4:	78 00 00 e8 	e_b     1002fdc <RecievedFile+0x15c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:103
+		} else if (RecType == '9') /* S9 record? */
+ 1002ef8:	31 3f 00 12 	e_lbz   r9,18(r31)
+ 1002efc:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002f00:	70 09 98 39 	e_cmp16i r9,57
+ 1002f04:	7f 80 00 20 	e_mcrf  cr7
+ 1002f08:	7d 20 00 26 	mfcr    r9
+ 1002f0c:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002f10:	7d 28 01 20 	mtcrf   128,r9
+ 1002f14:	7a 02 00 1c 	e_bne   1002f30 <RecievedFile+0xb0>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:105
+		{
+			SRecord->RecType = EndRec; /* yes. mark as a end record */
+ 1002f18:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002f1c:	71 40 00 02 	e_li    r10,2
+ 1002f20:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:106
+			AddrBytes = 2; /* with 2 address bytes */
+ 1002f24:	71 20 00 02 	e_li    r9,2
+ 1002f28:	35 3f 00 11 	e_stb   r9,17(r31)
+ 1002f2c:	78 00 00 b0 	e_b     1002fdc <RecievedFile+0x15c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:107
+		} else if (RecType == '8') /* S8 record? */
+ 1002f30:	31 3f 00 12 	e_lbz   r9,18(r31)
+ 1002f34:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002f38:	70 09 98 38 	e_cmp16i r9,56
+ 1002f3c:	7f 80 00 20 	e_mcrf  cr7
+ 1002f40:	7d 20 00 26 	mfcr    r9
+ 1002f44:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002f48:	7d 28 01 20 	mtcrf   128,r9
+ 1002f4c:	7a 02 00 1c 	e_bne   1002f68 <RecievedFile+0xe8>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:109
+		{
+			SRecord->RecType = EndRec; /* yes. mark as a end record */
+ 1002f50:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002f54:	71 40 00 02 	e_li    r10,2
+ 1002f58:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:110
+			AddrBytes = 3; /* with 3 address bytes */
+ 1002f5c:	71 20 00 03 	e_li    r9,3
+ 1002f60:	35 3f 00 11 	e_stb   r9,17(r31)
+ 1002f64:	78 00 00 78 	e_b     1002fdc <RecievedFile+0x15c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:111
+		} else if (RecType == '7') /* S7 record? */
+ 1002f68:	31 3f 00 12 	e_lbz   r9,18(r31)
+ 1002f6c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002f70:	70 09 98 37 	e_cmp16i r9,55
+ 1002f74:	7f 80 00 20 	e_mcrf  cr7
+ 1002f78:	7d 20 00 26 	mfcr    r9
+ 1002f7c:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002f80:	7d 28 01 20 	mtcrf   128,r9
+ 1002f84:	7a 02 00 1c 	e_bne   1002fa0 <RecievedFile+0x120>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:113
+		{
+			SRecord->RecType = EndRec; /* yes. mark as a end record */
+ 1002f88:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002f8c:	71 40 00 02 	e_li    r10,2
+ 1002f90:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:114
+			AddrBytes = 4; /* with 4 address bytes */
+ 1002f94:	71 20 00 04 	e_li    r9,4
+ 1002f98:	35 3f 00 11 	e_stb   r9,17(r31)
+ 1002f9c:	78 00 00 40 	e_b     1002fdc <RecievedFile+0x15c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:115
+		} else if (RecType == '3') /* S3 record? */
+ 1002fa0:	31 3f 00 12 	e_lbz   r9,18(r31)
+ 1002fa4:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002fa8:	70 09 98 33 	e_cmp16i r9,51
+ 1002fac:	7f 80 00 20 	e_mcrf  cr7
+ 1002fb0:	7d 20 00 26 	mfcr    r9
+ 1002fb4:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1002fb8:	7d 28 01 20 	mtcrf   128,r9
+ 1002fbc:	7a 02 00 1c 	e_bne   1002fd8 <RecievedFile+0x158>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:117
+		{
+			SRecord->RecType = DataRec;/* yes. mark as a data record */
+ 1002fc0:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002fc4:	71 40 00 01 	e_li    r10,1
+ 1002fc8:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:118
+			AddrBytes = 4; /* with 3 address bytes */
+ 1002fcc:	71 20 00 04 	e_li    r9,4
+ 1002fd0:	35 3f 00 11 	e_stb   r9,17(r31)
+ 1002fd4:	78 00 00 08 	e_b     1002fdc <RecievedFile+0x15c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:175
+			send2Term("Checksum isn't correct !",14);
+			return (ErrorChecksum); /* no return an error */
+		}
+		else
+			return (noErr);
+	}
+ 1002fd8:	79 ff fe be 	e_b     1002e96 <RecievedFile+0x16>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:122
+			SRecord->RecType = DataRec;/* yes. mark as a data record */
+			AddrBytes = 4; /* with 3 address bytes */
+		} else
+			continue; /* we only receive S0, S3, S7, S8 & S9 S-Records */
+
+		Error = GetHex(&SRecord->NumOfBytes);
+ 1002fdc:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1002fe0:	19 29 80 01 	e_addi  r9,r9,1
+ 1002fe4:	03 13       	se_mfar r3,r9
+ 1002fe6:	79 ff fd 15 	e_bl    1002cfa <GetHex>
+ 1002fea:	02 31       	se_mtar r9,r3
+ 1002fec:	35 3f 00 13 	e_stb   r9,19(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:123
+		if (Error != noErr) /* get the record length field. valid hex byte? */
+ 1002ff0:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 1002ff4:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1002ff8:	70 09 98 00 	e_cmp16i r9,0
+ 1002ffc:	7f 80 00 20 	e_mcrf  cr7
+ 1003000:	7d 20 00 26 	mfcr    r9
+ 1003004:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003008:	7d 28 01 20 	mtcrf   128,r9
+ 100300c:	7a 12 00 10 	e_beq   100301c <RecievedFile+0x19c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:124
+			return (Error); /* no. return an error */
+ 1003010:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 1003014:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003018:	78 00 02 da 	e_b     10032f2 <RecievedFile+0x472>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:127
+
+		/* initialize the checksum with the record length */
+		CheckSum = SRecord->NumOfBytes;
+ 100301c:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1003020:	31 29 00 01 	e_lbz   r9,1(r9)
+ 1003024:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:130
+
+		/* subtract number of bytes in the address+1 to get the length of data field */
+		NumDataBytes = (SRecord->NumOfBytes -= (AddrBytes + 1));
+ 1003028:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 100302c:	31 29 00 01 	e_lbz   r9,1(r9)
+ 1003030:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 1003034:	31 3f 00 11 	e_lbz   r9,17(r31)
+ 1003038:	7d 29 50 50 	subf    r9,r9,r10
+ 100303c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003040:	19 29 84 ff 	e_addi  r9,r9,-1
+ 1003044:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 1003048:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 100304c:	35 49 00 01 	e_stb   r10,1(r9)
+ 1003050:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1003054:	31 29 00 01 	e_lbz   r9,1(r9)
+ 1003058:	35 3f 00 14 	e_stb   r9,20(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:131
+		if (NumDataBytes > MAXDATASIZE) /* is the S-Record longer than allowed? */{
+ 100305c:	31 3f 00 14 	e_lbz   r9,20(r31)
+ 1003060:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003064:	70 09 a8 40 	e_cmpl16i r9,64
+ 1003068:	7f 80 00 20 	e_mcrf  cr7
+ 100306c:	7d 20 00 26 	mfcr    r9
+ 1003070:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003074:	7d 28 01 20 	mtcrf   128,r9
+ 1003078:	7a 01 00 1a 	e_ble   1003092 <RecievedFile+0x212>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:132
+			send2Term("S-Record longer than MAXLEN",28);
+ 100307c:	71 20 e1 00 	e_lis   r9,256
+ 1003080:	1c 69 47 94 	e_add16i r3,r9,18324
+ 1003084:	49 c4       	se_li   r4,28
+ 1003086:	78 00 10 09 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:133
+			return (ErrorLen); /* yes. report an error */
+ 100308a:	71 20 00 06 	e_li    r9,6
+ 100308e:	78 00 02 64 	e_b     10032f2 <RecievedFile+0x472>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:135
+		}
+		for (x = 0; x < AddrBytes; x++) {
+ 1003092:	71 20 00 00 	e_li    r9,0
+ 1003096:	35 3f 00 10 	e_stb   r9,16(r31)
+ 100309a:	78 00 00 96 	e_b     1003130 <RecievedFile+0x2b0>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:136
+			Error = GetHex(&SRecByte);
+ 100309e:	19 3f 80 15 	e_addi  r9,r31,21
+ 10030a2:	03 13       	se_mfar r3,r9
+ 10030a4:	79 ff fc 57 	e_bl    1002cfa <GetHex>
+ 10030a8:	02 31       	se_mtar r9,r3
+ 10030aa:	35 3f 00 13 	e_stb   r9,19(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:137
+			if (Error
+ 10030ae:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 10030b2:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10030b6:	70 09 98 00 	e_cmp16i r9,0
+ 10030ba:	7f 80 00 20 	e_mcrf  cr7
+ 10030be:	7d 20 00 26 	mfcr    r9
+ 10030c2:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10030c6:	7d 28 01 20 	mtcrf   128,r9
+ 10030ca:	7a 12 00 2a 	e_beq   10030f4 <RecievedFile+0x274>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:139
+					!= noErr) /* get a byte of the load address. valid hex byte? */{
+				OutStr("Error" + Error);
+ 10030ce:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 10030d2:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10030d6:	71 20 e1 00 	e_lis   r9,256
+ 10030da:	1d 29 47 b0 	e_add16i r9,r9,18352
+ 10030de:	7d 2a 4a 14 	add     r9,r10,r9
+ 10030e2:	03 13       	se_mfar r3,r9
+ 10030e4:	78 00 13 c7 	e_bl    10044aa <OutStr>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:140
+				return (Error); /* no return an error */
+ 10030e8:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 10030ec:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10030f0:	78 00 02 02 	e_b     10032f2 <RecievedFile+0x472>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:142 (discriminator 2)
+			}
+			CheckSum += SRecByte; /* add it into the checksum */
+ 10030f4:	31 3f 00 15 	e_lbz   r9,21(r31)
+ 10030f8:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10030fc:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1003100:	7d 2a 4a 14 	add     r9,r10,r9
+ 1003104:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:143 (discriminator 2)
+			Addressess = (Addressess << 8) + SRecByte;
+ 1003108:	51 3f 00 0c 	e_lwz   r9,12(r31)
+ 100310c:	7d 29 40 70 	e_slwi  r9,r9,8
+ 1003110:	31 5f 00 15 	e_lbz   r10,21(r31)
+ 1003114:	75 4a 06 3f 	e_rlwinm r10,r10,0,24,31
+ 1003118:	7d 29 52 14 	add     r9,r9,r10
+ 100311c:	55 3f 00 0c 	e_stw   r9,12(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:135 (discriminator 2)
+		NumDataBytes = (SRecord->NumOfBytes -= (AddrBytes + 1));
+		if (NumDataBytes > MAXDATASIZE) /* is the S-Record longer than allowed? */{
+			send2Term("S-Record longer than MAXLEN",28);
+			return (ErrorLen); /* yes. report an error */
+		}
+		for (x = 0; x < AddrBytes; x++) {
+ 1003120:	31 3f 00 10 	e_lbz   r9,16(r31)
+ 1003124:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003128:	19 29 80 01 	e_addi  r9,r9,1
+ 100312c:	35 3f 00 10 	e_stb   r9,16(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:135 (discriminator 1)
+ 1003130:	31 3f 00 10 	e_lbz   r9,16(r31)
+ 1003134:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 1003138:	31 3f 00 11 	e_lbz   r9,17(r31)
+ 100313c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003140:	7f 8a 48 40 	cmplw   cr7,r10,r9
+ 1003144:	7d 20 00 26 	mfcr    r9
+ 1003148:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 100314c:	7d 28 01 20 	mtcrf   128,r9
+ 1003150:	7a 10 ff 4e 	e_blt   100309e <RecievedFile+0x21e>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:146
+			}
+			CheckSum += SRecByte; /* add it into the checksum */
+			Addressess = (Addressess << 8) + SRecByte;
+		}
+
+		SRecord->Address = Addressess;
+ 1003154:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 1003158:	51 5f 00 0c 	e_lwz   r10,12(r31)
+ 100315c:	55 49 00 04 	e_stw   r10,4(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:147
+		for (x = 0; x < NumDataBytes; x++) /* receive the data field */
+ 1003160:	71 20 00 00 	e_li    r9,0
+ 1003164:	35 3f 00 10 	e_stb   r9,16(r31)
+ 1003168:	78 00 00 9a 	e_b     1003202 <RecievedFile+0x382>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:149
+		{
+			Error = GetHex(&SRecByte);
+ 100316c:	19 3f 80 15 	e_addi  r9,r31,21
+ 1003170:	03 13       	se_mfar r3,r9
+ 1003172:	79 ff fb 89 	e_bl    1002cfa <GetHex>
+ 1003176:	02 31       	se_mtar r9,r3
+ 1003178:	35 3f 00 13 	e_stb   r9,19(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:150
+			if (Error != noErr) /* get a data field byte. valid hex byte? */
+ 100317c:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 1003180:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003184:	70 09 98 00 	e_cmp16i r9,0
+ 1003188:	7f 80 00 20 	e_mcrf  cr7
+ 100318c:	7d 20 00 26 	mfcr    r9
+ 1003190:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003194:	7d 28 01 20 	mtcrf   128,r9
+ 1003198:	7a 12 00 2a 	e_beq   10031c2 <RecievedFile+0x342>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:152
+			{
+				OutStr("Error" + Error);
+ 100319c:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 10031a0:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10031a4:	71 20 e1 00 	e_lis   r9,256
+ 10031a8:	1d 29 47 b0 	e_add16i r9,r9,18352
+ 10031ac:	7d 2a 4a 14 	add     r9,r10,r9
+ 10031b0:	03 13       	se_mfar r3,r9
+ 10031b2:	78 00 12 f9 	e_bl    10044aa <OutStr>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:153
+				return (Error); /* no return an error */
+ 10031b6:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 10031ba:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10031be:	78 00 01 34 	e_b     10032f2 <RecievedFile+0x472>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:155 (discriminator 2)
+			}
+			CheckSum += SRecByte; /* yes. add it in to the checksum */
+ 10031c2:	31 3f 00 15 	e_lbz   r9,21(r31)
+ 10031c6:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10031ca:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 10031ce:	7d 2a 4a 14 	add     r9,r10,r9
+ 10031d2:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:157 (discriminator 2)
+
+			SRecord->Data[x] = SRecByte;
+ 10031d6:	31 3f 00 10 	e_lbz   r9,16(r31)
+ 10031da:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10031de:	31 5f 00 15 	e_lbz   r10,21(r31)
+ 10031e2:	75 4a 06 3f 	e_rlwinm r10,r10,0,24,31
+ 10031e6:	51 1f 00 18 	e_lwz   r8,24(r31)
+ 10031ea:	7d 28 4a 14 	add     r9,r8,r9
+ 10031ee:	35 49 00 08 	e_stb   r10,8(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:147 (discriminator 2)
+			CheckSum += SRecByte; /* add it into the checksum */
+			Addressess = (Addressess << 8) + SRecByte;
+		}
+
+		SRecord->Address = Addressess;
+		for (x = 0; x < NumDataBytes; x++) /* receive the data field */
+ 10031f2:	31 3f 00 10 	e_lbz   r9,16(r31)
+ 10031f6:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10031fa:	19 29 80 01 	e_addi  r9,r9,1
+ 10031fe:	35 3f 00 10 	e_stb   r9,16(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:147 (discriminator 1)
+ 1003202:	31 3f 00 10 	e_lbz   r9,16(r31)
+ 1003206:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 100320a:	31 3f 00 14 	e_lbz   r9,20(r31)
+ 100320e:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003212:	7f 8a 48 40 	cmplw   cr7,r10,r9
+ 1003216:	7d 20 00 26 	mfcr    r9
+ 100321a:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 100321e:	7d 28 01 20 	mtcrf   128,r9
+ 1003222:	7a 10 ff 4a 	e_blt   100316c <RecievedFile+0x2ec>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:159
+			}
+			CheckSum += SRecByte; /* yes. add it in to the checksum */
+
+			SRecord->Data[x] = SRecByte;
+		}
+		Error = GetHex(&SRecByte);
+ 1003226:	19 3f 80 15 	e_addi  r9,r31,21
+ 100322a:	03 13       	se_mfar r3,r9
+ 100322c:	79 ff fa cf 	e_bl    1002cfa <GetHex>
+ 1003230:	02 31       	se_mtar r9,r3
+ 1003232:	35 3f 00 13 	e_stb   r9,19(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:161
+		/* get the record checksum (last byte of the record). valid hex byte? */
+		if (Error != noErr) {
+ 1003236:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 100323a:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 100323e:	70 09 98 00 	e_cmp16i r9,0
+ 1003242:	7f 80 00 20 	e_mcrf  cr7
+ 1003246:	7d 20 00 26 	mfcr    r9
+ 100324a:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 100324e:	7d 28 01 20 	mtcrf   128,r9
+ 1003252:	7a 12 00 2a 	e_beq   100327c <RecievedFile+0x3fc>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:162
+			OutStr("Error" + Error);
+ 1003256:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 100325a:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 100325e:	71 20 e1 00 	e_lis   r9,256
+ 1003262:	1d 29 47 b0 	e_add16i r9,r9,18352
+ 1003266:	7d 2a 4a 14 	add     r9,r10,r9
+ 100326a:	03 13       	se_mfar r3,r9
+ 100326c:	78 00 12 3f 	e_bl    10044aa <OutStr>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:163
+			return (Error); /* no return an error */
+ 1003270:	31 3f 00 13 	e_lbz   r9,19(r31)
+ 1003274:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003278:	78 00 00 7a 	e_b     10032f2 <RecievedFile+0x472>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:165
+		}
+		CheckSum = (uint8_t) ~CheckSum; /* take 1's compliment of calculated checksum */
+ 100327c:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1003280:	7d 29 48 f8 	not     r9,r9
+ 1003284:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:166
+		if (CheckSum != SRecByte) /* calculated checksum == received checksum ? */{
+ 1003288:	31 3f 00 15 	e_lbz   r9,21(r31)
+ 100328c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003290:	31 5f 00 08 	e_lbz   r10,8(r31)
+ 1003294:	75 4a 06 3f 	e_rlwinm r10,r10,0,24,31
+ 1003298:	7f 8a 48 00 	cmpw    cr7,r10,r9
+ 100329c:	7d 20 00 26 	mfcr    r9
+ 10032a0:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10032a4:	7d 28 01 20 	mtcrf   128,r9
+ 10032a8:	7a 12 00 46 	e_beq   10032ee <RecievedFile+0x46e>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:167
+			OutStr("\n");
+ 10032ac:	71 20 e1 00 	e_lis   r9,256
+ 10032b0:	1c 69 47 b8 	e_add16i r3,r9,18360
+ 10032b4:	78 00 11 f7 	e_bl    10044aa <OutStr>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:168
+			PutChar(CheckSum);
+ 10032b8:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 10032bc:	7d 29 07 74 	extsb   r9,r9
+ 10032c0:	03 13       	se_mfar r3,r9
+ 10032c2:	78 00 0e 89 	e_bl    100414a <PutChar>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:169
+			PutChar(SRecByte);
+ 10032c6:	31 3f 00 15 	e_lbz   r9,21(r31)
+ 10032ca:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10032ce:	7d 29 07 74 	extsb   r9,r9
+ 10032d2:	03 13       	se_mfar r3,r9
+ 10032d4:	78 00 0e 77 	e_bl    100414a <PutChar>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:170
+			send2Term("Checksum isn't correct !",14);
+ 10032d8:	71 20 e1 00 	e_lis   r9,256
+ 10032dc:	1c 69 47 bc 	e_add16i r3,r9,18364
+ 10032e0:	48 e4       	se_li   r4,14
+ 10032e2:	78 00 0d ad 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:171
+			return (ErrorChecksum); /* no return an error */
+ 10032e6:	71 20 00 07 	e_li    r9,7
+ 10032ea:	78 00 00 08 	e_b     10032f2 <RecievedFile+0x472>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:174
+		}
+		else
+			return (noErr);
+ 10032ee:	71 20 00 00 	e_li    r9,0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/srec.c:176 (discriminator 2)
+	}
+} //RecievedFile
+ 10032f2:	03 13       	se_mfar r3,r9
+ 10032f4:	19 7f 80 28 	e_addi  r11,r31,40
+ 10032f8:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 10032fc:	00 90       	se_mtlr r0
+ 10032fe:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1003302:	03 31       	se_mfar r1,r11
+ 1003304:	00 04       	se_blr
+
+01003306 <PLL_160MHz>:
+PLL_160MHz():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:27
+#include "project.h"
+
+
+//This changes the mode from 16MHz internal to 160MHz PLL.
+void PLL_160MHz(void)
+{
+ 1003306:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 100330a:	d3 f1       	se_stw  r31,12(r1)
+ 100330c:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:29
+  /* Connect XOSC to PLL */
+  MC_CGM.AC5_SC.B.SELCTL=1;
+ 100330e:	71 40 58 00 	e_li    r10,-327680
+ 1003312:	51 2a 01 c0 	e_lwz   r9,448(r10)
+ 1003316:	71 00 00 01 	e_li    r8,1
+ 100331a:	75 09 c1 ce 	e_rlwimi r9,r8,24,7,7
+ 100331e:	55 2a 01 c0 	e_stw   r9,448(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:35
+
+  /* Configure PLL0 Dividers - 160MHz from 40Mhx XOSC */
+  /* PLL input = FXOSC = 40MHz
+     VCO range = 600-1200MHz
+  */
+  PLLDIG.PLLDV.B.PREDIV  = 1; 	/* Divide input clock by 1, resulting clock will be reference input for the PLL analog loop */
+ 1003322:	71 40 58 00 	e_li    r10,-327680
+ 1003326:	19 4a d0 80 	e_ori   r10,r10,128
+ 100332a:	51 2a 00 28 	e_lwz   r9,40(r10)
+ 100332e:	71 00 00 01 	e_li    r8,1
+ 1003332:	75 09 64 66 	e_rlwimi r9,r8,12,17,19
+ 1003336:	55 2a 00 28 	e_stw   r9,40(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:36
+  PLLDIG.PLLDV.B.MFD     = 16; 	/* Loop multiplication factor 16*40 MHz */
+ 100333a:	71 40 58 00 	e_li    r10,-327680
+ 100333e:	19 4a d0 80 	e_ori   r10,r10,128
+ 1003342:	51 2a 00 28 	e_lwz   r9,40(r10)
+ 1003346:	71 00 00 10 	e_li    r8,16
+ 100334a:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 100334e:	55 2a 00 28 	e_stw   r9,40(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:37
+  PLLDIG.PLLDV.B.RFDPHI  = 1; 	/* VCO post divider = 4 so 16*40/40 = 160MHz */
+ 1003352:	71 40 58 00 	e_li    r10,-327680
+ 1003356:	19 4a d0 80 	e_ori   r10,r10,128
+ 100335a:	51 2a 00 28 	e_lwz   r9,40(r10)
+ 100335e:	71 00 00 01 	e_li    r8,1
+ 1003362:	75 09 82 9e 	e_rlwimi r9,r8,16,10,15
+ 1003366:	55 2a 00 28 	e_stw   r9,40(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:39
+
+  PLLDIG.PLLCAL3.R = 0x09C3C000; /* Contains the denominator of the fractional loop division factor */
+ 100336a:	71 20 58 00 	e_li    r9,-327680
+ 100336e:	19 29 d0 80 	e_ori   r9,r9,128
+ 1003372:	71 41 e1 c3 	e_lis   r10,2499
+ 1003376:	19 4a d1 c0 	e_ori   r10,r10,49152
+ 100337a:	55 49 00 18 	e_stw   r10,24(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:41
+  	  	  	  	  	  	  	  	 /* MFDEN = 9C3C000h = 163823616 */
+  PLLDIG.PLLFD.B.SMDEN = 1;		 /* Sigma delta modulation enabled */
+ 100337e:	71 40 58 00 	e_li    r10,-327680
+ 1003382:	19 4a d0 80 	e_ori   r10,r10,128
+ 1003386:	51 2a 00 30 	e_lwz   r9,48(r10)
+ 100338a:	71 00 00 01 	e_li    r8,1
+ 100338e:	75 09 f0 42 	e_rlwimi r9,r8,30,1,1
+ 1003392:	55 2a 00 30 	e_stw   r9,48(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:43
+  /* switch to PLL */
+  MC_ME.DRUN_MC.R = 0x00130072;	/* MVRON = 1, FLAON = RUN mode, PLLON=1, FXOSCON = 1, FIRCON = 1, SYSCLK = PLL PHI_0 */
+ 1003396:	71 20 58 00 	e_li    r9,-327680
+ 100339a:	19 29 d1 80 	e_ori   r9,r9,32768
+ 100339e:	71 40 e0 13 	e_lis   r10,19
+ 10033a2:	19 4a d0 72 	e_ori   r10,r10,114
+ 10033a6:	55 49 00 2c 	e_stw   r10,44(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:44
+  MC_ME.MCTL.R = 0x30005AF0; 	/* Target mode = DRUN, KEY = 5AF0 */
+ 10033aa:	71 20 58 00 	e_li    r9,-327680
+ 10033ae:	19 29 d1 80 	e_ori   r9,r9,32768
+ 10033b2:	71 46 e0 00 	e_lis   r10,12288
+ 10033b6:	71 4b c2 f0 	e_or2i  r10,23280
+ 10033ba:	55 49 00 04 	e_stw   r10,4(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:45
+  MC_ME.MCTL.R = 0x3000A50F; 	/* Target mode = DRUN, KEY = A50F */
+ 10033be:	71 20 58 00 	e_li    r9,-327680
+ 10033c2:	19 29 d1 80 	e_ori   r9,r9,32768
+ 10033c6:	71 46 e0 00 	e_lis   r10,12288
+ 10033ca:	71 54 c5 0f 	e_or2i  r10,42255
+ 10033ce:	55 49 00 04 	e_stw   r10,4(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:47
+
+  while(MC_ME.GS.B.S_MTRANS == 1);      /* Wait for mode transition complete */
+ 10033d2:	44 00       	se_nop
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:47 (discriminator 1)
+ 10033d4:	71 20 58 00 	e_li    r9,-327680
+ 10033d8:	19 29 d1 80 	e_ori   r9,r9,32768
+ 10033dc:	51 29 00 00 	e_lwz   r9,0(r9)
+ 10033e0:	7d 29 dc 70 	e_srwi  r9,r9,27
+ 10033e4:	19 29 c0 01 	e_andi  r9,r9,1
+ 10033e8:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10033ec:	70 09 a8 01 	e_cmpl16i r9,1
+ 10033f0:	7f 80 00 20 	e_mcrf  cr7
+ 10033f4:	7d 20 00 26 	mfcr    r9
+ 10033f8:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10033fc:	7d 28 01 20 	mtcrf   128,r9
+ 1003400:	7a 12 ff d4 	e_beq   10033d4 <PLL_160MHz+0xce>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:48
+}
+ 1003404:	19 7f 80 10 	e_addi  r11,r31,16
+ 1003408:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 100340c:	03 31       	se_mfar r1,r11
+ 100340e:	00 04       	se_blr
+
+01003410 <system160mhz>:
+system160mhz():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:51
+
+void system160mhz(void)
+{
+ 1003410:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 1003414:	00 80       	se_mflr r0
+ 1003416:	d5 01       	se_stw  r0,20(r1)
+ 1003418:	d3 f1       	se_stw  r31,12(r1)
+ 100341a:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:53
+  /* F160 - max 160 MHz */
+  MC_CGM.SC_DC0.B.DIV = 0;  /* Freq = sysclk / (0+1) = sysclk */
+ 100341c:	71 40 58 00 	e_li    r10,-327680
+ 1003420:	51 2a 07 e8 	e_lwz   r9,2024(r10)
+ 1003424:	71 00 00 00 	e_li    r8,0
+ 1003428:	75 09 83 5e 	e_rlwimi r9,r8,16,13,15
+ 100342c:	55 2a 07 e8 	e_stw   r9,2024(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:54
+  MC_CGM.SC_DC0.B.DE  = 1;  /* Enable divided clock */
+ 1003430:	71 40 58 00 	e_li    r10,-327680
+ 1003434:	51 2a 07 e8 	e_lwz   r9,2024(r10)
+ 1003438:	71 00 00 01 	e_li    r8,1
+ 100343c:	75 09 f8 00 	e_rlwimi r9,r8,31,0,0
+ 1003440:	55 2a 07 e8 	e_stw   r9,2024(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:58
+
+  /* S80 - max 80 MHz */
+  /* MC_CGM_SC_DC1[DIV] and MC_CGM_SC_DC5[DIV] must be equal at all times */
+  MC_CGM.SC_DC1.B.DIV = 1;  /* Freq = sysclk / (2+1) = sysclk/2 */
+ 1003444:	71 40 58 00 	e_li    r10,-327680
+ 1003448:	51 2a 07 ec 	e_lwz   r9,2028(r10)
+ 100344c:	71 00 00 01 	e_li    r8,1
+ 1003450:	75 09 83 5e 	e_rlwimi r9,r8,16,13,15
+ 1003454:	55 2a 07 ec 	e_stw   r9,2028(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:59
+  MC_CGM.SC_DC1.B.DE  = 1;  /* Enable divided clock */
+ 1003458:	71 40 58 00 	e_li    r10,-327680
+ 100345c:	51 2a 07 ec 	e_lwz   r9,2028(r10)
+ 1003460:	71 00 00 01 	e_li    r8,1
+ 1003464:	75 09 f8 00 	e_rlwimi r9,r8,31,0,0
+ 1003468:	55 2a 07 ec 	e_stw   r9,2028(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:63
+
+  /* FS80 - max 80 MHz */
+  /* MC_CGM_SC_DC1[DIV] and MC_CGM_SC_DC5[DIV] must be equal at all times */
+  MC_CGM.SC_DC5.R = MC_CGM.SC_DC1.R;  /* 80 MHz max */
+ 100346c:	71 20 58 00 	e_li    r9,-327680
+ 1003470:	71 40 58 00 	e_li    r10,-327680
+ 1003474:	51 4a 07 ec 	e_lwz   r10,2028(r10)
+ 1003478:	55 49 07 fc 	e_stw   r10,2044(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:66
+
+  /* S40 - max 40 MHz */
+  MC_CGM.SC_DC2.B.DIV = 3;  /* Freq = sysclk / (3+1) = sysclk/4 */
+ 100347c:	71 40 58 00 	e_li    r10,-327680
+ 1003480:	51 2a 07 f0 	e_lwz   r9,2032(r10)
+ 1003484:	71 00 00 03 	e_li    r8,3
+ 1003488:	75 09 83 1e 	e_rlwimi r9,r8,16,12,15
+ 100348c:	55 2a 07 f0 	e_stw   r9,2032(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:67
+  MC_CGM.SC_DC2.B.DE  = 1;  /* Enable divided clock */
+ 1003490:	71 40 58 00 	e_li    r10,-327680
+ 1003494:	51 2a 07 f0 	e_lwz   r9,2032(r10)
+ 1003498:	71 00 00 01 	e_li    r8,1
+ 100349c:	75 09 f8 00 	e_rlwimi r9,r8,31,0,0
+ 10034a0:	55 2a 07 f0 	e_stw   r9,2032(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:75
+
+  /* F80 - max 80 MHz - use default values*/
+
+  /* F20 - clock out configured at clock_out* function */
+
+  PLL_160MHz();
+ 10034a4:	79 ff fe 63 	e_bl    1003306 <PLL_160MHz>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/mode.c:76
+}
+ 10034a8:	19 7f 80 10 	e_addi  r11,r31,16
+ 10034ac:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 10034b0:	00 90       	se_mtlr r0
+ 10034b2:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 10034b6:	03 31       	se_mfar r1,r11
+ 10034b8:	00 04       	se_blr
+
+010034ba <hw_init>:
+hw_init():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:14
+
+
+extern void xcptn_xmpl(void);
+void peri_clock_gating(void); /* Configures gating/enabling peripheral(LIN) clocks */
+
+void hw_init(void) {
+ 10034ba:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 10034be:	d3 f1       	se_stw  r31,12(r1)
+ 10034c0:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:32
+	MC_ME.CADDR[3].R = 0x13a0000 Check| 0x1;
+#endif
+	MC_ME.MCTL.R = (mctl & 0xffff0000ul) | KEY_VALUE1;
+	MC_ME.MCTL.R = mctl; /* key value 2 always from MCTL */
+#endif /* defined(DEBUG_SECONDARY_CORES) */
+}
+ 10034c2:	19 7f 80 10 	e_addi  r11,r31,16
+ 10034c6:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 10034ca:	03 31       	se_mfar r1,r11
+ 10034cc:	00 04       	se_blr
+
+010034ce <ProgramFlash>:
+ProgramFlash():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:40
+/*********************************Thanh*********DONE********************/
+void JumpToAddress(void (*StartAddress)()) {
+	(*StartAddress)();
+}
+/***********************************Thanh*********DONE*******************/
+UINT8 ProgramFlash(void) {
+ 10034ce:	18 21 06 a0 	e_stwu  r1,-96(r1)
+ 10034d2:	00 80       	se_mflr r0
+ 10034d4:	54 01 00 64 	e_stw   r0,100(r1)
+ 10034d8:	57 e1 00 5c 	e_stw   r31,92(r1)
+ 10034dc:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:42
+	Srec1 Program;
+	UINT8 Error = noErr;
+ 10034de:	71 20 00 00 	e_li    r9,0
+ 10034e2:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:43
+	UINT32* Input = (UINT32*) 0x40000000;
+ 10034e6:	71 28 e0 00 	e_lis   r9,16384
+ 10034ea:	55 3f 00 0c 	e_stw   r9,12(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:44
+	memset(Input, 0, 128000);
+ 10034ee:	c3 3f       	se_lwz  r3,12(r31)
+ 10034f0:	48 04       	se_li   r4,0
+ 10034f2:	70 be 0c 00 	e_li    r5,128000
+ 10034f6:	78 00 11 8d 	e_bl    1004682 <memset>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:45
+	send2Term("Waiting ...",11);
+ 10034fa:	71 20 e1 00 	e_lis   r9,256
+ 10034fe:	1c 69 47 d8 	e_add16i r3,r9,18392
+ 1003502:	48 b4       	se_li   r4,11
+ 1003504:	78 00 0b 8b 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:48
+	for (;;) {
+		/* go get an S-Record, return if there was an error */
+		Error = RecievedFile(&Program);
+ 1003508:	19 3f 80 10 	e_addi  r9,r31,16
+ 100350c:	03 13       	se_mfar r3,r9
+ 100350e:	79 ff f9 73 	e_bl    1002e80 <RecievedFile>
+ 1003512:	02 31       	se_mtar r9,r3
+ 1003514:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:49
+		if (Error != 0)
+ 1003518:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 100351c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003520:	70 09 98 00 	e_cmp16i r9,0
+ 1003524:	7f 80 00 20 	e_mcrf  cr7
+ 1003528:	7d 20 00 26 	mfcr    r9
+ 100352c:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003530:	7d 28 01 20 	mtcrf   128,r9
+ 1003534:	7a 12 00 08 	e_beq   100353c <ProgramFlash+0x6e>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:50
+			break;
+ 1003538:	78 00 00 da 	e_b     1003612 <ProgramFlash+0x144>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:51
+		if (Program.RecType == EndRec) /* S7, S8 or S9 record? */
+ 100353c:	31 3f 00 10 	e_lbz   r9,16(r31)
+ 1003540:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003544:	70 09 a8 02 	e_cmpl16i r9,2
+ 1003548:	7f 80 00 20 	e_mcrf  cr7
+ 100354c:	7d 20 00 26 	mfcr    r9
+ 1003550:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003554:	7d 28 01 20 	mtcrf   128,r9
+ 1003558:	7a 02 00 08 	e_bne   1003560 <ProgramFlash+0x92>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:52
+			break; /* yes. return */
+ 100355c:	78 00 00 b6 	e_b     1003612 <ProgramFlash+0x144>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:54
+
+		else if (Program.RecType == HeaderRec) /* S0 record? */
+ 1003560:	31 3f 00 10 	e_lbz   r9,16(r31)
+ 1003564:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003568:	70 09 a8 03 	e_cmpl16i r9,3
+ 100356c:	7f 80 00 20 	e_mcrf  cr7
+ 1003570:	7d 20 00 26 	mfcr    r9
+ 1003574:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003578:	7d 28 01 20 	mtcrf   128,r9
+ 100357c:	7a 02 00 08 	e_bne   1003584 <ProgramFlash+0xb6>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:55
+			continue; /* yes. just ignore it */
+ 1003580:	78 00 00 8e 	e_b     100360e <ProgramFlash+0x140>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:58
+		/* a data record was received */
+		else {
+			if ((Program.Address & 0x0000000FUL) != 0) /* S-Record address aligned? */
+ 1003584:	51 3f 00 14 	e_lwz   r9,20(r31)
+ 1003588:	19 29 c0 0f 	e_andi  r9,r9,15
+ 100358c:	70 09 98 00 	e_cmp16i r9,0
+ 1003590:	7f 80 00 20 	e_mcrf  cr7
+ 1003594:	7d 20 00 26 	mfcr    r9
+ 1003598:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 100359c:	7d 28 01 20 	mtcrf   128,r9
+ 10035a0:	7a 12 00 12 	e_beq   10035b2 <ProgramFlash+0xe4>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:60
+			{
+				PutChar(ErrorOdd);
+ 10035a4:	48 23       	se_li   r3,2
+ 10035a6:	78 00 0b a5 	e_bl    100414a <PutChar>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:61
+				return (ErrorOdd); /* address not aligned. return */
+ 10035aa:	71 20 00 02 	e_li    r9,2
+ 10035ae:	78 00 00 6c 	e_b     100361a <ProgramFlash+0x14c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:63
+			}
+			if (Program.NumOfBytes != 16)/* S-Record constant length 16? */
+ 10035b2:	31 3f 00 11 	e_lbz   r9,17(r31)
+ 10035b6:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10035ba:	70 09 a8 10 	e_cmpl16i r9,16
+ 10035be:	7f 80 00 20 	e_mcrf  cr7
+ 10035c2:	7d 20 00 26 	mfcr    r9
+ 10035c6:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10035ca:	7d 28 01 20 	mtcrf   128,r9
+ 10035ce:	7a 12 00 1a 	e_beq   10035e8 <ProgramFlash+0x11a>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:65
+			{
+				send2Term("length different from 16",24);
+ 10035d2:	71 20 e1 00 	e_lis   r9,256
+ 10035d6:	1c 69 47 e4 	e_add16i r3,r9,18404
+ 10035da:	49 84       	se_li   r4,24
+ 10035dc:	78 00 0a b3 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:66
+				return (ErrorOdd); /* length different from 16. Return */
+ 10035e0:	71 20 00 02 	e_li    r9,2
+ 10035e4:	78 00 00 36 	e_b     100361a <ProgramFlash+0x14c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:69
+			}
+		}
+		memcpy((UINT32*)Program.Address, Program.Data, Program.NumOfBytes);
+ 10035e8:	51 3f 00 14 	e_lwz   r9,20(r31)
+ 10035ec:	7d 28 4b 78 	mr      r8,r9
+ 10035f0:	31 3f 00 11 	e_lbz   r9,17(r31)
+ 10035f4:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10035f8:	7d 2a 4b 78 	mr      r10,r9
+ 10035fc:	19 3f 80 10 	e_addi  r9,r31,16
+ 1003600:	19 29 80 08 	e_addi  r9,r9,8
+ 1003604:	03 03       	se_mfar r3,r8
+ 1003606:	03 14       	se_mfar r4,r9
+ 1003608:	03 25       	se_mfar r5,r10
+ 100360a:	78 00 10 37 	e_bl    1004640 <memcpy>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:70
+	}
+ 100360e:	79 ff fe fa 	e_b     1003508 <ProgramFlash+0x3a>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:71
+	return Error;
+ 1003612:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1003616:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:72 (discriminator 1)
+} /*ProgramFlash*/
+ 100361a:	03 13       	se_mfar r3,r9
+ 100361c:	19 7f 80 60 	e_addi  r11,r31,96
+ 1003620:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 1003624:	00 90       	se_mtlr r0
+ 1003626:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 100362a:	03 31       	se_mfar r1,r11
+ 100362c:	00 04       	se_blr
+
+0100362e <AppExecute>:
+AppExecute():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:73
+void AppExecute(void) {
+ 100362e:	18 21 06 e0 	e_stwu  r1,-32(r1)
+ 1003632:	00 80       	se_mflr r0
+ 1003634:	d9 01       	se_stw  r0,36(r1)
+ 1003636:	d7 f1       	se_stw  r31,28(r1)
+ 1003638:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:74
+	unsigned int m_StartAddress = 0x40000000;
+ 100363a:	71 28 e0 00 	e_lis   r9,16384
+ 100363e:	55 3f 00 08 	e_stw   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:75
+	send2Term("Program is running !",20);
+ 1003642:	71 20 e1 00 	e_lis   r9,256
+ 1003646:	1c 69 48 00 	e_add16i r3,r9,18432
+ 100364a:	49 44       	se_li   r4,20
+ 100364c:	78 00 0a 43 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:76
+		JumpToAddress((void (*)()) m_StartAddress);
+ 1003650:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 1003654:	03 13       	se_mfar r3,r9
+ 1003656:	79 ff f5 7b 	e_bl    1002bd0 <JumpToAddress>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:77
+}
+ 100365a:	19 7f 80 20 	e_addi  r11,r31,32
+ 100365e:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 1003662:	00 90       	se_mtlr r0
+ 1003664:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1003668:	03 31       	se_mfar r1,r11
+ 100366a:	00 04       	se_blr
+
+0100366c <main>:
+main():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:80
+/************************************ Main *************Thanh******DONE****************/
+
+int main(void) {
+ 100366c:	18 21 06 e0 	e_stwu  r1,-32(r1)
+ 1003670:	00 80       	se_mflr r0
+ 1003672:	d9 01       	se_stw  r0,36(r1)
+ 1003674:	d7 f1       	se_stw  r31,28(r1)
+ 1003676:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:83
+	UINT8 c;
+
+	xcptn_xmpl(); /* Configures and Enables Interrupts */
+ 1003678:	78 00 0f 95 	e_bl    100460c <xcptn_xmpl>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:85
+
+	peri_clock_gating();       /* Configures gating/enabling peripheral clocks for modes*/
+ 100367c:	78 00 01 2d 	e_bl    10037a8 <peri_clock_gating>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:87
+	/* Configuration occurs after mode transition */
+	system160mhz();            /* sysclk=160MHz, dividers configured, mode transition*/
+ 1003680:	79 ff fd 91 	e_bl    1003410 <system160mhz>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:88
+	hw_init();
+ 1003684:	79 ff fe 37 	e_bl    10034ba <hw_init>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:89
+	initLINFlexD_1(80, 115200);/* Initialize LINFlex1: UART Mode 80MHz, 115200 Baud */
+ 1003688:	4d 03       	se_li   r3,80
+ 100368a:	70 98 0a 00 	e_li    r4,115200
+ 100368e:	78 00 06 9d 	e_bl    1003d2a <initLINFlexD_1>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:92
+
+	for (;;) {
+		send2Term("Menu:",5);
+ 1003692:	71 20 e1 00 	e_lis   r9,256
+ 1003696:	1c 69 48 18 	e_add16i r3,r9,18456
+ 100369a:	48 54       	se_li   r4,5
+ 100369c:	78 00 09 f3 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:93
+		send2Term("[SPACE] Load the new App", 24);
+ 10036a0:	71 20 e1 00 	e_lis   r9,256
+ 10036a4:	1c 69 48 20 	e_add16i r3,r9,18464
+ 10036a8:	49 84       	se_li   r4,24
+ 10036aa:	78 00 09 e5 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:94
+		send2Term("[INS] Run Application",21);
+ 10036ae:	71 20 e1 00 	e_lis   r9,256
+ 10036b2:	1c 69 48 3c 	e_add16i r3,r9,18492
+ 10036b6:	49 54       	se_li   r4,21
+ 10036b8:	78 00 09 d7 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:96 (discriminator 2)
+		do {
+			c = rxLINFlexD_1();
+ 10036bc:	78 00 08 9b 	e_bl    1003f56 <rxLINFlexD_1>
+ 10036c0:	02 31       	se_mtar r9,r3
+ 10036c2:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:97 (discriminator 2)
+		} while ((c != 32) && (c != 48));
+ 10036c6:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 10036ca:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10036ce:	70 09 98 20 	e_cmp16i r9,32
+ 10036d2:	7f 80 00 20 	e_mcrf  cr7
+ 10036d6:	7d 20 00 26 	mfcr    r9
+ 10036da:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10036de:	7d 28 01 20 	mtcrf   128,r9
+ 10036e2:	7a 12 00 24 	e_beq   1003706 <main+0x9a>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:97 (discriminator 1)
+ 10036e6:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 10036ea:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10036ee:	70 09 98 30 	e_cmp16i r9,48
+ 10036f2:	7f 80 00 20 	e_mcrf  cr7
+ 10036f6:	7d 20 00 26 	mfcr    r9
+ 10036fa:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10036fe:	7d 28 01 20 	mtcrf   128,r9
+ 1003702:	7a 02 ff ba 	e_bne   10036bc <main+0x50>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:99
+
+		send2Term("--- ---- ---",12);
+ 1003706:	71 20 e1 00 	e_lis   r9,256
+ 100370a:	1c 69 48 54 	e_add16i r3,r9,18516
+ 100370e:	48 c4       	se_li   r4,12
+ 1003710:	78 00 09 7f 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:101
+
+		switch (c) {
+ 1003714:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1003718:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 100371c:	70 09 98 20 	e_cmp16i r9,32
+ 1003720:	7f 80 00 20 	e_mcrf  cr7
+ 1003724:	7d 40 00 26 	mfcr    r10
+ 1003728:	75 4a e0 07 	e_rlwinm r10,r10,28,0,3
+ 100372c:	7d 48 01 20 	mtcrf   128,r10
+ 1003730:	7a 12 00 20 	e_beq   1003750 <main+0xe4>
+ 1003734:	70 09 98 30 	e_cmp16i r9,48
+ 1003738:	7f 80 00 20 	e_mcrf  cr7
+ 100373c:	7d 20 00 26 	mfcr    r9
+ 1003740:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003744:	7d 28 01 20 	mtcrf   128,r9
+ 1003748:	7a 12 00 56 	e_beq   100379e <main+0x132>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:115
+		case 48:                 /* Run Program */
+			AppExecute();
+			break;
+
+		default:
+			break;
+ 100374c:	78 00 00 58 	e_b     10037a4 <main+0x138>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:103
+
+		send2Term("--- ---- ---",12);
+
+		switch (c) {
+		case 32:                /* Write Srec file */
+			c = ProgramFlash();
+ 1003750:	79 ff fd 7f 	e_bl    10034ce <ProgramFlash>
+ 1003754:	02 31       	se_mtar r9,r3
+ 1003756:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:104
+			if (c != 0)
+ 100375a:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 100375e:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003762:	70 09 98 00 	e_cmp16i r9,0
+ 1003766:	7f 80 00 20 	e_mcrf  cr7
+ 100376a:	7d 20 00 26 	mfcr    r9
+ 100376e:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003772:	7d 28 01 20 	mtcrf   128,r9
+ 1003776:	7a 12 00 16 	e_beq   100378c <main+0x120>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:105
+				send2Term("Failed!",6);
+ 100377a:	71 20 e1 00 	e_lis   r9,256
+ 100377e:	1c 69 48 64 	e_add16i r3,r9,18532
+ 1003782:	48 64       	se_li   r4,6
+ 1003784:	78 00 09 0b 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:108
+			else
+				send2Term("DONE!",5);
+			break;
+ 1003788:	78 00 00 1c 	e_b     10037a4 <main+0x138>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:107
+		case 32:                /* Write Srec file */
+			c = ProgramFlash();
+			if (c != 0)
+				send2Term("Failed!",6);
+			else
+				send2Term("DONE!",5);
+ 100378c:	71 20 e1 00 	e_lis   r9,256
+ 1003790:	1c 69 48 6c 	e_add16i r3,r9,18540
+ 1003794:	48 54       	se_li   r4,5
+ 1003796:	78 00 08 f9 	e_bl    100408e <send2Term>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:108
+			break;
+ 100379a:	78 00 00 0a 	e_b     10037a4 <main+0x138>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:111
+
+		case 48:                 /* Run Program */
+			AppExecute();
+ 100379e:	79 ff fe 91 	e_bl    100362e <AppExecute>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:112
+			break;
+ 10037a2:	44 00       	se_nop
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:117 (discriminator 1)
+
+		default:
+			break;
+		}
+	}
+ 10037a4:	79 ff fe ee 	e_b     1003692 <main+0x26>
+
+010037a8 <peri_clock_gating>:
+peri_clock_gating():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:124
+	return 0;
+}
+
+/************************  End of Main ***************************************/
+
+void peri_clock_gating(void) { /* Configures gating/enabling peripheral clocks for modes*/
+ 10037a8:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 10037ac:	d3 f1       	se_stw  r31,12(r1)
+ 10037ae:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:125
+	MC_ME.RUN_PC[0].R = 0x00000000; /* Gate off clock for all RUN modes */
+ 10037b0:	71 20 58 00 	e_li    r9,-327680
+ 10037b4:	19 29 d1 80 	e_ori   r9,r9,32768
+ 10037b8:	71 40 00 00 	e_li    r10,0
+ 10037bc:	55 49 00 80 	e_stw   r10,128(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:126
+	MC_ME.RUN_PC[1].R = 0x000000FE; /* Configures peripheral clock for all RUN modes */
+ 10037c0:	71 20 58 00 	e_li    r9,-327680
+ 10037c4:	19 29 d1 80 	e_ori   r9,r9,32768
+ 10037c8:	71 40 00 fe 	e_li    r10,254
+ 10037cc:	55 49 00 84 	e_stw   r10,132(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:127
+	MC_ME.PCTL[51].B.RUN_CFG = 0x1; /* LINFlex 2: select peripheral configuration RUN_PC[1] */
+ 10037d0:	71 20 58 00 	e_li    r9,-327680
+ 10037d4:	19 29 d1 80 	e_ori   r9,r9,32768
+ 10037d8:	31 49 00 f3 	e_lbz   r10,243(r9)
+ 10037dc:	19 4a c4 f8 	e_andi  r10,r10,-8
+ 10037e0:	19 4a d0 01 	e_ori   r10,r10,1
+ 10037e4:	35 49 00 f3 	e_stb   r10,243(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:128
+}
+ 10037e8:	19 7f 80 10 	e_addi  r11,r31,16
+ 10037ec:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 10037f0:	03 31       	se_mfar r1,r11
+ 10037f2:	00 04       	se_blr
+
+010037f4 <LIN1RX_irq>:
+LIN1RX_irq():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:129
+void LIN1RX_irq(void) {
+ 10037f4:	18 21 06 e0 	e_stwu  r1,-32(r1)
+ 10037f8:	d7 f1       	se_stw  r31,28(r1)
+ 10037fa:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:133
+	uint8_t c;
+
+	/* Wait for Release Message Buffer */
+	while (1 != LINFlexD_1.UARTSR.B.RMB) {
+ 10037fc:	44 00       	se_nop
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:133 (discriminator 1)
+ 10037fe:	71 3f e3 e8 	e_lis   r9,64488
+ 1003802:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003806:	51 29 00 14 	e_lwz   r9,20(r9)
+ 100380a:	7d 29 4c 70 	e_srwi  r9,r9,9
+ 100380e:	19 29 c0 01 	e_andi  r9,r9,1
+ 1003812:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003816:	70 09 a8 01 	e_cmpl16i r9,1
+ 100381a:	7f 80 00 20 	e_mcrf  cr7
+ 100381e:	7d 20 00 26 	mfcr    r9
+ 1003822:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003826:	7d 28 01 20 	mtcrf   128,r9
+ 100382a:	7a 02 ff d4 	e_bne   10037fe <LIN1RX_irq+0xa>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:136
+	}
+	/* Read data from receive buffer */
+	c = LINFlexD_1.BDRM.B.DATA4;
+ 100382e:	71 3f e3 e8 	e_lis   r9,64488
+ 1003832:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003836:	51 29 00 3c 	e_lwz   r9,60(r9)
+ 100383a:	7d 2a 4b 78 	mr      r10,r9
+ 100383e:	71 3f 7f ff 	e_li    r9,-1
+ 1003842:	7d 49 48 38 	and     r9,r10,r9
+ 1003846:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:139
+	;
+	/* Clear the RMB and DRFRFE flags by writing 1 to them */
+	LINFlexD_1.UARTSR.R = 0x0204;
+ 100384a:	71 3f e3 e8 	e_lis   r9,64488
+ 100384e:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003852:	71 40 02 04 	e_li    r10,516
+ 1003856:	55 49 00 14 	e_stw   r10,20(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:141
+
+	if (c == XOff)                  /* host want us to stop sending data? */
+ 100385a:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 100385e:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003862:	70 09 98 13 	e_cmp16i r9,19
+ 1003866:	7f 80 00 20 	e_mcrf  cr7
+ 100386a:	7d 20 00 26 	mfcr    r9
+ 100386e:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003872:	7d 28 01 20 	mtcrf   128,r9
+ 1003876:	7a 02 00 14 	e_bne   100388a <LIN1RX_irq+0x96>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:143
+	{
+		XOffRcvd = 1;               /* let putchar know that it may continue to place characters */
+ 100387a:	71 28 e0 02 	e_lis   r9,16386
+ 100387e:	71 40 00 01 	e_li    r10,1
+ 1003882:	35 49 00 04 	e_stb   r10,4(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:145
+		/* in the buffer but not enable Xmit interrupts */
+		return;
+ 1003886:	78 00 02 94 	e_b     1003b1a <LIN1RX_irq+0x326>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:146
+	} else if (c == XOn)             /* host want us to start sending data? */
+ 100388a:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 100388e:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003892:	70 09 98 11 	e_cmp16i r9,17
+ 1003896:	7f 80 00 20 	e_mcrf  cr7
+ 100389a:	7d 20 00 26 	mfcr    r9
+ 100389e:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10038a2:	7d 28 01 20 	mtcrf   128,r9
+ 10038a6:	7a 02 01 10 	e_bne   10039b6 <LIN1RX_irq+0x1c2>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:148
+	{
+		if (TxBAvail != TxBufSize)   /* anything left in the Tx buffer? */
+ 10038aa:	71 28 e0 02 	e_lis   r9,16386
+ 10038ae:	31 29 00 05 	e_lbz   r9,5(r9)
+ 10038b2:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10038b6:	70 09 a8 40 	e_cmpl16i r9,64
+ 10038ba:	7f 80 00 20 	e_mcrf  cr7
+ 10038be:	7d 20 00 26 	mfcr    r9
+ 10038c2:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10038c6:	7d 28 01 20 	mtcrf   128,r9
+ 10038ca:	7a 12 00 dc 	e_beq   10039a6 <LIN1RX_irq+0x1b2>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:150
+
+			if (TxInProgress == 0) {
+ 10038ce:	71 28 e0 02 	e_lis   r9,16386
+ 10038d2:	31 29 00 00 	e_lbz   r9,0(r9)
+ 10038d6:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10038da:	70 09 98 00 	e_cmp16i r9,0
+ 10038de:	7f 80 00 20 	e_mcrf  cr7
+ 10038e2:	7d 20 00 26 	mfcr    r9
+ 10038e6:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10038ea:	7d 28 01 20 	mtcrf   128,r9
+ 10038ee:	7a 02 00 b8 	e_bne   10039a6 <LIN1RX_irq+0x1b2>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:152
+				/* write character to transmit buffer */
+				LINFlexD_1.BDRL.B.DATA0 = TxBuff[TxOut++];
+ 10038f2:	71 3f e3 e8 	e_lis   r9,64488
+ 10038f6:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 10038fa:	71 28 e0 02 	e_lis   r9,16386
+ 10038fe:	31 29 00 0a 	e_lbz   r9,10(r9)
+ 1003902:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003906:	19 09 80 01 	e_addi  r8,r9,1
+ 100390a:	75 07 06 3f 	e_rlwinm r7,r8,0,24,31
+ 100390e:	71 08 e0 02 	e_lis   r8,16386
+ 1003912:	34 e8 00 0a 	e_stb   r7,10(r8)
+ 1003916:	7d 28 4b 78 	mr      r8,r9
+ 100391a:	71 28 e0 02 	e_lis   r9,16386
+ 100391e:	1d 29 00 6c 	e_add16i r9,r9,108
+ 1003922:	7d 29 40 ae 	lbzx    r9,r9,r8
+ 1003926:	75 28 06 3f 	e_rlwinm r8,r9,0,24,31
+ 100392a:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 100392e:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 1003932:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:154
+				/* Data Transmitted Interrupt Enable */
+				LINFlexD_1.LINIER.B.DTIE = 1;
+ 1003936:	71 3f e3 e8 	e_lis   r9,64488
+ 100393a:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 100393e:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 1003942:	71 00 00 01 	e_li    r8,1
+ 1003946:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 100394a:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:155
+				TxInProgress = 1;
+ 100394e:	71 28 e0 02 	e_lis   r9,16386
+ 1003952:	71 40 00 01 	e_li    r10,1
+ 1003956:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:157
+
+				if (TxOut == TxBufSize) /* reached the physical end of the buffer? */
+ 100395a:	71 28 e0 02 	e_lis   r9,16386
+ 100395e:	31 29 00 0a 	e_lbz   r9,10(r9)
+ 1003962:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003966:	70 09 a8 40 	e_cmpl16i r9,64
+ 100396a:	7f 80 00 20 	e_mcrf  cr7
+ 100396e:	7d 20 00 26 	mfcr    r9
+ 1003972:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003976:	7d 28 01 20 	mtcrf   128,r9
+ 100397a:	7a 02 00 10 	e_bne   100398a <LIN1RX_irq+0x196>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:158
+					TxOut = 0;          /* yes. wrap around to the start */
+ 100397e:	71 28 e0 02 	e_lis   r9,16386
+ 1003982:	71 40 00 00 	e_li    r10,0
+ 1003986:	35 49 00 0a 	e_stb   r10,10(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:159
+				TxBAvail++;
+ 100398a:	71 28 e0 02 	e_lis   r9,16386
+ 100398e:	31 29 00 05 	e_lbz   r9,5(r9)
+ 1003992:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003996:	19 29 80 01 	e_addi  r9,r9,1
+ 100399a:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 100399e:	71 28 e0 02 	e_lis   r9,16386
+ 10039a2:	35 49 00 05 	e_stb   r10,5(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:162
+			}
+
+		XOffRcvd = 0;
+ 10039a6:	71 28 e0 02 	e_lis   r9,16386
+ 10039aa:	71 40 00 00 	e_li    r10,0
+ 10039ae:	35 49 00 04 	e_stb   r10,4(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:163
+		return;
+ 10039b2:	78 00 01 68 	e_b     1003b1a <LIN1RX_irq+0x326>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:168
+	}
+
+	/* if the number of bytes available in the Rx buff
+	 is < XOffCount & an XOff hasn't been sent */
+	if ((RxBAvail <= XOffCount) && (XOffSent == 0)) {
+ 10039b6:	71 28 e0 02 	e_lis   r9,16386
+ 10039ba:	31 29 00 07 	e_lbz   r9,7(r9)
+ 10039be:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10039c2:	70 09 a8 52 	e_cmpl16i r9,82
+ 10039c6:	7f 80 00 20 	e_mcrf  cr7
+ 10039ca:	7d 20 00 26 	mfcr    r9
+ 10039ce:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10039d2:	7d 28 01 20 	mtcrf   128,r9
+ 10039d6:	7a 11 00 a4 	e_bgt   1003a7a <LIN1RX_irq+0x286>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:168 (discriminator 1)
+ 10039da:	71 28 e0 02 	e_lis   r9,16386
+ 10039de:	31 29 00 02 	e_lbz   r9,2(r9)
+ 10039e2:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10039e6:	70 09 98 00 	e_cmp16i r9,0
+ 10039ea:	7f 80 00 20 	e_mcrf  cr7
+ 10039ee:	7d 20 00 26 	mfcr    r9
+ 10039f2:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10039f6:	7d 28 01 20 	mtcrf   128,r9
+ 10039fa:	7a 02 00 80 	e_bne   1003a7a <LIN1RX_irq+0x286>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:169
+		if (TxInProgress == 0) {
+ 10039fe:	71 28 e0 02 	e_lis   r9,16386
+ 1003a02:	31 29 00 00 	e_lbz   r9,0(r9)
+ 1003a06:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003a0a:	70 09 98 00 	e_cmp16i r9,0
+ 1003a0e:	7f 80 00 20 	e_mcrf  cr7
+ 1003a12:	7d 20 00 26 	mfcr    r9
+ 1003a16:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003a1a:	7d 28 01 20 	mtcrf   128,r9
+ 1003a1e:	7a 02 00 50 	e_bne   1003a6e <LIN1RX_irq+0x27a>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:171
+			/* write character to transmit buffer */
+			LINFlexD_1.BDRL.B.DATA0 = XOff;
+ 1003a22:	71 3f e3 e8 	e_lis   r9,64488
+ 1003a26:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003a2a:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 1003a2e:	71 00 00 13 	e_li    r8,19
+ 1003a32:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 1003a36:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:173
+			/* Data Transmitted Interrupt Enable */
+			LINFlexD_1.LINIER.B.DTIE = 1;
+ 1003a3a:	71 3f e3 e8 	e_lis   r9,64488
+ 1003a3e:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003a42:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 1003a46:	71 00 00 01 	e_li    r8,1
+ 1003a4a:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 1003a4e:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:174
+			TxInProgress = 1;
+ 1003a52:	71 28 e0 02 	e_lis   r9,16386
+ 1003a56:	71 40 00 01 	e_li    r10,1
+ 1003a5a:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:175
+			XOffSent = 1;              /* set the flag showing that we've queued up to send an XOff */
+ 1003a5e:	71 28 e0 02 	e_lis   r9,16386
+ 1003a62:	71 40 00 01 	e_li    r10,1
+ 1003a66:	35 49 00 02 	e_stb   r10,2(r9)
+ 1003a6a:	78 00 00 10 	e_b     1003a7a <LIN1RX_irq+0x286>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:177
+		} else
+			SendXOff = 1;              /* set flag to send an XOff, stoping the host from sending data */
+ 1003a6e:	71 28 e0 02 	e_lis   r9,16386
+ 1003a72:	71 40 00 01 	e_li    r10,1
+ 1003a76:	35 49 00 06 	e_stb   r10,6(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:180
+	}
+
+	if (RxBAvail != 0)                 /* if there are bytes available in the Rx buffer */
+ 1003a7a:	71 28 e0 02 	e_lis   r9,16386
+ 1003a7e:	31 29 00 07 	e_lbz   r9,7(r9)
+ 1003a82:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003a86:	70 09 98 00 	e_cmp16i r9,0
+ 1003a8a:	7f 80 00 20 	e_mcrf  cr7
+ 1003a8e:	7d 20 00 26 	mfcr    r9
+ 1003a92:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003a96:	7d 28 01 20 	mtcrf   128,r9
+ 1003a9a:	7a 12 00 80 	e_beq   1003b1a <LIN1RX_irq+0x326>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:182
+	{
+		RxBAvail--;                    /* reduce the count by 1 */
+ 1003a9e:	71 28 e0 02 	e_lis   r9,16386
+ 1003aa2:	31 29 00 07 	e_lbz   r9,7(r9)
+ 1003aa6:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003aaa:	19 29 84 ff 	e_addi  r9,r9,-1
+ 1003aae:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 1003ab2:	71 28 e0 02 	e_lis   r9,16386
+ 1003ab6:	35 49 00 07 	e_stb   r10,7(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:183
+		RxBuff[RxIn++] = c;            /* place the received byte in the buffer */
+ 1003aba:	71 28 e0 02 	e_lis   r9,16386
+ 1003abe:	31 29 00 01 	e_lbz   r9,1(r9)
+ 1003ac2:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003ac6:	19 49 80 01 	e_addi  r10,r9,1
+ 1003aca:	75 48 06 3f 	e_rlwinm r8,r10,0,24,31
+ 1003ace:	71 48 e0 02 	e_lis   r10,16386
+ 1003ad2:	35 0a 00 01 	e_stb   r8,1(r10)
+ 1003ad6:	7d 28 4b 78 	mr      r8,r9
+ 1003ada:	71 28 e0 02 	e_lis   r9,16386
+ 1003ade:	1d 29 00 0c 	e_add16i r9,r9,12
+ 1003ae2:	31 5f 00 08 	e_lbz   r10,8(r31)
+ 1003ae6:	7d 49 41 ae 	stbx    r10,r9,r8
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:184
+		if (RxIn == RxBufSize)         /* reached the physical end of the buffer? */
+ 1003aea:	71 28 e0 02 	e_lis   r9,16386
+ 1003aee:	31 29 00 01 	e_lbz   r9,1(r9)
+ 1003af2:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003af6:	70 09 a8 60 	e_cmpl16i r9,96
+ 1003afa:	7f 80 00 20 	e_mcrf  cr7
+ 1003afe:	7d 20 00 26 	mfcr    r9
+ 1003b02:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003b06:	7d 28 01 20 	mtcrf   128,r9
+ 1003b0a:	7a 02 00 10 	e_bne   1003b1a <LIN1RX_irq+0x326>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:185
+			RxIn = 0;                  /* yes. wrap around to the start */
+ 1003b0e:	71 28 e0 02 	e_lis   r9,16386
+ 1003b12:	71 40 00 00 	e_li    r10,0
+ 1003b16:	35 49 00 01 	e_stb   r10,1(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:187
+	}
+} /*LINFlexD_1_RX_ISR*/
+ 1003b1a:	19 7f 80 20 	e_addi  r11,r31,32
+ 1003b1e:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1003b22:	03 31       	se_mfar r1,r11
+ 1003b24:	00 04       	se_blr
+
+01003b26 <LIN1TX_irq>:
+LIN1TX_irq():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:188
+void LIN1TX_irq(void) {
+ 1003b26:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 1003b2a:	d3 f1       	se_stw  r31,12(r1)
+ 1003b2c:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:190
+	/* Clear the DTFTFF flag and not the other flags */
+	LINFlexD_1.UARTSR.R = 0x0002;
+ 1003b2e:	71 3f e3 e8 	e_lis   r9,64488
+ 1003b32:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003b36:	71 40 00 02 	e_li    r10,2
+ 1003b3a:	55 49 00 14 	e_stw   r10,20(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:192
+
+	if (SendXOn != 0)                  /* request to send an XOn to the host? */
+ 1003b3e:	71 28 e0 02 	e_lis   r9,16386
+ 1003b42:	31 29 00 03 	e_lbz   r9,3(r9)
+ 1003b46:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003b4a:	70 09 98 00 	e_cmp16i r9,0
+ 1003b4e:	7f 80 00 20 	e_mcrf  cr7
+ 1003b52:	7d 20 00 26 	mfcr    r9
+ 1003b56:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003b5a:	7d 28 01 20 	mtcrf   128,r9
+ 1003b5e:	7a 12 00 44 	e_beq   1003ba2 <LIN1TX_irq+0x7c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:194
+	{
+		SendXOn = 0;
+ 1003b62:	71 28 e0 02 	e_lis   r9,16386
+ 1003b66:	71 40 00 00 	e_li    r10,0
+ 1003b6a:	35 49 00 03 	e_stb   r10,3(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:195
+		XOffSent = 0;                  /* reset the XOff flag */
+ 1003b6e:	71 28 e0 02 	e_lis   r9,16386
+ 1003b72:	71 40 00 00 	e_li    r10,0
+ 1003b76:	35 49 00 02 	e_stb   r10,2(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:198
+
+		/* write character to transmit buffer */
+		LINFlexD_1.BDRL.B.DATA0 = XOn;
+ 1003b7a:	71 3f e3 e8 	e_lis   r9,64488
+ 1003b7e:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003b82:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 1003b86:	71 00 00 11 	e_li    r8,17
+ 1003b8a:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 1003b8e:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:200
+		/* Data Transmitted Interrupt Enable */
+		TxInProgress = 1;
+ 1003b92:	71 28 e0 02 	e_lis   r9,16386
+ 1003b96:	71 40 00 01 	e_li    r10,1
+ 1003b9a:	35 49 00 00 	e_stb   r10,0(r9)
+ 1003b9e:	78 00 01 80 	e_b     1003d1e <LIN1TX_irq+0x1f8>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:203
+	}
+
+	else if (SendXOff != 0)            /* request to send an XOff to the host? */
+ 1003ba2:	71 28 e0 02 	e_lis   r9,16386
+ 1003ba6:	31 29 00 06 	e_lbz   r9,6(r9)
+ 1003baa:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003bae:	70 09 98 00 	e_cmp16i r9,0
+ 1003bb2:	7f 80 00 20 	e_mcrf  cr7
+ 1003bb6:	7d 20 00 26 	mfcr    r9
+ 1003bba:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003bbe:	7d 28 01 20 	mtcrf   128,r9
+ 1003bc2:	7a 12 00 38 	e_beq   1003bfa <LIN1TX_irq+0xd4>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:205
+	{
+		SendXOff = 0;                  /* yes, clear the request */
+ 1003bc6:	71 28 e0 02 	e_lis   r9,16386
+ 1003bca:	71 40 00 00 	e_li    r10,0
+ 1003bce:	35 49 00 06 	e_stb   r10,6(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:208
+
+		/* write character to transmit buffer */
+		LINFlexD_1.BDRL.B.DATA0 = XOff;
+ 1003bd2:	71 3f e3 e8 	e_lis   r9,64488
+ 1003bd6:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003bda:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 1003bde:	71 00 00 13 	e_li    r8,19
+ 1003be2:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 1003be6:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:210
+		/* Data Transmitted Interrupt Enable */
+		TxInProgress = 1;
+ 1003bea:	71 28 e0 02 	e_lis   r9,16386
+ 1003bee:	71 40 00 01 	e_li    r10,1
+ 1003bf2:	35 49 00 00 	e_stb   r10,0(r9)
+ 1003bf6:	78 00 01 28 	e_b     1003d1e <LIN1TX_irq+0x1f8>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:214
+	}
+
+	/* if anything left in the Tx buffer and XOff was not received, send data */
+	else if ((TxBAvail != TxBufSize) && (XOffRcvd == 0)) {
+ 1003bfa:	71 28 e0 02 	e_lis   r9,16386
+ 1003bfe:	31 29 00 05 	e_lbz   r9,5(r9)
+ 1003c02:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003c06:	70 09 a8 40 	e_cmpl16i r9,64
+ 1003c0a:	7f 80 00 20 	e_mcrf  cr7
+ 1003c0e:	7d 20 00 26 	mfcr    r9
+ 1003c12:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003c16:	7d 28 01 20 	mtcrf   128,r9
+ 1003c1a:	7a 12 00 e0 	e_beq   1003cfa <LIN1TX_irq+0x1d4>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:214 (discriminator 1)
+ 1003c1e:	71 28 e0 02 	e_lis   r9,16386
+ 1003c22:	31 29 00 04 	e_lbz   r9,4(r9)
+ 1003c26:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003c2a:	70 09 98 00 	e_cmp16i r9,0
+ 1003c2e:	7f 80 00 20 	e_mcrf  cr7
+ 1003c32:	7d 20 00 26 	mfcr    r9
+ 1003c36:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003c3a:	7d 28 01 20 	mtcrf   128,r9
+ 1003c3e:	7a 02 00 bc 	e_bne   1003cfa <LIN1TX_irq+0x1d4>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:216
+		/* write character to transmit buffer */
+		LINFlexD_1.BDRL.B.DATA0 = TxBuff[TxOut++];
+ 1003c42:	71 3f e3 e8 	e_lis   r9,64488
+ 1003c46:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003c4a:	71 28 e0 02 	e_lis   r9,16386
+ 1003c4e:	31 29 00 0a 	e_lbz   r9,10(r9)
+ 1003c52:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003c56:	19 09 80 01 	e_addi  r8,r9,1
+ 1003c5a:	75 07 06 3f 	e_rlwinm r7,r8,0,24,31
+ 1003c5e:	71 08 e0 02 	e_lis   r8,16386
+ 1003c62:	34 e8 00 0a 	e_stb   r7,10(r8)
+ 1003c66:	7d 28 4b 78 	mr      r8,r9
+ 1003c6a:	71 28 e0 02 	e_lis   r9,16386
+ 1003c6e:	1d 29 00 6c 	e_add16i r9,r9,108
+ 1003c72:	7d 29 40 ae 	lbzx    r9,r9,r8
+ 1003c76:	75 28 06 3f 	e_rlwinm r8,r9,0,24,31
+ 1003c7a:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 1003c7e:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 1003c82:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:218
+		/* Data Transmitted Interrupt Enable */
+		LINFlexD_1.LINIER.B.DTIE = 1;
+ 1003c86:	71 3f e3 e8 	e_lis   r9,64488
+ 1003c8a:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003c8e:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 1003c92:	71 00 00 01 	e_li    r8,1
+ 1003c96:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 1003c9a:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:219
+		TxInProgress = 1;
+ 1003c9e:	71 28 e0 02 	e_lis   r9,16386
+ 1003ca2:	71 40 00 01 	e_li    r10,1
+ 1003ca6:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:221
+
+		if (TxOut == TxBufSize)         /* reached the physical end of the buffer? */
+ 1003caa:	71 28 e0 02 	e_lis   r9,16386
+ 1003cae:	31 29 00 0a 	e_lbz   r9,10(r9)
+ 1003cb2:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003cb6:	70 09 a8 40 	e_cmpl16i r9,64
+ 1003cba:	7f 80 00 20 	e_mcrf  cr7
+ 1003cbe:	7d 20 00 26 	mfcr    r9
+ 1003cc2:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003cc6:	7d 28 01 20 	mtcrf   128,r9
+ 1003cca:	7a 02 00 10 	e_bne   1003cda <LIN1TX_irq+0x1b4>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:222
+			TxOut = 0;                  /* yes. wrap around to the start */
+ 1003cce:	71 28 e0 02 	e_lis   r9,16386
+ 1003cd2:	71 40 00 00 	e_li    r10,0
+ 1003cd6:	35 49 00 0a 	e_stb   r10,10(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:223
+		TxBAvail++;
+ 1003cda:	71 28 e0 02 	e_lis   r9,16386
+ 1003cde:	31 29 00 05 	e_lbz   r9,5(r9)
+ 1003ce2:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003ce6:	19 29 80 01 	e_addi  r9,r9,1
+ 1003cea:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 1003cee:	71 28 e0 02 	e_lis   r9,16386
+ 1003cf2:	35 49 00 05 	e_stb   r10,5(r9)
+ 1003cf6:	78 00 00 28 	e_b     1003d1e <LIN1TX_irq+0x1f8>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:226
+	} else {
+		/* Data Transmitted Interrupt disable */
+		LINFlexD_1.LINIER.B.DTIE = 0;
+ 1003cfa:	71 3f e3 e8 	e_lis   r9,64488
+ 1003cfe:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003d02:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 1003d06:	71 00 00 00 	e_li    r8,0
+ 1003d0a:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 1003d0e:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:227
+		TxInProgress = 0;
+ 1003d12:	71 28 e0 02 	e_lis   r9,16386
+ 1003d16:	71 40 00 00 	e_li    r10,0
+ 1003d1a:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/main.c:229
+	}
+} /*LINFlexD_1_TX_ISR*/
+ 1003d1e:	19 7f 80 10 	e_addi  r11,r31,16
+ 1003d22:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1003d26:	03 31       	se_mfar r1,r11
+ 1003d28:	00 04       	se_blr
+
+01003d2a <initLINFlexD_1>:
+initLINFlexD_1():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:8
+unsigned char UARTFirstTransmitFlag;
+
+
+/* LINFlex 1 for UART functioning */
+/******************************************TUNG**********DONE****************/
+void initLINFlexD_1 ( unsigned int MegaHertz, unsigned int BaudRate ) {
+ 1003d2a:	18 21 06 d8 	e_stwu  r1,-40(r1)
+ 1003d2e:	d9 f1       	se_stw  r31,36(r1)
+ 1003d30:	01 1f       	se_mr   r31,r1
+ 1003d32:	d6 3f       	se_stw  r3,24(r31)
+ 1003d34:	d7 4f       	se_stw  r4,28(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:11
+  unsigned int Fraction;
+  unsigned int Integer;
+  RxIn = RxOut = TxIn = TxOut = 0;  /* set the Rx & Tx queue indexes to zero */
+ 1003d36:	71 20 00 00 	e_li    r9,0
+ 1003d3a:	71 48 e0 02 	e_lis   r10,16386
+ 1003d3e:	35 2a 00 0a 	e_stb   r9,10(r10)
+ 1003d42:	71 48 e0 02 	e_lis   r10,16386
+ 1003d46:	35 2a 00 08 	e_stb   r9,8(r10)
+ 1003d4a:	71 48 e0 02 	e_lis   r10,16386
+ 1003d4e:	35 2a 00 09 	e_stb   r9,9(r10)
+ 1003d52:	71 48 e0 02 	e_lis   r10,16386
+ 1003d56:	35 2a 00 01 	e_stb   r9,1(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:12
+  RxBAvail = RxBufSize;     /* the receive buffer is empty */
+ 1003d5a:	71 28 e0 02 	e_lis   r9,16386
+ 1003d5e:	71 40 00 60 	e_li    r10,96
+ 1003d62:	35 49 00 07 	e_stb   r10,7(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:13
+  TxBAvail = TxBufSize;     /* the transmit buffer is empty */
+ 1003d66:	71 28 e0 02 	e_lis   r9,16386
+ 1003d6a:	71 40 00 40 	e_li    r10,64
+ 1003d6e:	35 49 00 05 	e_stb   r10,5(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:14
+  XOffSent = 0;             /* XOff character has not been sent */
+ 1003d72:	71 28 e0 02 	e_lis   r9,16386
+ 1003d76:	71 40 00 00 	e_li    r10,0
+ 1003d7a:	35 49 00 02 	e_stb   r10,2(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:15
+  XOffRcvd = 0;             /* XOff character has not been received */
+ 1003d7e:	71 28 e0 02 	e_lis   r9,16386
+ 1003d82:	71 40 00 00 	e_li    r10,0
+ 1003d86:	35 49 00 04 	e_stb   r10,4(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:16
+  SendXOff = 0;             /* Don't send an XOff */
+ 1003d8a:	71 28 e0 02 	e_lis   r9,16386
+ 1003d8e:	71 40 00 00 	e_li    r10,0
+ 1003d92:	35 49 00 06 	e_stb   r10,6(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:17
+  LINFlexD_1.LINCR1.B.INIT = 1;     /* Enter Initialization Mode */
+ 1003d96:	71 3f e3 e8 	e_lis   r9,64488
+ 1003d9a:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003d9e:	51 2a 00 00 	e_lwz   r9,0(r10)
+ 1003da2:	71 00 00 01 	e_li    r8,1
+ 1003da6:	75 09 07 fe 	e_rlwimi r9,r8,0,31,31
+ 1003daa:	55 2a 00 00 	e_stw   r9,0(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:18
+  LINFlexD_1.LINCR1.B.SLEEP = 0;    /* Exit Sleep Mode */
+ 1003dae:	71 3f e3 e8 	e_lis   r9,64488
+ 1003db2:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003db6:	51 2a 00 00 	e_lwz   r9,0(r10)
+ 1003dba:	71 00 00 00 	e_li    r8,0
+ 1003dbe:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 1003dc2:	55 2a 00 00 	e_stw   r9,0(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:19
+  LINFlexD_1.UARTCR.B.UART = 1;     /* UART Enable, Req'd before UART configuration */
+ 1003dc6:	71 3f e3 e8 	e_lis   r9,64488
+ 1003dca:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003dce:	51 2a 00 10 	e_lwz   r9,16(r10)
+ 1003dd2:	71 00 00 01 	e_li    r8,1
+ 1003dd6:	75 09 07 fe 	e_rlwimi r9,r8,0,31,31
+ 1003dda:	55 2a 00 10 	e_stw   r9,16(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:20
+  LINFlexD_1.UARTCR.R = 0x0033;     /* UART Enable, 1 byte tx, no parity, 8 data*/
+ 1003dde:	71 3f e3 e8 	e_lis   r9,64488
+ 1003de2:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003de6:	71 40 00 33 	e_li    r10,51
+ 1003dea:	55 49 00 10 	e_stw   r10,16(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:21
+  LINFlexD_1.UARTSR.B.SZF = 1;      /* CHANGE THIS LINE   Clear the Zero status bit */
+ 1003dee:	71 3f e3 e8 	e_lis   r9,64488
+ 1003df2:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003df6:	51 2a 00 14 	e_lwz   r9,20(r10)
+ 1003dfa:	71 00 00 01 	e_li    r8,1
+ 1003dfe:	75 09 7c 20 	e_rlwimi r9,r8,15,16,16
+ 1003e02:	55 2a 00 14 	e_stw   r9,20(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:22
+  LINFlexD_1.UARTSR.B.DRFRFE = 1;   /* CHANGE THIS LINE  Clear DRFRFE flag - W1C */
+ 1003e06:	71 3f e3 e8 	e_lis   r9,64488
+ 1003e0a:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003e0e:	51 2a 00 14 	e_lwz   r9,20(r10)
+ 1003e12:	71 00 00 01 	e_li    r8,1
+ 1003e16:	75 09 17 7a 	e_rlwimi r9,r8,2,29,29
+ 1003e1a:	55 2a 00 14 	e_stw   r9,20(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:24
+
+  BaudRate  = (MegaHertz * 1000000) / BaudRate;
+ 1003e1e:	51 5f 00 18 	e_lwz   r10,24(r31)
+ 1003e22:	71 20 e0 0f 	e_lis   r9,15
+ 1003e26:	71 28 c2 40 	e_or2i  r9,16960
+ 1003e2a:	7d 4a 49 d6 	mullw   r10,r10,r9
+ 1003e2e:	51 3f 00 1c 	e_lwz   r9,28(r31)
+ 1003e32:	7d 2a 4b 96 	divwu   r9,r10,r9
+ 1003e36:	55 3f 00 1c 	e_stw   r9,28(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:25
+  Integer   = BaudRate / 16;
+ 1003e3a:	51 3f 00 1c 	e_lwz   r9,28(r31)
+ 1003e3e:	7d 29 24 70 	e_srwi  r9,r9,4
+ 1003e42:	55 3f 00 08 	e_stw   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:26
+  Fraction  = BaudRate - (Integer * 16);
+ 1003e46:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 1003e4a:	7d 29 20 70 	e_slwi  r9,r9,4
+ 1003e4e:	51 5f 00 1c 	e_lwz   r10,28(r31)
+ 1003e52:	7d 29 50 50 	subf    r9,r9,r10
+ 1003e56:	55 3f 00 0c 	e_stw   r9,12(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:28
+
+  LINFlexD_1.LINIBRR.R = Integer;
+ 1003e5a:	71 3f e3 e8 	e_lis   r9,64488
+ 1003e5e:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003e62:	51 5f 00 08 	e_lwz   r10,8(r31)
+ 1003e66:	55 49 00 28 	e_stw   r10,40(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:29
+  LINFlexD_1.LINFBRR.R = Fraction;
+ 1003e6a:	71 3f e3 e8 	e_lis   r9,64488
+ 1003e6e:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003e72:	51 5f 00 0c 	e_lwz   r10,12(r31)
+ 1003e76:	55 49 00 24 	e_stw   r10,36(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:30
+  LINFlexD_1.LINIER.B.DRIE = 1;	/* Data reception interrupt enable */
+ 1003e7a:	71 3f e3 e8 	e_lis   r9,64488
+ 1003e7e:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003e82:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 1003e86:	71 00 00 01 	e_li    r8,1
+ 1003e8a:	75 09 17 7a 	e_rlwimi r9,r8,2,29,29
+ 1003e8e:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:31
+  LINFlexD_1.LINIER.B.DTIE = 1;	/* Data reception interrupt enable */
+ 1003e92:	71 3f e3 e8 	e_lis   r9,64488
+ 1003e96:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003e9a:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 1003e9e:	71 00 00 01 	e_li    r8,1
+ 1003ea2:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 1003ea6:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:32
+  LINFlexD_1.LINCR1.B.INIT = 0;     /* Exit Initialization Mode */
+ 1003eaa:	71 3f e3 e8 	e_lis   r9,64488
+ 1003eae:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1003eb2:	51 2a 00 00 	e_lwz   r9,0(r10)
+ 1003eb6:	71 00 00 00 	e_li    r8,0
+ 1003eba:	75 09 07 fe 	e_rlwimi r9,r8,0,31,31
+ 1003ebe:	55 2a 00 00 	e_stw   r9,0(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:34
+
+  UARTFirstTransmitFlag = 1;        /* Indicate no Tx has taken place yet */
+ 1003ec2:	71 28 e0 02 	e_lis   r9,16386
+ 1003ec6:	71 40 00 01 	e_li    r10,1
+ 1003eca:	35 49 00 0b 	e_stb   r10,11(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:36
+
+  SIUL2.MSCR[PC6].B.SSS = 1;        /* Pad PC6: Source signal is LIN1_TX  */
+ 1003ece:	71 40 60 00 	e_li    r10,-262144
+ 1003ed2:	51 2a 02 d8 	e_lwz   r9,728(r10)
+ 1003ed6:	71 00 00 01 	e_li    r8,1
+ 1003eda:	75 09 07 3e 	e_rlwimi r9,r8,0,28,31
+ 1003ede:	55 2a 02 d8 	e_stw   r9,728(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:37
+  SIUL2.MSCR[PC6].B.OBE = 1;        /* Pad PC6: OBE=1. */
+ 1003ee2:	71 40 60 00 	e_li    r10,-262144
+ 1003ee6:	51 2a 02 d8 	e_lwz   r9,728(r10)
+ 1003eea:	71 00 00 01 	e_li    r8,1
+ 1003eee:	75 09 c9 8c 	e_rlwimi r9,r8,25,6,6
+ 1003ef2:	55 2a 02 d8 	e_stw   r9,728(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:38
+  SIUL2.MSCR[PC6].B.SRC = 3;        /* Pad PC6: Full strength slew rate */
+ 1003ef6:	71 40 60 00 	e_li    r10,-262144
+ 1003efa:	51 2a 02 d8 	e_lwz   r9,728(r10)
+ 1003efe:	71 00 00 03 	e_li    r8,3
+ 1003f02:	75 09 e0 86 	e_rlwimi r9,r8,28,2,3
+ 1003f06:	55 2a 02 d8 	e_stw   r9,728(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:39
+  SIUL2.MSCR[PC7].B.IBE = 1;        /* Pad PC7: Enable pad for input */
+ 1003f0a:	71 40 60 00 	e_li    r10,-262144
+ 1003f0e:	51 2a 02 dc 	e_lwz   r9,732(r10)
+ 1003f12:	71 00 00 01 	e_li    r8,1
+ 1003f16:	75 09 9b 18 	e_rlwimi r9,r8,19,12,12
+ 1003f1a:	55 2a 02 dc 	e_stw   r9,732(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:40
+  SIUL2.IMCR[201].B.SSS = 1;        /* LIN1_RX : connected to pad PC9 */
+ 1003f1e:	71 40 60 00 	e_li    r10,-262144
+ 1003f22:	51 2a 0d 64 	e_lwz   r9,3428(r10)
+ 1003f26:	71 00 00 01 	e_li    r8,1
+ 1003f2a:	75 09 07 3e 	e_rlwimi r9,r8,0,28,31
+ 1003f2e:	55 2a 0d 64 	e_stw   r9,3428(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:41
+  INTC.PSR[379].R = 0x8001;	/* interrupt routed to core 0, priority 1 */
+ 1003f32:	71 3f e4 04 	e_lis   r9,64516
+ 1003f36:	71 50 78 01 	e_li    r10,-32767
+ 1003f3a:	5d 49 03 56 	e_sth   r10,854(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:42
+  INTC.PSR[380].R = 0x8001;	/* interrupt routed to core 0, priority 1 */
+ 1003f3e:	71 3f e4 04 	e_lis   r9,64516
+ 1003f42:	71 50 78 01 	e_li    r10,-32767
+ 1003f46:	5d 49 03 58 	e_sth   r10,856(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:43
+}
+ 1003f4a:	19 7f 80 28 	e_addi  r11,r31,40
+ 1003f4e:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1003f52:	03 31       	se_mfar r1,r11
+ 1003f54:	00 04       	se_blr
+
+01003f56 <rxLINFlexD_1>:
+rxLINFlexD_1():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:45
+/**********************************************Tung*****************DONE**************/
+unsigned char rxLINFlexD_1() {
+ 1003f56:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 1003f5a:	d3 f1       	se_stw  r31,12(r1)
+ 1003f5c:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:46
+  while (LINFlexD_1.UARTSR.B.DRFRFE == 0); /* Wait for data reception complete*/
+ 1003f5e:	44 00       	se_nop
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:46 (discriminator 1)
+ 1003f60:	71 3f e3 e8 	e_lis   r9,64488
+ 1003f64:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003f68:	51 29 00 14 	e_lwz   r9,20(r9)
+ 1003f6c:	7d 29 14 70 	e_srwi  r9,r9,2
+ 1003f70:	19 29 c0 01 	e_andi  r9,r9,1
+ 1003f74:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003f78:	70 09 98 00 	e_cmp16i r9,0
+ 1003f7c:	7f 80 00 20 	e_mcrf  cr7
+ 1003f80:	7d 20 00 26 	mfcr    r9
+ 1003f84:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1003f88:	7d 28 01 20 	mtcrf   128,r9
+ 1003f8c:	7a 12 ff d4 	e_beq   1003f60 <rxLINFlexD_1+0xa>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:47
+  LINFlexD_1.UARTSR.R &= UART_DRFRFE;      /* Clear data reception flag W1C */
+ 1003f90:	71 3f e3 e8 	e_lis   r9,64488
+ 1003f94:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003f98:	71 5f e3 e8 	e_lis   r10,64488
+ 1003f9c:	19 4a d1 c0 	e_ori   r10,r10,49152
+ 1003fa0:	51 4a 00 14 	e_lwz   r10,20(r10)
+ 1003fa4:	19 4a c0 04 	e_andi  r10,r10,4
+ 1003fa8:	55 49 00 14 	e_stw   r10,20(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:48
+  return( LINFlexD_1.BDRM.B.DATA4 );       /* Read byte of Data */
+ 1003fac:	71 3f e3 e8 	e_lis   r9,64488
+ 1003fb0:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1003fb4:	51 29 00 3c 	e_lwz   r9,60(r9)
+ 1003fb8:	7d 2a 4b 78 	mr      r10,r9
+ 1003fbc:	71 3f 7f ff 	e_li    r9,-1
+ 1003fc0:	7d 49 48 38 	and     r9,r10,r9
+ 1003fc4:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:49
+}
+ 1003fc8:	03 13       	se_mfar r3,r9
+ 1003fca:	19 7f 80 10 	e_addi  r11,r31,16
+ 1003fce:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1003fd2:	03 31       	se_mfar r1,r11
+ 1003fd4:	00 04       	se_blr
+
+01003fd6 <txLINFlexD_1>:
+txLINFlexD_1():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:52
+/************************************************Tung***************DONE**************/
+
+void txLINFlexD_1( unsigned char Data ) {
+ 1003fd6:	18 21 06 e8 	e_stwu  r1,-24(r1)
+ 1003fda:	d5 f1       	se_stw  r31,20(r1)
+ 1003fdc:	01 1f       	se_mr   r31,r1
+ 1003fde:	02 31       	se_mtar r9,r3
+ 1003fe0:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:53
+  if( UARTFirstTransmitFlag )   {         /* 1st byte transmit after init: */
+ 1003fe4:	71 28 e0 02 	e_lis   r9,16386
+ 1003fe8:	31 29 00 0b 	e_lbz   r9,11(r9)
+ 1003fec:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1003ff0:	70 09 98 00 	e_cmp16i r9,0
+ 1003ff4:	7f 80 00 20 	e_mcrf  cr7
+ 1003ff8:	7d 20 00 26 	mfcr    r9
+ 1003ffc:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1004000:	7d 28 01 20 	mtcrf   128,r9
+ 1004004:	7a 12 00 14 	e_beq   1004018 <txLINFlexD_1+0x42>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:54
+    UARTFirstTransmitFlag = 0;            /* Clear variable */
+ 1004008:	71 28 e0 02 	e_lis   r9,16386
+ 100400c:	71 40 00 00 	e_li    r10,0
+ 1004010:	35 49 00 0b 	e_stb   r10,11(r9)
+ 1004014:	78 00 00 52 	e_b     1004066 <txLINFlexD_1+0x90>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:57
+  }
+  else {                                  /* Normal transmit (not 1st time): */
+    while (LINFlexD_1.UARTSR.B.DTFTFF == 0); /* Wait for data transmission complete*/
+ 1004018:	44 00       	se_nop
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:57 (discriminator 1)
+ 100401a:	71 3f e3 e8 	e_lis   r9,64488
+ 100401e:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1004022:	51 29 00 14 	e_lwz   r9,20(r9)
+ 1004026:	7d 29 0c 70 	e_srwi  r9,r9,1
+ 100402a:	19 29 c0 01 	e_andi  r9,r9,1
+ 100402e:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1004032:	70 09 98 00 	e_cmp16i r9,0
+ 1004036:	7f 80 00 20 	e_mcrf  cr7
+ 100403a:	7d 20 00 26 	mfcr    r9
+ 100403e:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1004042:	7d 28 01 20 	mtcrf   128,r9
+ 1004046:	7a 12 ff d4 	e_beq   100401a <txLINFlexD_1+0x44>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:58
+    LINFlexD_1.UARTSR.R &= UART_DTFTFF;      /* Clear DTFTFF flag - W1C */
+ 100404a:	71 3f e3 e8 	e_lis   r9,64488
+ 100404e:	19 29 d1 c0 	e_ori   r9,r9,49152
+ 1004052:	71 5f e3 e8 	e_lis   r10,64488
+ 1004056:	19 4a d1 c0 	e_ori   r10,r10,49152
+ 100405a:	51 4a 00 14 	e_lwz   r10,20(r10)
+ 100405e:	19 4a c0 02 	e_andi  r10,r10,2
+ 1004062:	55 49 00 14 	e_stw   r10,20(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:60
+  }
+  LINFlexD_1.BDRL.B.DATA0 = Data;            /* Transmit 8 bits Data */
+ 1004066:	71 3f e3 e8 	e_lis   r9,64488
+ 100406a:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 100406e:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1004072:	75 28 06 3f 	e_rlwinm r8,r9,0,24,31
+ 1004076:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 100407a:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 100407e:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:61
+}
+ 1004082:	19 7f 80 18 	e_addi  r11,r31,24
+ 1004086:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 100408a:	03 31       	se_mfar r1,r11
+ 100408c:	00 04       	se_blr
+
+0100408e <send2Term>:
+send2Term():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:73
+
+void echoLINFlexD_1() {                 /* Optional utility to echo char. */
+  txLINFlexD_1( rxLINFlexD_1() );
+}
+/********************************************************Tung**********DONE***********/
+void send2Term(char *input2, unsigned int len )  {     /* Display message to terminal */
+ 100408e:	18 21 06 d8 	e_stwu  r1,-40(r1)
+ 1004092:	00 80       	se_mflr r0
+ 1004094:	db 01       	se_stw  r0,44(r1)
+ 1004096:	d9 f1       	se_stw  r31,36(r1)
+ 1004098:	01 1f       	se_mr   r31,r1
+ 100409a:	d6 3f       	se_stw  r3,24(r31)
+ 100409c:	d7 4f       	se_stw  r4,28(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:76
+  unsigned int count;
+
+  if (input2 == (void*)0 || len == 0)
+ 100409e:	51 3f 00 18 	e_lwz   r9,24(r31)
+ 10040a2:	70 09 98 00 	e_cmp16i r9,0
+ 10040a6:	7f 80 00 20 	e_mcrf  cr7
+ 10040aa:	7d 20 00 26 	mfcr    r9
+ 10040ae:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10040b2:	7d 28 01 20 	mtcrf   128,r9
+ 10040b6:	7a 12 00 20 	e_beq   10040d6 <send2Term+0x48>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:76 (discriminator 1)
+ 10040ba:	51 3f 00 1c 	e_lwz   r9,28(r31)
+ 10040be:	70 09 98 00 	e_cmp16i r9,0
+ 10040c2:	7f 80 00 20 	e_mcrf  cr7
+ 10040c6:	7d 20 00 26 	mfcr    r9
+ 10040ca:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10040ce:	7d 28 01 20 	mtcrf   128,r9
+ 10040d2:	7a 02 00 08 	e_bne   10040da <send2Term+0x4c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:78
+  {
+	return;
+ 10040d6:	78 00 00 62 	e_b     1004138 <send2Term+0xaa>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:81
+  }
+
+  for (count = 0; count < len; count++) {
+ 10040da:	71 20 00 00 	e_li    r9,0
+ 10040de:	55 3f 00 08 	e_stw   r9,8(r31)
+ 10040e2:	78 00 00 2e 	e_b     1004110 <send2Term+0x82>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:82 (discriminator 3)
+    txLINFlexD_1(input2[count]);
+ 10040e6:	51 5f 00 18 	e_lwz   r10,24(r31)
+ 10040ea:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 10040ee:	7d 2a 4a 14 	add     r9,r10,r9
+ 10040f2:	31 29 00 00 	e_lbz   r9,0(r9)
+ 10040f6:	7d 29 07 74 	extsb   r9,r9
+ 10040fa:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10040fe:	03 13       	se_mfar r3,r9
+ 1004100:	79 ff fe d7 	e_bl    1003fd6 <txLINFlexD_1>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:81 (discriminator 3)
+  if (input2 == (void*)0 || len == 0)
+  {
+	return;
+  }
+
+  for (count = 0; count < len; count++) {
+ 1004104:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 1004108:	19 29 80 01 	e_addi  r9,r9,1
+ 100410c:	55 3f 00 08 	e_stw   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:81 (discriminator 1)
+ 1004110:	51 5f 00 08 	e_lwz   r10,8(r31)
+ 1004114:	51 3f 00 1c 	e_lwz   r9,28(r31)
+ 1004118:	7f 8a 48 40 	cmplw   cr7,r10,r9
+ 100411c:	7d 20 00 26 	mfcr    r9
+ 1004120:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1004124:	7d 28 01 20 	mtcrf   128,r9
+ 1004128:	7a 10 ff be 	e_blt   10040e6 <send2Term+0x58>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:84
+    txLINFlexD_1(input2[count]);
+  }
+  txLINFlexD_1(13);                /* Carriage return */
+ 100412c:	48 d3       	se_li   r3,13
+ 100412e:	79 ff fe a9 	e_bl    1003fd6 <txLINFlexD_1>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:85
+  txLINFlexD_1(10);                /* Line feed */
+ 1004132:	48 a3       	se_li   r3,10
+ 1004134:	79 ff fe a3 	e_bl    1003fd6 <txLINFlexD_1>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:86
+}
+ 1004138:	19 7f 80 28 	e_addi  r11,r31,40
+ 100413c:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 1004140:	00 90       	se_mtlr r0
+ 1004142:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1004146:	03 31       	se_mfar r1,r11
+ 1004148:	00 04       	se_blr
+
+0100414a <PutChar>:
+PutChar():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:89
+/*********************************************************Tung********DONE************/
+void PutChar(int8_t c)
+{
+ 100414a:	18 21 06 e8 	e_stwu  r1,-24(r1)
+ 100414e:	d5 f1       	se_stw  r31,20(r1)
+ 1004150:	01 1f       	se_mr   r31,r1
+ 1004152:	02 31       	se_mtar r9,r3
+ 1004154:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:90
+    while (TxBAvail == 0){};    /* if there's no room in the xmit queue wait here */
+ 1004158:	44 00       	se_nop
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:90 (discriminator 1)
+ 100415a:	71 28 e0 02 	e_lis   r9,16386
+ 100415e:	31 29 00 05 	e_lbz   r9,5(r9)
+ 1004162:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1004166:	70 09 98 00 	e_cmp16i r9,0
+ 100416a:	7f 80 00 20 	e_mcrf  cr7
+ 100416e:	7d 20 00 26 	mfcr    r9
+ 1004172:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1004176:	7d 28 01 20 	mtcrf   128,r9
+ 100417a:	7a 12 ff e0 	e_beq   100415a <PutChar+0x10>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:92
+
+    asm("wrteei 0");		    /* disable interrupts */
+ 100417e:	7c 00 01 46 	wrteei  0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:93
+    TxBuff[TxIn++] = (int8_t)c; /* put the char in the buffer, inc buffer index */
+ 1004182:	71 28 e0 02 	e_lis   r9,16386
+ 1004186:	31 29 00 08 	e_lbz   r9,8(r9)
+ 100418a:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 100418e:	19 49 80 01 	e_addi  r10,r9,1
+ 1004192:	75 48 06 3f 	e_rlwinm r8,r10,0,24,31
+ 1004196:	71 48 e0 02 	e_lis   r10,16386
+ 100419a:	35 0a 00 08 	e_stb   r8,8(r10)
+ 100419e:	7d 28 4b 78 	mr      r8,r9
+ 10041a2:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 10041a6:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10041aa:	71 28 e0 02 	e_lis   r9,16386
+ 10041ae:	1d 29 00 6c 	e_add16i r9,r9,108
+ 10041b2:	7d 49 41 ae 	stbx    r10,r9,r8
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:94
+    if (TxIn == TxBufSize)     	/* buffer index go past the end of the buffer? */
+ 10041b6:	71 28 e0 02 	e_lis   r9,16386
+ 10041ba:	31 29 00 08 	e_lbz   r9,8(r9)
+ 10041be:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10041c2:	70 09 a8 40 	e_cmpl16i r9,64
+ 10041c6:	7f 80 00 20 	e_mcrf  cr7
+ 10041ca:	7d 20 00 26 	mfcr    r9
+ 10041ce:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10041d2:	7d 28 01 20 	mtcrf   128,r9
+ 10041d6:	7a 02 00 10 	e_bne   10041e6 <PutChar+0x9c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:95
+	TxIn = 0;               /* yes. wrap around to the start */
+ 10041da:	71 28 e0 02 	e_lis   r9,16386
+ 10041de:	71 40 00 00 	e_li    r10,0
+ 10041e2:	35 49 00 08 	e_stb   r10,8(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:96
+    TxBAvail--;                	/* one less character available in the buffer */
+ 10041e6:	71 28 e0 02 	e_lis   r9,16386
+ 10041ea:	31 29 00 05 	e_lbz   r9,5(r9)
+ 10041ee:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10041f2:	19 29 84 ff 	e_addi  r9,r9,-1
+ 10041f6:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10041fa:	71 28 e0 02 	e_lis   r9,16386
+ 10041fe:	35 49 00 05 	e_stb   r10,5(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:97
+    if (XOffRcvd == 0)         	/* if an XOff has not been received... */
+ 1004202:	71 28 e0 02 	e_lis   r9,16386
+ 1004206:	31 29 00 04 	e_lbz   r9,4(r9)
+ 100420a:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 100420e:	70 09 98 00 	e_cmp16i r9,0
+ 1004212:	7f 80 00 20 	e_mcrf  cr7
+ 1004216:	7d 20 00 26 	mfcr    r9
+ 100421a:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 100421e:	7d 28 01 20 	mtcrf   128,r9
+ 1004222:	7a 02 00 dc 	e_bne   10042fe <PutChar+0x1b4>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:99
+    {
+	if(TxInProgress == 0)
+ 1004226:	71 28 e0 02 	e_lis   r9,16386
+ 100422a:	31 29 00 00 	e_lbz   r9,0(r9)
+ 100422e:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1004232:	70 09 98 00 	e_cmp16i r9,0
+ 1004236:	7f 80 00 20 	e_mcrf  cr7
+ 100423a:	7d 20 00 26 	mfcr    r9
+ 100423e:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1004242:	7d 28 01 20 	mtcrf   128,r9
+ 1004246:	7a 02 00 b8 	e_bne   10042fe <PutChar+0x1b4>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:102
+	{
+	    /* write character to transmit buffer */
+	    LINFlexD_1.BDRL.B.DATA0 = TxBuff[TxOut++];
+ 100424a:	71 3f e3 e8 	e_lis   r9,64488
+ 100424e:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1004252:	71 28 e0 02 	e_lis   r9,16386
+ 1004256:	31 29 00 0a 	e_lbz   r9,10(r9)
+ 100425a:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 100425e:	19 09 80 01 	e_addi  r8,r9,1
+ 1004262:	75 07 06 3f 	e_rlwinm r7,r8,0,24,31
+ 1004266:	71 08 e0 02 	e_lis   r8,16386
+ 100426a:	34 e8 00 0a 	e_stb   r7,10(r8)
+ 100426e:	7d 28 4b 78 	mr      r8,r9
+ 1004272:	71 28 e0 02 	e_lis   r9,16386
+ 1004276:	1d 29 00 6c 	e_add16i r9,r9,108
+ 100427a:	7d 29 40 ae 	lbzx    r9,r9,r8
+ 100427e:	75 28 06 3f 	e_rlwinm r8,r9,0,24,31
+ 1004282:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 1004286:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 100428a:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:104
+	    /* Data Transmitted Interrupt Enable */
+	    LINFlexD_1.LINIER.B.DTIE = 1;
+ 100428e:	71 3f e3 e8 	e_lis   r9,64488
+ 1004292:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1004296:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 100429a:	71 00 00 01 	e_li    r8,1
+ 100429e:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 10042a2:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:105
+	    TxInProgress = 1;
+ 10042a6:	71 28 e0 02 	e_lis   r9,16386
+ 10042aa:	71 40 00 01 	e_li    r10,1
+ 10042ae:	35 49 00 00 	e_stb   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:107
+
+	    if (TxOut == TxBufSize)	/* reached the physical end of the buffer? */
+ 10042b2:	71 28 e0 02 	e_lis   r9,16386
+ 10042b6:	31 29 00 0a 	e_lbz   r9,10(r9)
+ 10042ba:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10042be:	70 09 a8 40 	e_cmpl16i r9,64
+ 10042c2:	7f 80 00 20 	e_mcrf  cr7
+ 10042c6:	7d 20 00 26 	mfcr    r9
+ 10042ca:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10042ce:	7d 28 01 20 	mtcrf   128,r9
+ 10042d2:	7a 02 00 10 	e_bne   10042e2 <PutChar+0x198>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:108
+		TxOut = 0;              /* yes. wrap around to the start */
+ 10042d6:	71 28 e0 02 	e_lis   r9,16386
+ 10042da:	71 40 00 00 	e_li    r10,0
+ 10042de:	35 49 00 0a 	e_stb   r10,10(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:109
+	    TxBAvail++;
+ 10042e2:	71 28 e0 02 	e_lis   r9,16386
+ 10042e6:	31 29 00 05 	e_lbz   r9,5(r9)
+ 10042ea:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10042ee:	19 29 80 01 	e_addi  r9,r9,1
+ 10042f2:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10042f6:	71 28 e0 02 	e_lis   r9,16386
+ 10042fa:	35 49 00 05 	e_stb   r10,5(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:113
+	}
+    }
+
+    asm("wrteei 1");	/* enable interrupts */
+ 10042fe:	7c 00 81 46 	wrteei  1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:114
+}/*PutChar*/
+ 1004302:	19 7f 80 18 	e_addi  r11,r31,24
+ 1004306:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 100430a:	03 31       	se_mfar r1,r11
+ 100430c:	00 04       	se_blr
+
+0100430e <GetChar>:
+GetChar():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:120
+
+/*******************************************************************************
+Function Name : GetChar
+*********************************************************Tung*****DONE*****************/
+int8_t GetChar(void)
+{
+ 100430e:	18 21 06 e0 	e_stwu  r1,-32(r1)
+ 1004312:	d7 f1       	se_stw  r31,28(r1)
+ 1004314:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:124
+    uint8_t c;                 	/* holds the character we'll return */
+
+    /* if there's no characters in the Rx buffer wait here */
+    while (RxBAvail == RxBufSize){};
+ 1004316:	44 00       	se_nop
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:124 (discriminator 1)
+ 1004318:	71 28 e0 02 	e_lis   r9,16386
+ 100431c:	31 29 00 07 	e_lbz   r9,7(r9)
+ 1004320:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1004324:	70 09 a8 60 	e_cmpl16i r9,96
+ 1004328:	7f 80 00 20 	e_mcrf  cr7
+ 100432c:	7d 20 00 26 	mfcr    r9
+ 1004330:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1004334:	7d 28 01 20 	mtcrf   128,r9
+ 1004338:	7a 12 ff e0 	e_beq   1004318 <GetChar+0xa>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:126
+
+    asm("wrteei 0");						/* disable interrupts */
+ 100433c:	7c 00 01 46 	wrteei  0
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:129
+
+    /* get a character from the Rx buffer & advance the Rx index */
+    c = RxBuff[RxOut++];
+ 1004340:	71 28 e0 02 	e_lis   r9,16386
+ 1004344:	31 29 00 09 	e_lbz   r9,9(r9)
+ 1004348:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 100434c:	19 49 80 01 	e_addi  r10,r9,1
+ 1004350:	75 48 06 3f 	e_rlwinm r8,r10,0,24,31
+ 1004354:	71 48 e0 02 	e_lis   r10,16386
+ 1004358:	35 0a 00 09 	e_stb   r8,9(r10)
+ 100435c:	7d 2a 4b 78 	mr      r10,r9
+ 1004360:	71 28 e0 02 	e_lis   r9,16386
+ 1004364:	1d 29 00 0c 	e_add16i r9,r9,12
+ 1004368:	7d 29 50 ae 	lbzx    r9,r9,r10
+ 100436c:	35 3f 00 08 	e_stb   r9,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:130
+    if (RxOut == RxBufSize)    	/* index go past the physical end of the buffer? */
+ 1004370:	71 28 e0 02 	e_lis   r9,16386
+ 1004374:	31 29 00 09 	e_lbz   r9,9(r9)
+ 1004378:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 100437c:	70 09 a8 60 	e_cmpl16i r9,96
+ 1004380:	7f 80 00 20 	e_mcrf  cr7
+ 1004384:	7d 20 00 26 	mfcr    r9
+ 1004388:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 100438c:	7d 28 01 20 	mtcrf   128,r9
+ 1004390:	7a 02 00 10 	e_bne   10043a0 <GetChar+0x92>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:131
+	RxOut = 0;                /* yes wrap around to the start */
+ 1004394:	71 28 e0 02 	e_lis   r9,16386
+ 1004398:	71 40 00 00 	e_li    r10,0
+ 100439c:	35 49 00 09 	e_stb   r10,9(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:132
+    RxBAvail++;                	/* 1 more byte available in the receive buffer */
+ 10043a0:	71 28 e0 02 	e_lis   r9,16386
+ 10043a4:	31 29 00 07 	e_lbz   r9,7(r9)
+ 10043a8:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10043ac:	19 29 80 01 	e_addi  r9,r9,1
+ 10043b0:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10043b4:	71 28 e0 02 	e_lis   r9,16386
+ 10043b8:	35 49 00 07 	e_stb   r10,7(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:136
+
+    /* if an XOff was previously sent & the Rx buffer
+       has more than XOnCount bytes available */
+    if ((XOffSent != 0) & (RxBAvail >= XOnCount))
+ 10043bc:	71 28 e0 02 	e_lis   r9,16386
+ 10043c0:	31 29 00 02 	e_lbz   r9,2(r9)
+ 10043c4:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10043c8:	7d 29 00 d0 	neg     r9,r9
+ 10043cc:	7d 29 fc 70 	e_srwi  r9,r9,31
+ 10043d0:	75 2a 06 3f 	e_rlwinm r10,r9,0,24,31
+ 10043d4:	71 28 e0 02 	e_lis   r9,16386
+ 10043d8:	31 29 00 07 	e_lbz   r9,7(r9)
+ 10043dc:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10043e0:	70 09 a8 57 	e_cmpl16i r9,87
+ 10043e4:	7f 80 00 20 	e_mcrf  cr7
+ 10043e8:	7d 20 00 26 	mfcr    r9
+ 10043ec:	75 29 f7 ff 	e_rlwinm r9,r9,30,31,31
+ 10043f0:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10043f4:	7d 49 48 38 	and     r9,r10,r9
+ 10043f8:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 10043fc:	70 09 98 00 	e_cmp16i r9,0
+ 1004400:	7f 80 00 20 	e_mcrf  cr7
+ 1004404:	7d 20 00 26 	mfcr    r9
+ 1004408:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 100440c:	7d 28 01 20 	mtcrf   128,r9
+ 1004410:	7a 12 00 80 	e_beq   1004490 <GetChar+0x182>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:138
+    {
+	if(TxInProgress == 0)
+ 1004414:	71 28 e0 02 	e_lis   r9,16386
+ 1004418:	31 29 00 00 	e_lbz   r9,0(r9)
+ 100441c:	75 29 06 3f 	e_rlwinm r9,r9,0,24,31
+ 1004420:	70 09 98 00 	e_cmp16i r9,0
+ 1004424:	7f 80 00 20 	e_mcrf  cr7
+ 1004428:	7d 20 00 26 	mfcr    r9
+ 100442c:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 1004430:	7d 28 01 20 	mtcrf   128,r9
+ 1004434:	7a 02 00 50 	e_bne   1004484 <GetChar+0x176>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:141
+	{
+	    /* write character to transmit buffer */
+	    LINFlexD_1.BDRL.B.DATA0 = XOn;
+ 1004438:	71 3f e3 e8 	e_lis   r9,64488
+ 100443c:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1004440:	51 2a 00 38 	e_lwz   r9,56(r10)
+ 1004444:	71 00 00 11 	e_li    r8,17
+ 1004448:	75 09 06 3e 	e_rlwimi r9,r8,0,24,31
+ 100444c:	55 2a 00 38 	e_stw   r9,56(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:143
+	    /* Data Transmitted Interrupt Enable */
+	    LINFlexD_1.LINIER.B.DTIE = 1;
+ 1004450:	71 3f e3 e8 	e_lis   r9,64488
+ 1004454:	19 2a d1 c0 	e_ori   r10,r9,49152
+ 1004458:	51 2a 00 04 	e_lwz   r9,4(r10)
+ 100445c:	71 00 00 01 	e_li    r8,1
+ 1004460:	75 09 0f bc 	e_rlwimi r9,r8,1,30,30
+ 1004464:	55 2a 00 04 	e_stw   r9,4(r10)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:144
+	    XOffSent = 0;
+ 1004468:	71 28 e0 02 	e_lis   r9,16386
+ 100446c:	71 40 00 00 	e_li    r10,0
+ 1004470:	35 49 00 02 	e_stb   r10,2(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:145
+	    TxInProgress = 1;
+ 1004474:	71 28 e0 02 	e_lis   r9,16386
+ 1004478:	71 40 00 01 	e_li    r10,1
+ 100447c:	35 49 00 00 	e_stb   r10,0(r9)
+ 1004480:	78 00 00 10 	e_b     1004490 <GetChar+0x182>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:148
+	}
+	else
+	    SendXOn = 1;
+ 1004484:	71 28 e0 02 	e_lis   r9,16386
+ 1004488:	71 40 00 01 	e_li    r10,1
+ 100448c:	35 49 00 03 	e_stb   r10,3(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:150
+    }
+    asm("wrteei 1");						/* enable interrupts */
+ 1004490:	7c 00 81 46 	wrteei  1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:152
+
+    return(c);     /* return the character retrieved from receive buffer */
+ 1004494:	31 3f 00 08 	e_lbz   r9,8(r31)
+ 1004498:	7d 29 07 74 	extsb   r9,r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:153
+}/*GetChar*/
+ 100449c:	03 13       	se_mfar r3,r9
+ 100449e:	19 7f 80 20 	e_addi  r11,r31,32
+ 10044a2:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 10044a6:	03 31       	se_mfar r1,r11
+ 10044a8:	00 04       	se_blr
+
+010044aa <OutStr>:
+OutStr():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:159
+
+/*******************************************************************************
+Function Name : OutStr
+****************************************************Tung***DONE***********************/
+void OutStr(char *Str)
+{
+ 10044aa:	18 21 06 e8 	e_stwu  r1,-24(r1)
+ 10044ae:	00 80       	se_mflr r0
+ 10044b0:	d7 01       	se_stw  r0,28(r1)
+ 10044b2:	d5 f1       	se_stw  r31,20(r1)
+ 10044b4:	01 1f       	se_mr   r31,r1
+ 10044b6:	d2 3f       	se_stw  r3,8(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:161
+    /* output 1 character at a time untill we reach the end of the string */
+    while (*Str != 0)
+ 10044b8:	78 00 00 1e 	e_b     10044d6 <OutStr+0x2c>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:162
+	PutChar(*Str++);
+ 10044bc:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 10044c0:	19 49 80 01 	e_addi  r10,r9,1
+ 10044c4:	55 5f 00 08 	e_stw   r10,8(r31)
+ 10044c8:	31 29 00 00 	e_lbz   r9,0(r9)
+ 10044cc:	7d 29 07 74 	extsb   r9,r9
+ 10044d0:	03 13       	se_mfar r3,r9
+ 10044d2:	79 ff fc 79 	e_bl    100414a <PutChar>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:161
+Function Name : OutStr
+****************************************************Tung***DONE***********************/
+void OutStr(char *Str)
+{
+    /* output 1 character at a time untill we reach the end of the string */
+    while (*Str != 0)
+ 10044d6:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 10044da:	31 29 00 00 	e_lbz   r9,0(r9)
+ 10044de:	7d 29 07 74 	extsb   r9,r9
+ 10044e2:	70 09 98 00 	e_cmp16i r9,0
+ 10044e6:	7f 80 00 20 	e_mcrf  cr7
+ 10044ea:	7d 20 00 26 	mfcr    r9
+ 10044ee:	75 29 e0 07 	e_rlwinm r9,r9,28,0,3
+ 10044f2:	7d 28 01 20 	mtcrf   128,r9
+ 10044f6:	7a 02 ff c6 	e_bne   10044bc <OutStr+0x12>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/linflexd_uart.c:163
+	PutChar(*Str++);
+}/*OutStr*/
+ 10044fa:	19 7f 80 18 	e_addi  r11,r31,24
+ 10044fe:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 1004502:	00 90       	se_mtlr r0
+ 1004504:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1004508:	03 31       	se_mfar r1,r11
+ 100450a:	00 04       	se_blr
+
+0100450c <dummy>:
+dummy():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_SW_mode_isr_vectors_MPC5748G.c:788
+(uint32_t) &dummy, /* Vector # 753 eMIOS channel 94,95 EMIOS_GFR[F94,F95] */
+
+};
+
+
+void dummy (void) {   /* Dummy ISR vector to trap undefined ISRs */
+ 100450c:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 1004510:	d3 f1       	se_stw  r31,12(r1)
+ 1004512:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/intc_SW_mode_isr_vectors_MPC5748G.c:789 (discriminator 1)
+    while (1) {};  /* Wait forever or for watchdog timeout */
+ 1004514:	78 00 00 00 	e_b     1004514 <dummy+0x8>
+
+01004518 <SetIVPR>:
+SetIVPR():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:45
+/**************************************************************************/
+/* FUNCTION     : SetIVPR                                                 */
+/* PURPOSE      : Initialise Core IVPR                                    */
+/**************************************************************************/
+void SetIVPR (register unsigned int x)
+{
+ 1004518:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 100451c:	d3 f1       	se_stw  r31,12(r1)
+ 100451e:	01 1f       	se_mr   r31,r1
+ 1004520:	02 31       	se_mtar r9,r3
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:46
+    MTSPR(63, x);
+ 1004522:	7d 3f 0b a6 	mtivpr  r9
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:47
+}
+ 1004526:	19 7f 80 10 	e_addi  r11,r31,16
+ 100452a:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 100452e:	03 31       	se_mfar r1,r11
+ 1004530:	00 04       	se_blr
+
+01004532 <InitINTC>:
+InitINTC():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:141
+/**************************************************************************/
+/* FUNCTION     : InitINTC                                                */
+/* PURPOSE      : This function intializes the INTC for software vector   */
+/*                mode.                                                   */
+/**************************************************************************/
+void InitINTC(void) {   
+ 1004532:	18 21 06 e0 	e_stwu  r1,-32(r1)
+ 1004536:	d7 f1       	se_stw  r31,28(r1)
+ 1004538:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:146
+
+	uint32_t __attribute__((unused)) temp;
+
+#if !defined(MPC574xP)
+    uint16_t coreId = GetCoreID ();
+ 100453a:	7d 3e 42 a6 	mfpir   r9
+ 100453e:	55 3f 00 08 	e_stw   r9,8(r31)
+ 1004542:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 1004546:	5d 3f 00 0c 	e_sth   r9,12(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:155
+#if defined(MPC574xP)
+    INTC.BCR.R   = 0;     /* Software vector mode   */
+#elif defined(MPC5777C)
+    INTC.MCR.R  &= ~(INTC_BCR_HVEN( coreId ));     /* Software vector mode   */
+#else
+    INTC.BCR.R  &= ~(INTC_BCR_HVEN( coreId ));     /* Software vector mode   */
+ 100454a:	71 3f e4 04 	e_lis   r9,64516
+ 100454e:	71 5f e4 04 	e_lis   r10,64516
+ 1004552:	51 0a 00 00 	e_lwz   r8,0(r10)
+ 1004556:	59 5f 00 0c 	e_lhz   r10,12(r31)
+ 100455a:	75 4a 04 3f 	e_rlwinm r10,r10,0,16,31
+ 100455e:	7d 4a 18 70 	e_slwi  r10,r10,3
+ 1004562:	48 17       	se_li   r7,1
+ 1004564:	7c ea 50 30 	slw     r10,r7,r10
+ 1004568:	7d 4a 50 f8 	not     r10,r10
+ 100456c:	7d 0a 50 38 	and     r10,r8,r10
+ 1004570:	55 49 00 00 	e_stw   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:176
+    temp = (coreId) ? INTC.IACKR1.R : INTC.IACKR0.R;
+    /* Set INTC ISR vector table base addr. */
+    if (coreId) INTC.IACKR1.R = (uint32_t) &IntcIsrVectorTable[0];
+    else INTC.IACKR0.R = (uint32_t) &IntcIsrVectorTable[0];
+#else
+    temp = INTC.IACKR[coreId].R;
+ 1004574:	71 5f e4 04 	e_lis   r10,64516
+ 1004578:	59 3f 00 0c 	e_lhz   r9,12(r31)
+ 100457c:	75 29 04 3f 	e_rlwinm r9,r9,0,16,31
+ 1004580:	19 29 80 08 	e_addi  r9,r9,8
+ 1004584:	7d 29 10 70 	e_slwi  r9,r9,2
+ 1004588:	7d 2a 4a 14 	add     r9,r10,r9
+ 100458c:	51 29 00 00 	e_lwz   r9,0(r9)
+ 1004590:	55 3f 00 10 	e_stw   r9,16(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:178
+    /* Set INTC ISR vector table base addr. */
+    INTC.IACKR[coreId].R = (uint32_t) &IntcIsrVectorTable[0];
+ 1004594:	71 1f e4 04 	e_lis   r8,64516
+ 1004598:	59 3f 00 0c 	e_lhz   r9,12(r31)
+ 100459c:	75 29 04 3f 	e_rlwinm r9,r9,0,16,31
+ 10045a0:	71 40 e1 00 	e_lis   r10,256
+ 10045a4:	1d 4a 20 00 	e_add16i r10,r10,8192
+ 10045a8:	19 29 80 08 	e_addi  r9,r9,8
+ 10045ac:	7d 29 10 70 	e_slwi  r9,r9,2
+ 10045b0:	7d 28 4a 14 	add     r9,r8,r9
+ 10045b4:	55 49 00 00 	e_stw   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:180
+#endif
+}
+ 10045b8:	19 7f 80 20 	e_addi  r11,r31,32
+ 10045bc:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 10045c0:	03 31       	se_mfar r1,r11
+ 10045c2:	00 04       	se_blr
+
+010045c4 <enableIrq>:
+enableIrq():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:188
+/**************************************************************************/
+/* FUNCTION     : enableIrq                                               */
+/* PURPOSE      : This function sets INTC's current priority to 0.        */
+/*                External interrupts to the core are enabled.            */
+/**************************************************************************/
+void enableIrq(void) {
+ 10045c4:	18 21 06 e0 	e_stwu  r1,-32(r1)
+ 10045c8:	d7 f1       	se_stw  r31,28(r1)
+ 10045ca:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:191
+
+#if !defined(MPC574xP)
+    uint16_t coreId = GetCoreID ();
+ 10045cc:	7d 3e 42 a6 	mfpir   r9
+ 10045d0:	55 3f 00 08 	e_stw   r9,8(r31)
+ 10045d4:	51 3f 00 08 	e_lwz   r9,8(r31)
+ 10045d8:	5d 3f 00 0c 	e_sth   r9,12(r31)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:208
+#elif defined(MPC574xC)
+    if (coreId) INTC.CPR1.R = 0U;
+    else INTC.CPR0.R = 0U;
+#else
+    /* Ensure INTC's current priority is 0 */
+    INTC.CPR[coreId].R = 0U;
+ 10045dc:	71 5f e4 04 	e_lis   r10,64516
+ 10045e0:	59 3f 00 0c 	e_lhz   r9,12(r31)
+ 10045e4:	75 29 04 3f 	e_rlwinm r9,r9,0,16,31
+ 10045e8:	19 29 80 04 	e_addi  r9,r9,4
+ 10045ec:	7d 29 10 70 	e_slwi  r9,r9,2
+ 10045f0:	7d 2a 4a 14 	add     r9,r10,r9
+ 10045f4:	71 40 00 00 	e_li    r10,0
+ 10045f8:	55 49 00 00 	e_stw   r10,0(r9)
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:211
+#endif
+    /* Enable external interrupts */
+    PPCASM (" wrteei 1 ");
+ 10045fc:	7c 00 81 46 	wrteei  1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:212
+}
+ 1004600:	19 7f 80 20 	e_addi  r11,r31,32
+ 1004604:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 1004608:	03 31       	se_mfar r1,r11
+ 100460a:	00 04       	se_blr
+
+0100460c <xcptn_xmpl>:
+xcptn_xmpl():
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:220
+/**************************************************************************/
+/* FUNCTION     : xcptn_xmpl                                              */
+/* PURPOSE      : This function sets up the necessary functions to raise  */
+/*                and handle a Interrupt in software vector mode          */
+/**************************************************************************/
+void xcptn_xmpl(void) {
+ 100460c:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 1004610:	00 80       	se_mflr r0
+ 1004612:	d5 01       	se_stw  r0,20(r1)
+ 1004614:	d3 f1       	se_stw  r31,12(r1)
+ 1004616:	01 1f       	se_mr   r31,r1
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:223
+    
+    /* Initialise Core IVPR */
+    SetIVPR ((unsigned int) &VTABLE);
+ 1004618:	71 20 e1 00 	e_lis   r9,256
+ 100461c:	1d 29 10 00 	e_add16i r9,r9,4096
+ 1004620:	03 13       	se_mfar r3,r9
+ 1004622:	79 ff fe f7 	e_bl    1004518 <SetIVPR>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:228
+#if defined(MPC5777C)
+    InitIVORS();
+#endif
+    /* Initialize INTC for SW vector mode */
+    InitINTC();               
+ 1004626:	79 ff ff 0d 	e_bl    1004532 <InitINTC>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:231
+    
+    /* Enable interrupts */
+    enableIrq();
+ 100462a:	79 ff ff 9b 	e_bl    10045c4 <enableIrq>
+D:\boot\bootloader\bootloader_Z4_0\Debug/../src/MPC57xx__Interrupt_Init.c:233
+
+}
+ 100462e:	19 7f 80 10 	e_addi  r11,r31,16
+ 1004632:	50 0b 00 04 	e_lwz   r0,4(r11)
+ 1004636:	00 90       	se_mtlr r0
+ 1004638:	53 eb ff fc 	e_lwz   r31,-4(r11)
+ 100463c:	03 31       	se_mfar r1,r11
+ 100463e:	00 04       	se_blr
+
+01004640 <memcpy>:
+memcpy():
+S32DS/e200_ewl/EWL_C/src/strings/memcpy.c:71
+ 1004640:	7c 84 18 40 	cmplw   cr1,r4,r3
+ 1004644:	7a 14 00 22 	e_blt   cr1,1004666 <memcpy+0x26>
+ 1004648:	20 05       	se_addi r5,1
+ 100464a:	71 20 00 00 	e_li    r9,0
+ 100464e:	00 b5       	se_mtctr r5
+S32DS/e200_ewl/EWL_C/src/strings/memcpy.c:72 (discriminator 1)
+ 1004650:	7a 30 00 14 	e_bdz   1004664 <memcpy+0x24>
+S32DS/e200_ewl/EWL_C/src/strings/memcpy.c:73
+ 1004654:	7d 44 48 ae 	lbzx    r10,r4,r9
+ 1004658:	7d 43 49 ae 	stbx    r10,r3,r9
+ 100465c:	19 29 80 01 	e_addi  r9,r9,1
+ 1004660:	79 ff ff f0 	e_b     1004650 <memcpy+0x10>
+ 1004664:	00 04       	se_blr
+S32DS/e200_ewl/EWL_C/src/strings/memcpy.c:75
+ 1004666:	7d 23 2a 14 	add     r9,r3,r5
+ 100466a:	04 54       	se_add  r4,r5
+ 100466c:	20 05       	se_addi r5,1
+ 100466e:	00 b5       	se_mtctr r5
+S32DS/e200_ewl/EWL_C/src/strings/memcpy.c:75 (discriminator 1)
+ 1004670:	7a 30 00 10 	e_bdz   1004680 <memcpy+0x40>
+S32DS/e200_ewl/EWL_C/src/strings/memcpy.c:76
+ 1004674:	19 44 00 ff 	e_lbzu  r10,-1(r4)
+ 1004678:	19 49 04 ff 	e_stbu  r10,-1(r9)
+ 100467c:	79 ff ff f4 	e_b     1004670 <memcpy+0x30>
+S32DS/e200_ewl/EWL_C/src/strings/memcpy.c:82
+ 1004680:	00 04       	se_blr
+
+01004682 <memset>:
+memset():
+S32DS/e200_ewl/EWL_C/src/strings/memset.c:29
+ 1004682:	18 21 06 f0 	e_stwu  r1,-16(r1)
+ 1004686:	00 80       	se_mflr r0
+ 1004688:	d3 f1       	se_stw  r31,12(r1)
+ 100468a:	d5 01       	se_stw  r0,20(r1)
+ 100468c:	01 3f       	se_mr   r31,r3
+S32DS/e200_ewl/EWL_C/src/strings/memset.c:30
+ 100468e:	78 00 00 0f 	e_bl    100469c <__fill_mem>
+S32DS/e200_ewl/EWL_C/src/strings/memset.c:33
+ 1004692:	01 f3       	se_mr   r3,r31
+ 1004694:	19 61 80 10 	e_addi  r11,r1,16
+ 1004698:	79 ff e5 f8 	e_b     1002c90 <_restgpr_31_x>
+
+0100469c <__fill_mem>:
+__fill_mem():
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:67
+ 100469c:	00 c4       	se_extzb r4
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:73
+ 100469e:	18 a5 a8 1f 	e_cmpli cr1,r5,31
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:70
+ 10046a2:	02 41       	se_mtar r9,r4
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:73
+ 10046a4:	7a 05 00 b4 	e_ble   cr1,1004758 <__fill_mem+0xbc>
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:76
+ 10046a8:	7d 23 00 d0 	neg     r9,r3
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:77
+ 10046ac:	19 2a c8 03 	e_andi. r10,r9,3
+ 10046b0:	7a 12 00 20 	e_beq   10046d0 <__fill_mem+0x34>
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:78
+ 10046b4:	7c aa 28 50 	subf    r5,r10,r5
+ 10046b8:	71 20 00 00 	e_li    r9,0
+ 10046bc:	7d 49 03 a6 	mtctr   r10
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:82 (discriminator 1)
+ 10046c0:	7c 83 49 ae 	stbx    r4,r3,r9
+ 10046c4:	19 29 80 01 	e_addi  r9,r9,1
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:83 (discriminator 1)
+ 10046c8:	7a 20 ff f8 	e_bdnz  10046c0 <__fill_mem+0x24>
+ 10046cc:	7c 63 4a 14 	add     r3,r3,r9
+ 10046d0:	71 20 00 00 	e_li    r9,0
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:86
+ 10046d4:	18 24 a8 00 	e_cmpi  cr1,r4,0
+ 10046d8:	7a 16 00 1c 	e_beq   cr1,10046f4 <__fill_mem+0x58>
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:87
+ 10046dc:	7c 8a 40 70 	e_slwi  r10,r4,8
+ 10046e0:	7c 88 c0 70 	e_slwi  r8,r4,24
+ 10046e4:	7c 89 80 70 	e_slwi  r9,r4,16
+ 10046e8:	7d 09 4b 78 	or      r9,r8,r9
+ 10046ec:	7d 29 23 78 	or      r9,r9,r4
+ 10046f0:	7d 29 53 78 	or      r9,r9,r10
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:99
+ 10046f4:	7c a8 2c 71 	e_srwi. r8,r5,5
+ 10046f8:	7a 12 00 3a 	e_beq   1004732 <__fill_mem+0x96>
+ 10046fc:	02 32       	se_mtar r10,r3
+ 10046fe:	7d 09 03 a6 	mtctr   r8
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:102 (discriminator 1)
+ 1004702:	55 2a 00 00 	e_stw   r9,0(r10)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:103 (discriminator 1)
+ 1004706:	55 2a 00 04 	e_stw   r9,4(r10)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:104 (discriminator 1)
+ 100470a:	55 2a 00 08 	e_stw   r9,8(r10)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:105 (discriminator 1)
+ 100470e:	55 2a 00 0c 	e_stw   r9,12(r10)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:106 (discriminator 1)
+ 1004712:	55 2a 00 10 	e_stw   r9,16(r10)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:107 (discriminator 1)
+ 1004716:	55 2a 00 14 	e_stw   r9,20(r10)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:108 (discriminator 1)
+ 100471a:	55 2a 00 18 	e_stw   r9,24(r10)
+ 100471e:	19 4a 80 20 	e_addi  r10,r10,32
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:109 (discriminator 1)
+ 1004722:	55 2a ff fc 	e_stw   r9,-4(r10)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:111 (discriminator 1)
+ 1004726:	7a 20 ff dc 	e_bdnz  1004702 <__fill_mem+0x66>
+ 100472a:	7d 08 28 70 	e_slwi  r8,r8,5
+ 100472e:	7c 63 42 14 	add     r3,r3,r8
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:114
+ 1004732:	74 aa f7 7f 	e_rlwinm r10,r5,30,29,31
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:116
+ 1004736:	18 2a a8 00 	e_cmpi  cr1,r10,0
+ 100473a:	7a 16 00 1c 	e_beq   cr1,1004756 <__fill_mem+0xba>
+ 100473e:	19 03 84 fc 	e_addi  r8,r3,-4
+ 1004742:	7d 49 03 a6 	mtctr   r10
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:119 (discriminator 1)
+ 1004746:	19 28 06 04 	e_stwu  r9,4(r8)
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:120 (discriminator 1)
+ 100474a:	7a 20 ff fc 	e_bdnz  1004746 <__fill_mem+0xaa>
+ 100474e:	7d 4a 10 70 	e_slwi  r10,r10,2
+ 1004752:	7c 63 52 14 	add     r3,r3,r10
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:125
+ 1004756:	2e 35       	se_andi r5,3
+ 1004758:	71 40 00 00 	e_li    r10,0
+ 100475c:	00 b5       	se_mtctr r5
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:128
+ 100475e:	18 25 a8 00 	e_cmpi  cr1,r5,0
+ 1004762:	7a 16 00 10 	e_beq   cr1,1004772 <__fill_mem+0xd6>
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:131 (discriminator 1)
+ 1004766:	7d 23 51 ae 	stbx    r9,r3,r10
+ 100476a:	19 4a 80 01 	e_addi  r10,r10,1
+S32DS/e200_ewl/EWL_C/src/strings/__filll_mem.c:132 (discriminator 1)
+ 100476e:	7a 20 ff f8 	e_bdnz  1004766 <__fill_mem+0xca>
+ 1004772:	00 04       	se_blr
+	...

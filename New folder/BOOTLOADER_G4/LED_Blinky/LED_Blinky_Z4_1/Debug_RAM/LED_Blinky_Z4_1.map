@@ -1,0 +1,353 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 ./Project_Settings/Startup_Code/startup.o
+ .data          0x00000000        0x0 ./Project_Settings/Startup_Code/startup.o
+ .bss           0x00000000        0x0 ./Project_Settings/Startup_Code/startup.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .group         0x00000000        0x8 ./src/main_Z4_1.o
+ .text          0x00000000        0x0 ./src/main_Z4_1.o
+ .data          0x00000000        0x0 ./src/main_Z4_1.o
+ .bss           0x00000000        0x0 ./src/main_Z4_1.o
+ .data          0x00000000        0x0 ./src/intc_sw_handlers.o
+ .bss           0x00000000        0x0 ./src/intc_sw_handlers.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .text          0x00000000        0x0 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .data          0x00000000        0x0 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .bss           0x00000000        0x0 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000      0x622 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0x52 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0xa0 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0x16 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0x64 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000      0x1a3 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000      0x133 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0x9d ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0x10 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000      0x15b ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0x28 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00000000       0x58 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .group         0x00000000        0x8 ./src/Vector.o
+ .group         0x00000000        0x8 ./src/Vector.o
+ .group         0x00000000        0x8 ./src/Vector.o
+ .group         0x00000000        0x8 ./src/Vector.o
+ .group         0x00000000        0x8 ./src/Vector.o
+ .text          0x00000000        0x0 ./src/Vector.o
+ .data          0x00000000        0x0 ./src/Vector.o
+ .bss           0x00000000        0x0 ./src/Vector.o
+ .debug_macro   0x00000000      0x622 ./src/Vector.o
+ .debug_macro   0x00000000       0x52 ./src/Vector.o
+ .debug_macro   0x00000000       0xa0 ./src/Vector.o
+ .debug_macro   0x00000000       0x16 ./src/Vector.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .group         0x00000000        0x8 ./src/MPC57xx__Interrupt_Init.o
+ .text          0x00000000        0x0 ./src/MPC57xx__Interrupt_Init.o
+ .data          0x00000000        0x0 ./src/MPC57xx__Interrupt_Init.o
+ .bss           0x00000000        0x0 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000      0x622 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x52 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0xa0 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x16 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x64 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000      0x1a3 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000      0x133 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x9d ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x10 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000      0x15b ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x28 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x58 ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000    0x1814c ./src/MPC57xx__Interrupt_Init.o
+ .debug_macro   0x00000000       0x2e ./src/MPC57xx__Interrupt_Init.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+SRAM             0x40040000         0x00040000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./Project_Settings/Startup_Code/startup.o
+LOAD ./src/main_Z4_1.o
+LOAD ./src/intc_sw_handlers.o
+LOAD ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+LOAD ./src/Vector.o
+LOAD ./src/MPC57xx__Interrupt_Init.o
+START GROUP
+LOAD C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2/lib/fp/e200z4\libc99.a
+LOAD C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2/lib/fp/e200z4\libm.a
+LOAD c:/freescale/s32_power_v1.1/cross_tools/powerpc-eabivle-4_9/bin/../lib/gcc/powerpc-eabivle/4.9.2/fp/e200z4\libgcc.a
+LOAD C:/Freescale/S32_Power_v1.1/S32DS/e200_ewl2/lib/fp/e200z4\librt.a
+END GROUP
+                0x00000000                __HEAP_SIZE = 0x0
+                0x00001000                __STACK_SIZE = 0x1000
+                0x00040000                SRAM_SIZE = 0x40000
+                0x40040000                SRAM_BASE_ADDR = 0x40040000
+
+.startup        0x40040000      0x222
+                0x40040000                __start = .
+ *(.startup)
+ .startup       0x40040000      0x222 ./Project_Settings/Startup_Code/startup.o
+                0x40040000                _start
+
+.core_exceptions_table
+                0x40041000       0xf4
+                0x40041000                __IVPR_VALUE = .
+ *(.core_exceptions_table)
+ .core_exceptions_table
+                0x40041000       0xf4 ./src/Vector.o
+                0x40041000                IVOR0_Vector
+                0x40041000                VTABLE
+                0x40041010                IVOR1_Vector
+                0x40041020                IVOR2_Vector
+                0x40041030                IVOR3_Vector
+                0x40041040                IVOR4_Vector
+                0x40041050                IVOR5_Vector
+                0x40041060                IVOR6_Vector
+                0x40041070                IVOR7_Vector
+                0x40041080                IVOR8_Vector
+                0x40041090                IVOR9_Vector
+                0x400410a0                IVOR10_Vector
+                0x400410b0                IVOR11_Vector
+                0x400410c0                IVOR12_Vector
+                0x400410d0                IVOR13_Vector
+                0x400410e0                IVOR14_Vector
+                0x400410f0                IVOR15_Vector
+
+.intc_vector_table
+                0x40042000      0xbc8
+ *(.intc_vector_table)
+ .intc_vector_table
+                0x40042000      0xbc8 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+                0x40042000                IntcIsrVectorTable
+
+.text           0x40042bd0      0x1b0
+ *(.text.startup)
+ *(.text)
+ .text          0x40042bd0       0x48 ./src/intc_sw_handlers.o
+                0x40042bd0                IVOR4_Handler
+ *(.init)
+ *(.text.*)
+ .text.main     0x40042c18       0x28 ./src/main_Z4_1.o
+                0x40042c18                main
+ .text.dummy    0x40042c40        0xc ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+                0x40042c40                dummy
+ .text.SetIVPR  0x40042c4c       0x1a ./src/MPC57xx__Interrupt_Init.o
+                0x40042c4c                SetIVPR
+ .text.InitINTC
+                0x40042c66       0x92 ./src/MPC57xx__Interrupt_Init.o
+                0x40042c66                InitINTC
+ .text.enableIrq
+                0x40042cf8       0x48 ./src/MPC57xx__Interrupt_Init.o
+                0x40042cf8                enableIrq
+ .text.xcptn_xmpl
+                0x40042d40       0x34 ./src/MPC57xx__Interrupt_Init.o
+                0x40042d40                xcptn_xmpl
+                0x40042d80                . = ALIGN (0x10)
+ *fill*         0x40042d74        0xc 
+
+.glink          0x40042d80        0x0
+ .glink         0x40042d80        0x0 ./Project_Settings/Startup_Code/startup.o
+
+.rodata
+ *(.rodata)
+ *(.rodata.*)
+
+.eh_frame_hdr   0x40042d80        0x0
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x40042d80        0x0 ./src/MPC57xx__Interrupt_Init.o
+
+.eh_frame       0x40042d80        0x0
+ *(.eh_frame)
+ .eh_frame      0x40042d80        0x0 ./Project_Settings/Startup_Code/startup.o
+
+.data           0x40042d80        0x0
+ *(.data)
+ *(.data.*)
+
+.sdata2         0x40042d80        0x0
+ *(.sdata2)
+ .sdata2        0x40042d80        0x0 ./Project_Settings/Startup_Code/startup.o
+ *(.sdata2.*)
+
+.rela.dyn       0x40042d80        0x0
+ .rela.iplt     0x40042d80        0x0 ./Project_Settings/Startup_Code/startup.o
+
+.sbss2
+ *(.sbss2)
+ *(.sbss2.*)
+
+.sdata          0x40042d80        0x0
+ *(.sdata)
+ .sdata         0x40042d80        0x0 ./Project_Settings/Startup_Code/startup.o
+ *(.sdata.*)
+
+.bss            0x40042d80        0x0
+                0x40042d80                __BSS_START = .
+ *(.sbss)
+ *(.sbss.*)
+ *(.bss)
+ *(.bss.*)
+ *(COMMON)
+                0x40042d80                __BSS_END = .
+
+.iplt           0x40042d80        0x0
+ .iplt          0x40042d80        0x0 ./Project_Settings/Startup_Code/startup.o
+
+.stack          0x40042d80     0x1004
+                0x40042d80                __HEAP = .
+                0x40042d80                PROVIDE (_end, .)
+                0x40042d80                PROVIDE (end, .)
+                0x40042d80                . = (. + __HEAP_SIZE)
+                0x40042d80                __HEAP_END = .
+                0x40042d80                _stack_end = .
+                0x40043d80                . = (. + __STACK_SIZE)
+ *fill*         0x40042d80     0x1000 
+                0x40043d80                _stack_addr = .
+                0x40043d80                __SP_INIT = .
+                0x40043d84                . = (. + 0x4)
+ *fill*         0x40043d80        0x4 
+                0x40042d80                __DATA_SRAM_ADDR = ADDR (.data)
+                0x40042d80                __SDATA_SRAM_ADDR = ADDR (.sdata)
+                0x00000000                __DATA_SIZE = SIZEOF (.data)
+                0x00000000                __SDATA_SIZE = SIZEOF (.sdata)
+                0x40042d80                __DATA_ROM_ADDR = LOADADDR (.data)
+                0x40042d80                __SDATA_ROM_ADDR = LOADADDR (.sdata)
+                0x00040000                __SRAM_SIZE = SRAM_SIZE
+                0x40040000                __SRAM_BASE_ADDR = SRAM_BASE_ADDR
+                0x00000000                __BSS_SIZE = (__BSS_END - __BSS_START)
+OUTPUT(LED_Blinky_Z4_1.elf elf32-powerpc)
+
+.PPC.EMB.apuinfo
+                0x00000000       0x18
+ .PPC.EMB.apuinfo
+                0x00000000       0x18 ./Project_Settings/Startup_Code/startup.o
+ .PPC.EMB.apuinfo
+                0x00000018       0x18 ./src/main_Z4_1.o
+ .PPC.EMB.apuinfo
+                0x00000030       0x18 ./src/intc_sw_handlers.o
+ .PPC.EMB.apuinfo
+                0x00000048       0x18 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .PPC.EMB.apuinfo
+                0x00000060       0x18 ./src/Vector.o
+ .PPC.EMB.apuinfo
+                0x00000078       0x18 ./src/MPC57xx__Interrupt_Init.o
+
+.comment        0x00000000       0x54
+ .comment       0x00000000       0x54 ./src/main_Z4_1.o
+                                 0x55 (size before relaxing)
+ .comment       0x00000054       0x55 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .comment       0x00000054       0x55 ./src/Vector.o
+ .comment       0x00000054       0x55 ./src/MPC57xx__Interrupt_Init.o
+
+.debug_line     0x00000000      0x797
+ .debug_line    0x00000000       0xe5 ./Project_Settings/Startup_Code/startup.o
+ .debug_line    0x000000e5      0x1c3 ./src/main_Z4_1.o
+ .debug_line    0x000002a8       0x5d ./src/intc_sw_handlers.o
+ .debug_line    0x00000305      0x1b7 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_line    0x000004bc       0xbd ./src/Vector.o
+ .debug_line    0x00000579      0x21e ./src/MPC57xx__Interrupt_Init.o
+
+.debug_info     0x00000000      0x745
+ .debug_info    0x00000000       0x93 ./Project_Settings/Startup_Code/startup.o
+ .debug_info    0x00000093       0x9d ./src/main_Z4_1.o
+ .debug_info    0x00000130       0x82 ./src/intc_sw_handlers.o
+ .debug_info    0x000001b2       0xb4 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_info    0x00000266       0x21 ./src/Vector.o
+ .debug_info    0x00000287      0x4be ./src/MPC57xx__Interrupt_Init.o
+
+.debug_abbrev   0x00000000      0x266
+ .debug_abbrev  0x00000000       0x14 ./Project_Settings/Startup_Code/startup.o
+ .debug_abbrev  0x00000014       0x5f ./src/main_Z4_1.o
+ .debug_abbrev  0x00000073       0x14 ./src/intc_sw_handlers.o
+ .debug_abbrev  0x00000087       0x7c ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_abbrev  0x00000103       0x13 ./src/Vector.o
+ .debug_abbrev  0x00000116      0x150 ./src/MPC57xx__Interrupt_Init.o
+
+.debug_aranges  0x00000000       0xd0
+ .debug_aranges
+                0x00000000       0x20 ./Project_Settings/Startup_Code/startup.o
+ .debug_aranges
+                0x00000020       0x20 ./src/main_Z4_1.o
+ .debug_aranges
+                0x00000040       0x20 ./src/intc_sw_handlers.o
+ .debug_aranges
+                0x00000060       0x20 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_aranges
+                0x00000080       0x18 ./src/Vector.o
+ .debug_aranges
+                0x00000098       0x38 ./src/MPC57xx__Interrupt_Init.o
+
+.debug_ranges   0x00000000       0x48
+ .debug_ranges  0x00000000       0x10 ./src/main_Z4_1.o
+ .debug_ranges  0x00000010       0x10 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_ranges  0x00000020       0x28 ./src/MPC57xx__Interrupt_Init.o
+
+.debug_macro    0x00000000    0x190c7
+ .debug_macro   0x00000000       0xb5 ./src/main_Z4_1.o
+ .debug_macro   0x000000b5      0x622 ./src/main_Z4_1.o
+ .debug_macro   0x000006d7       0x52 ./src/main_Z4_1.o
+ .debug_macro   0x00000729       0xa0 ./src/main_Z4_1.o
+ .debug_macro   0x000007c9       0x16 ./src/main_Z4_1.o
+ .debug_macro   0x000007df       0x64 ./src/main_Z4_1.o
+ .debug_macro   0x00000843      0x1a3 ./src/main_Z4_1.o
+ .debug_macro   0x000009e6      0x133 ./src/main_Z4_1.o
+ .debug_macro   0x00000b19       0x9d ./src/main_Z4_1.o
+ .debug_macro   0x00000bb6       0x10 ./src/main_Z4_1.o
+ .debug_macro   0x00000bc6      0x15b ./src/main_Z4_1.o
+ .debug_macro   0x00000d21       0x28 ./src/main_Z4_1.o
+ .debug_macro   0x00000d49       0x58 ./src/main_Z4_1.o
+ .debug_macro   0x00000da1    0x1814c ./src/main_Z4_1.o
+ .debug_macro   0x00018eed       0xa1 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_macro   0x00018f8e       0x41 ./src/Vector.o
+ .debug_macro   0x00018fcf       0x2e ./src/Vector.o
+ .debug_macro   0x00018ffd       0xca ./src/MPC57xx__Interrupt_Init.o
+
+.debug_str      0x00000000    0x6750a
+ .debug_str     0x00000000    0x671c4 ./src/main_Z4_1.o
+                              0x67241 (size before relaxing)
+ .debug_str     0x000671c4       0x44 ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+                               0x3a28 (size before relaxing)
+ .debug_str     0x00067208      0x185 ./src/Vector.o
+                               0x246f (size before relaxing)
+ .debug_str     0x0006738d      0x17d ./src/MPC57xx__Interrupt_Init.o
+                              0x674e8 (size before relaxing)
+
+.debug_frame    0x00000000       0xf8
+ .debug_frame   0x00000000       0x2c ./src/main_Z4_1.o
+ .debug_frame   0x0000002c       0x2c ./src/intc_SW_mode_isr_vectors_MPC5748G.o
+ .debug_frame   0x00000058       0xa0 ./src/MPC57xx__Interrupt_Init.o
