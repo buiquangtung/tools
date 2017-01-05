@@ -1,0 +1,105 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hello
+{
+    class Class1
+    {
+        protected static void Show(string a)
+        {
+            Console.WriteLine(a);
+            Console.ReadLine();
+        }
+        static void Main(string[] args)
+        {
+            int a = 79;
+            if (a>=80)
+            {
+                Show("Passed"); 
+            }
+            else
+            {
+                Show("Failed");
+            }
+        }
+    }
+    class SwitchCase
+    {
+        static void Main(string[] args)
+        {
+            Boolean check = false;
+            Console.WriteLine("Option: "); 
+            while(check==false)
+            {
+                string input = Console.ReadLine();
+                ushort x = UInt16.Parse(input);
+                switch (x)
+                {
+                    case 1:
+                        Console.WriteLine("out");
+                        break;
+                    case 2:
+                        Console.WriteLine("out");
+                        break;
+                    case 3:
+                        Console.WriteLine("next step");
+                        check = true;
+                        Console.ReadLine();
+                        break;
+                    default:
+                        Console.WriteLine("invalid");
+                        break;
+                }
+            }
+
+        }
+    }
+    class Loop : Class1
+    {
+        private static void Main(string[] args)
+        {
+            ushort cout=0;
+            while (cout<10)
+            {
+                cout++;
+                string result = cout.ToString();
+                Class1.Show(result);
+            }
+        }
+    }
+    class personal
+    {
+        public string name;
+        public ushort age;
+    }
+
+    class test 
+    {
+        static void Main(string[] args)
+        {
+            personal huy = new personal();
+            bool isPersonal = huy is personal ;
+            if (isPersonal)
+            {
+                Console.WriteLine("true");
+
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+            Console.ReadLine();
+           // huy.name();
+           //huy.age();
+           //Console.ReadLine();
+            huy.name = "tung";
+            huy.age = 20;
+            Console.WriteLine("name= {0}", huy.name);
+            Console.WriteLine("Age = {0}", huy.age);
+            Console.ReadLine();
+        }
+    }
+}
